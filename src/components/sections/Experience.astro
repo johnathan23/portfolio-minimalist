@@ -1,0 +1,135 @@
+---
+import Section from "../Section.astro";
+import { work } from "@cv";
+import GitHub from "@/icons/GitHub.astro";
+---
+
+<Section title="Experiencia laboral">
+  <ul>
+    {
+      work.map(({ name, startDate, endDate, position, summary, highlights, url }) => {
+        const formatDate = (dateStr: string | number | Date) => {
+          if (!dateStr) return "Actual";
+          const date = new Date(dateStr);
+          return date.toLocaleDateString("es-ES", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+          });
+        };
+
+        const getDuration = (start: string | number | Date, end: string | number | Date) => {
+          const startDate = new Date(start);
+          const endDate = end ? new Date(end) : new Date();
+
+          let months =
+            (endDate.getFullYear() - startDate.getFullYear()) * 12 +
+            (endDate.getMonth() - startDate.getMonth());
+
+          const years = Math.floor(months / 12);
+          const remainingMonths = months % 12;
+
+          const parts = [];
+          if (years > 0) parts.push(`${years} año${years > 1 ? "s" : ""}`);
+          if (remainingMonths > 0) parts.push(`${remainingMonths} mes${remainingMonths > 1 ? "es" : ""}`);
+
+          return parts.length ? parts.join(" ") : "Menos de 1 mes";
+        };
+
+        return (
+          <li>
+            <article>
+              <header>
+                <div>
+                  <h3>
+                    <a href={url} title={`Ver ${name}`} target="_blank">
+                      {name}
+                    </a>
+                  </h3>
+                  <h4>{position}</h4>
+                </div>
+
+                <div class="date-info">
+                  <time datetime={startDate} data-title={startDate}>
+                    {formatDate(startDate)}
+                  </time>
+                  {" - "}
+                  <time datetime={endDate} data-title={endDate}>
+                    {formatDate(endDate)}
+                  </time>
+                  <span class="duration">({getDuration(startDate, endDate)})</span>
+                </div>
+              </header>
+
+              <footer>
+                <p>{summary}</p>
+                {highlights && highlights.length > 0 && (
+                  <ul class="work-highlights">
+                    {highlights.map((item) => (
+                      <li>{item}</li>
+                    ))}
+                  </ul>
+                )}
+              </footer>
+            </article>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  article h3 {
+    font-weight: 500;
+    color: #111;
+  }
+
+  article h3 a {
+    color: #111;
+  }
+
+  article h3 a:hover {
+    text-decoration: underline;
+  }
+
+  article h4 {
+    color: #222;
+    font-weight: 400;
+    margin: 4px 0;
+  }
+
+  .date-info {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: #555;
+  }
+
+  .duration {
+    font-style: italic;
+    opacity: 0.8;
+  }
+
+  footer p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .work-highlights {
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    list-style-type: disc;
+    font-size: 0.75rem;
+    line-height: 1.3;
+    color: #444;
+  }
+</style>

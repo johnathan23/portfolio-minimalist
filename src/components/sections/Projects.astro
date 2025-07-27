@@ -1,0 +1,182 @@
+---
+import GitHub from "@/icons/GitHub.astro"
+import Section from "../Section.astro"
+import { projects } from "@cv"
+
+// Definir tipo para proyecto
+type Project = {
+  name: string
+  company?: string
+  isActive?: boolean
+  description: string
+  highlights: string[]
+  url: string
+  github?: string
+}
+
+// Agrupar proyectos por compañía
+function groupByCompany(projects: Project[]): Record<string, Project[]> {
+  const grouped: Record<string, Project[]> = {}
+  for (const project of projects) {
+    const company = project.company || "Proyectos personales"
+    if (!grouped[company]) {
+      grouped[company] = []
+    }
+    grouped[company].push(project)
+  }
+  return grouped
+}
+
+const groupedProjects = groupByCompany(projects as unknown as Project[])
+---
+
+<Section title="Proyectos">
+  {
+    Object.entries(groupedProjects).map(([company, companyProjects]) => (
+      <div>
+        <h3>{company}</h3>
+        <ul>
+          {
+            companyProjects.map((project) => (
+              <li>
+                <article>
+                  <header>
+                    <h4>
+                      <a href={project.url} target="_blank" title={`Ver el proyecto ${project.name}`}>
+                        {project.name}
+                      </a>
+                      {project.isActive && <span>•</span>}
+                      {project.github && (
+                        <a
+                          class="github-code-link"
+                          href={project.github}
+                          target="_blank"
+                          title={`Ver código fuente del proyecto ${project.name}`}
+                        >
+                          <GitHub />
+                        </a>
+                      )}
+                    </h4>
+                    <p>{project.description}</p>
+                  </header>
+                  <footer>
+                    {project.highlights.map((highlight) => (
+                      <span>{highlight}</span>
+                    ))}
+                  </footer>
+                </article>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    ))
+  }
+</Section>
+
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-inline: -16px;
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  article {
+    border-radius: 8px;
+    border: 1px solid #f2f2f2;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    height: 100%;
+  }
+
+  article header {
+    flex: 1;
+  }
+
+  article h4 {
+    margin-bottom: 4px;
+    font-size: 1rem;
+  }
+
+  article a {
+    color: #111;
+  }
+
+  article a:hover {
+    text-decoration: underline;
+  }
+
+  article p {
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+    margin-bottom: 4px;
+  }
+
+  article h4 span {
+    color: rgb(0, 188, 47);
+    animation-name: flicker;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    font-size: 0.6rem;
+  }
+
+  footer span {
+    border-radius: 6px;
+    background: #eee;
+    color: #444;
+    font-size: 0.6rem;
+    font-weight: 500;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .github-code-link {
+    margin-left: 5px;
+  }
+
+  @keyframes flicker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.25;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @media (width <= 700px) {
+    ul {
+      margin-inline: 0px;
+    }
+
+    article {
+      border: none;
+      box-shadow: 0 1px 1px #f2f2f2;
+      padding: 0 0 16px 0;
+    }
+  }
+
+  @media print {
+    article h4 span {
+      animation-name: none;
+    }
+  }
+</style>

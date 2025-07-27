@@ -1,0 +1,105 @@
+---
+import Section from "../Section.astro"
+import { courses } from "@cv"
+
+type CourseGroup = {
+  institution: string
+  area: string
+  studyType: string
+  courses: string[]
+}
+
+function groupByInstitution(courses: CourseGroup[]): Record<string, CourseGroup[]> {
+  const grouped: Record<string, CourseGroup[]> = {}
+  for (const entry of courses) {
+    const institution = entry.institution || "Otros cursos"
+    if (!grouped[institution]) {
+      grouped[institution] = []
+    }
+    grouped[institution].push(entry)
+  }
+  return grouped
+}
+
+const groupedCourses = groupByInstitution(courses as CourseGroup[])
+---
+
+<Section title="Cursos">
+  {
+    Object.entries(groupedCourses).map(([institution, courseGroups]) => (
+      <div>
+        <h3>{institution}</h3>
+        <ul>
+          {
+            courseGroups.map(({ area, studyType, courses }) => (
+              courses.map((course) => (
+                <li>
+                  <article>
+                    <header>
+                      <h4>{course}</h4>
+                      <p>{area} - {studyType}</p>
+                    </header>
+                  </article>
+                </li>
+              ))
+            ))
+          }
+        </ul>
+      </div>
+    ))
+  }
+</Section>
+
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-inline: -16px;
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  article {
+    border-radius: 8px;
+    border: 1px solid #f2f2f2;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    height: 100%;
+  }
+
+  article header {
+    flex: 1;
+  }
+
+  article h4 {
+    margin-bottom: 4px;
+    font-size: 1rem;
+  }
+
+  article p {
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+    margin-bottom: 0;
+    color: #666;
+  }
+
+  @media (width <= 700px) {
+    ul {
+      margin-inline: 0px;
+    }
+
+    article {
+      border: none;
+      box-shadow: 0 1px 1px #f2f2f2;
+      padding: 0 0 16px 0;
+    }
+  }
+</style>

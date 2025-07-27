@@ -1,0 +1,745 @@
+{
+  "basics": {
+    "name": "Johnathan Yesid Silva Parra",
+    "label": "Mobile Developer",
+    "image": "/me.webp",
+    "email": "johnathanyesid@gmail.com",
+    "phone": "+57 3182921612",
+    "url": "https://johnathan23.github.io/",
+    "summary": "Como Mobile Developer, me destaco por mi habilidad para colaborar eficazmente en equipo, adaptarme a nuevos entornos y aprender con rapidez. Poseo las competencias técnicas necesarias para desempeñarme con excelencia en el ámbito laboral, contribuyendo al crecimiento empresarial mediante la entrega de resultados positivos. Mi enfoque está en satisfacer plenamente las necesidades de los clientes, asegurando una experiencia de usuario óptima y generando valor agregado para la organización.",
+    "location": {
+      "address": "",
+      "postalCode": "681002",
+      "city": "Floridablanca",
+      "countryCode": "Co",
+      "region": "Colombia"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "johnathan-yesid-silva-parra",
+        "url": "https://linkedin.com/in/johnathan-yesid-silva-parra"
+      },
+      {
+        "network": "GitHub",
+        "username": "johnathan23",
+        "url": "https://github.com/johnathan23"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Apex Global Mobility",
+      "position": "Dev Architect with Flutter",
+      "url": "https://apexglobal.co/",
+      "startDate": "2024-08-01",
+      "endDate": "2025-03-31",
+      "summary": "Participé en el diseño, desarrollo e implementación de soluciones móviles y web B2B y B2C para la distribución de productos CBC, con foco en eficiencia, automatización y soporte multiplataforma.",
+      "highlights": [
+        "Desempeñé el rol de Technical Leader, liderando 3 equipos de trabajo involucrandome en todo el flujo de desarrollo, desde la planificación hasta la entrega final.",
+        "Realicé los despliegues de las aplicaciones móviles en las tiendas de Google Play y Apple Store",
+        "Implemente CD con Bitrise para las aplicaciones móviles, logrando una entrega continua y eficiente."
+      ]
+    },
+    {
+      "name": "Yalutec",
+      "position": "Front Mobile Developer with Flutter",
+      "url": "https://yalutec.com/",
+      "startDate": "2024-06-24",
+      "endDate": "2024-07-31",
+      "summary": "Lideré el desarrollo de “Loyalty”, un programa de fidelización creado con Flutter, logrando una experiencia de usuario consistente en iOS, Android y Web.",
+      "highlights": null
+    },
+    {
+      "name": "Venko",
+      "position": "Mobile Developer",
+      "url": "https://www.venko.co/",
+      "startDate": "2021-06-14",
+      "endDate": "2024-06-24",
+      "summary": "Participé en el diseño, desarrollo e implementación de soluciones móviles y multiplataforma orientadas a la automatización, productividad, salud y generación de código, utilizando tecnologías como Flutter, Kotlin y OpenCV.",
+      "highlights": [
+        "Desempeñé el rol de Mobile Leader, involucrandome en todo el flujo de desarrollo, desde la planificación hasta la entrega final.",
+        "Brinde servicios de consultoria a nombre de Venko, ayudando a empresas a mejorar sus procesos de desarrollo y optimización de recursos."
+      ]
+    },
+    {
+      "name": "Actions Tracker S.L.",
+      "position": "Android Developer",
+      "url": "https://actiontracker.eu/",
+      "startDate": "2021-01-01",
+      "endDate": "2021-05-31",
+      "summary": "Participé en el diseño, desarrollo e implementación de “IvAdventure”, una aplicación de automatización y control inteligente de dispositivos basada en BLE y WiFi, orientada a optimizar interruptores y medidores tradicionales mediante un sistema centralizado con ESP32.",
+      "highlights": null
+    },
+    {
+      "name": "High Developer",
+      "position": "Android Developer",
+      "url": "https://highdeveloper.com/",
+      "startDate": "2018-02-01",
+      "endDate": "2021-06-30",
+      "summary": "Participé en el diseño, desarrollo e implementación de soluciones móviles orientadas a IoT, salud, seguridad, administración y servicios, utilizando tecnologías como Android-Java, Xamarin, Flutter, Swift y Firebase.",
+      "highlights": null
+    }
+  ],
+  "education": [
+    {
+      "institution": "Netzun & San Ignacio University",
+      "area": "Metodologías Ágiles",
+      "paused": false,
+      "studyType": "Diploma",
+      "startDate": null,
+      "endDate": "2025-06-17"
+    },
+    {
+      "institution": "Netzun & San Ignacio University",
+      "area": "Diseño de Experiencia de Usuario",
+      "paused": false,
+      "studyType": "Diploma",
+      "startDate": null,
+      "endDate": "2025-04-22"
+    },
+    {
+      "institution": "Netzun & San Ignacio University",
+      "area": "Desarrollo de Aplicaciones Móviles",
+      "paused": false,
+      "studyType": "Diploma",
+      "startDate": null,
+      "endDate": "2025-04-20"
+    },
+    {
+      "institution": "Netzun & San Ignacio University",
+      "area": "iOS",
+      "paused": false,
+      "studyType": "Diploma",
+      "startDate": null,
+      "endDate": "2025-04-20"
+    },
+    {
+      "institution": "Netzun & San Ignacio University",
+      "area": "Android",
+      "paused": false,
+      "studyType": "Diploma",
+      "startDate": null,
+      "endDate": "2025-04-19"
+    },
+    {
+      "institution": "Universidad Pontificia Bolivariana",
+      "area": "Ingenieria de Sistemas e Informática",
+      "paused": true,
+      "studyType": "Bachelor",
+      "startDate": "2015-01-14",
+      "endDate": "2018-06-01"
+    },
+    {
+      "institution": "SENA",
+      "area": "Contabilidad y Finanzas",
+      "paused": false,
+      "studyType": "Associate degree",
+      "startDate": null,
+      "endDate": "2014-12-06"
+    },
+    {
+      "institution": "Colegio Integrado Nuestra Señora de las Mercedes",
+      "area": "Comercial",
+      "paused": false,
+      "studyType": "High School",
+      "startDate": null,
+      "endDate": "2014-12-06"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Google Play Store Listing",
+      "date": "2025-01-02",
+      "validThrough": "2028-01-02",
+      "issuer": "Google Play Academy",
+      "url": "https://www.credential.net/ab0b4f05-af38-4676-bc44-0ad6108c782e#acc.Caknp0U5"
+    }
+  ],
+  "courses": [
+    {
+      "institution": "Platzi",
+      "area": "Programación",
+      "studyType": "Career tracks",
+      "courses": [
+        "Google Cloud Platform",
+        "Arquitectura y Patrones de Diseño",
+        "Diseño UI/UX",
+        "Testing y Despliegue",
+        "Desarrollo Multiplataforma con React Native",
+        "Desarrollo Multiplataforma con Flutter",
+        "Desarrollo de Aplicaciones iOS",
+        "Desarrollo de Aplicaciones Huawei",
+        "Desarrollo de Aplicaciones Android"
+      ]
+    },
+    {
+      "institution": "Udemy",
+      "area": "Programación",
+      "studyType": "Additional training",
+      "courses": [
+        "Patrones de Diseño Mobile",
+        "Principios SOLID y Clean Code",
+        "Flutter Web",
+        "Flutter Avanzado",
+        "Flutter Intermedio",
+        "Flutter Básico",
+        "Figma",
+        "Bootcamp de iOS",
+        "Kotlin",
+        "React Native",
+        "Xamarin Forms",
+        "Android-Java"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Git",
+      "level": "Experto"
+    },
+    {
+      "name": "GitHub",
+      "level": "Avanzado"
+    },
+    {
+      "name": "Gilab",
+      "level": "Avanzado"
+    },
+    {
+      "name": "BitBucket",
+      "level": "Avanzado"
+    },
+    {
+      "name": "Jira",
+      "level": "Avanzado"
+    },
+    {
+      "name": "Asana",
+      "level": "Avanzado"
+    },
+    {
+      "name": "Trello",
+      "level": "Avanzado"
+    },
+    {
+      "name": "Confluence",
+      "level": "Avanzado"
+    },
+    {
+      "name": "Miro",
+      "level": "Avanzado"
+    },
+    {
+      "name": "Mermaid",
+      "level": "Intermedio"
+    },
+    {
+      "name": "Google Cloud",
+      "level": "Experto"
+    },
+    {
+      "name": "Azure",
+      "level": "Intermedio"
+    },
+    {
+      "name": "AWS",
+      "level": "Intermedio"
+    },
+    {
+      "name": "Flutter",
+      "level": "Master"
+    },
+    {
+      "name": "Kotlin",
+      "level": "Avanzado"
+    },
+    {
+      "name": "Java",
+      "level": "Avanzado"
+    },
+    {
+      "name": "Swift",
+      "level": "Avanzado"
+    },
+    {
+      "name": "Objective-C",
+      "level": "Avanzado"
+    },
+    {
+      "name": "React Native",
+      "level": "Basico"
+    },
+    {
+      "name": "Xamarin Forms",
+      "level": "Intermedio"
+    },
+    {
+      "name": "Python",
+      "level": "Basico"
+    },
+    {
+      "name": "JavaScript",
+      "level": "Basico"
+    },
+    {
+      "name": "GraphQL",
+      "level": "Avanzado"
+    },
+    {
+      "name": "SQL",
+      "level": "Avanzado"
+    },
+    {
+      "name": "Realm",
+      "level": "Avanzado"
+    },
+    {
+      "name": "MongoDB",
+      "level": "Intermedio"
+    },
+    {
+      "name": "Firebase",
+      "level": "Experto"
+    },
+    {
+      "name": "Supabase",
+      "level": "Basico"
+    },
+    {
+      "name": "Postman",
+      "level": "Master"
+    },
+    {
+      "name": "Figma",
+      "level": "Master"
+    },
+    {
+      "name": "Adobe XD",
+      "level": "Avanzado"
+    },
+    {
+      "name": "Docker",
+      "level": "Basico"
+    },
+    {
+      "name": "Bitrise",
+      "level": "Avanzado"
+    },
+    {
+      "name": "CodeMagic",
+      "level": "Intermedio"
+    },
+    {
+      "name": "Play Store",
+      "level": "Master"
+    },
+    {
+      "name": "Apple Store",
+      "level": "Experto"
+    },
+    {
+      "name": "App Gallery",
+      "level": "Avanzado"
+    },
+    {
+      "name": "Hexagonal Architecture",
+      "level": "Experto"
+    },
+    {
+      "name": "Clean Architecture",
+      "level": "Experto"
+    },
+    {
+      "name": "Feature Architecture",
+      "level": "Experto"
+    },
+    {
+      "name": "Atomic Design",
+      "level": "Avanzado"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "C2"
+    },
+    {
+      "language": "Inglés",
+      "fluency": "B1"
+    },
+    {
+      "language": "Portugués",
+      "fluency": "B1"
+    },
+    {
+      "language": "Ruso",
+      "fluency": "A2"
+    }
+  ],
+  "hobbies": [
+    "Lectura",
+    "Viajar",
+    "Cocinar",
+    "Manualidades"
+  ],
+  "projects": [
+    {
+      "name": "Pepsi Chat",
+      "company": "Apex Global Mobility",
+      "isActive": true,
+      "description": "Plataforma B2B de comercio electrónico para facilitar la distribución de productos de CBC a tenderos y proveedores",
+      "highlights": [
+        "Cross Platform",
+        "17 Países"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.apexdigital.b2b_app&hl=es_CO",
+      "github": null
+    },
+    {
+      "name": "Vah",
+      "company": "Apex Global Mobility",
+      "isActive": true,
+      "description": "Aplicación B2C de comercio electrónico que permite a los consumidores adquirir productos de CBC directamente.",
+      "highlights": [
+        "Survey Monkey"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "XDelivery",
+      "company": "Apex Global Mobility",
+      "isActive": true,
+      "description": "Plataforma de seguimiento y gestión de entregas para optimizar la logística de distribución de productos CBC.",
+      "highlights": [
+        "Google Maps",
+        "Google Routes",
+        "8 Países"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.capullo.delivery.app&hl=es_CO",
+      "github": null
+    },
+    {
+      "name": "Monorepo",
+      "company": "Apex Global Mobility",
+      "isActive": true,
+      "description": "Un mono-repo para administrar múltiples proyectos empresariales.",
+      "highlights": [
+        "Melos"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Lealtad",
+      "company": "Yalutec",
+      "isActive": true,
+      "description": "Programa de fidelización de clientes.",
+      "highlights": [
+        "Saas",
+        "5 Países"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Goldrain",
+      "company": "Venko",
+      "isActive": true,
+      "description": "Aplicación de generación de Low Code basada en texto descriptivo",
+      "highlights": [
+        "IA",
+        "Cross Platform"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Planifiquese",
+      "company": "Venko",
+      "isActive": true,
+      "description": "Herramienta de gestión de trabajo y medición de tiempos, facilitando la organización y seguimiento de tareas",
+      "highlights": [
+        "Cross Platform",
+        "Jira",
+        "Excel"
+      ],
+      "url": "https://www.planifique.se/",
+      "github": null
+    },
+    {
+      "name": "Vundo",
+      "company": "Venko",
+      "isActive": true,
+      "description": "Aplicación de firma electrónica, optimizando procesos de autenticación y seguridad digital con la tecnología",
+      "highlights": [
+        "Open Cv"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Firmese",
+      "company": "Venko",
+      "isActive": true,
+      "description": "Aplicación para el seguimiento de hematomas y monitoreo de la salud",
+      "highlights": [
+        "Google Ml Kit",
+        "Pdf417"
+      ],
+      "url": "https://www.firme.se/",
+      "github": null
+    },
+    {
+      "name": "Document Recognizer",
+      "company": "Venko",
+      "isActive": true,
+      "description": "Plugin especializado en el procesamiento y serialización de datos de documentos de identidad",
+      "highlights": [
+        "Google Ml Kit",
+        "OCR"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Verifiquese",
+      "company": "Venko",
+      "isActive": true,
+      "description": "Aplicación para la consulta y visualización de información personal a través de fuentes públicas",
+      "highlights": [
+        "Mobile Cross Platform",
+        "Pdf417",
+        "Google Drive",
+        "Google Ads",
+        "12 Países"
+      ],
+      "url": "https://www.verifique.se/",
+      "github": null
+    },
+    {
+      "name": "ReadytoSail",
+      "company": "Actions Tracker S.L",
+      "isActive": true,
+      "description": "Plataforma multipropósito para yates que permite el control remoto seguro mediante automatización de tareas a bordo, con acceso a información en tiempo real 24/7 desde cualquier lugar, priorizando la seguridad y la toma de decisiones eficientes durante la navegación.",
+      "highlights": [
+        "IoT",
+        "WiFi"
+      ],
+      "url": "https://readytosail.eu/",
+      "github": null
+    },
+    {
+      "name": "IvAdventure",
+      "company": "Actions Tracker S.L",
+      "isActive": true,
+      "description": "Aplicación innovadora que permite optimizar la funcionalidad de interruptores y medidores tradicionales a través de un sistema de mando central inteligente.",
+      "highlights": [
+        "IoT",
+        "BLE",
+        "SPN32"
+      ],
+      "url": "https://ivadventure.com/",
+      "github": null
+    },
+    {
+      "name": "konjunto",
+      "company": "High Developer",
+      "isActive": true,
+      "description": "Aplicación centrada en la administración y gestión de propiedad horizontal.",
+      "highlights": [],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Reservato",
+      "company": "High Developer",
+      "isActive": true,
+      "description": "Aplicación para realizar reservaciones para diversas actividades comerciales.",
+      "highlights": [],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Coverty",
+      "company": "High Developer",
+      "isActive": true,
+      "description": "Aplicación destinada a la seguridad y convivencia ciudadana.",
+      "highlights": [
+        "IoT",
+        "BLE",
+        "Google Maps",
+        "Broadcast",
+        "Firebase"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "AppTracing",
+      "company": "High Developer",
+      "isActive": true,
+      "description": "Aplicación que permite una atención inmediata y seguimiento de incidencias.",
+      "highlights": [
+        "IoT",
+        "BLE",
+        "Google Maps",
+        "Google Routes",
+        "Broadcast",
+        "MQTT",
+        "GeoCercas"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Sifa",
+      "company": "High Developer",
+      "isActive": true,
+      "description": "Aplicación enfocada en el sector de la salud, facilitando la gestión de facturas y pacientes.",
+      "highlights": [],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Streamlog",
+      "company": "High Developer",
+      "isActive": true,
+      "description": "Aplicación para la gestión de sensores.",
+      "highlights": [
+        "IoT", 
+        "BLE"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Taxi Renta",
+      "isActive": true,
+      "company": "Freelance",
+      "description": "Aplicación  que facilita la solicitud de servicios de transporte hacia y desde el aeropuerto Palonegro.",
+      "highlights": [
+        "Google Maps",
+        "Google Routes"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Ninja Express",
+      "isActive": true,
+      "company": "Freelance",
+      "description": "Aplicación móvil enfocado en entregas bajo demanda",
+      "highlights": [
+        "Rappi",
+        "Stripe"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "UTS Reservat",
+      "isActive": true,
+      "company": "Freelance",
+      "description": "Aplicación de reservaciones hoteleras.",
+      "highlights": [],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Planets",
+      "company": null,
+      "isActive": true,
+      "description": "Aplicación educativa para niños que enseña sobre los planetas.",
+      "highlights": [
+        "Animaciones",
+        "Cross Platform"
+      ],
+      "url": "https://johnathan23.github.io/planets-3a",
+      "github": "https://github.com/johnathan23/planets-3a"
+    },
+    {
+      "name": "Cats Breeds",
+      "company": null,
+      "isActive": true,
+      "description": "App educativa sobre gatitos que enseña a conocer sus razas, necesidades de cuidado, tipo de alimentación y entorno ideal.",
+      "highlights": [
+        "Cross Platform"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Portfolio",
+      "company": null,
+      "isActive": true,
+      "description": "App todo-en-uno que diseña tu CV y portafolio visual para destacar habilidades, proyectos y experiencia de forma profesional y atractiva.",
+      "highlights": [
+        "Cross Platform",
+        "Firebase",
+        "Adaptativa"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Pet Society",
+      "company": null,
+      "isActive": true,
+      "description": "Red social para mascotas que facilita la adopción, monta y venta de animales",
+      "highlights": [],
+      "url": "https://play.google.com/apps/testing/co.churquitos.pet_society.pet_society",
+      "github": null
+    },
+    {
+      "name": "Chefcito",
+      "company": null,
+      "isActive": true,
+      "description": "Aplicación para almacenar y gestionar recetas culinarias",
+      "highlights": [],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Vacu+",
+      "company": null,
+      "isActive": true,
+      "description": "Aplicación para el seguimiento de vacunación.",
+      "highlights": [],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Pokedex",
+      "company": null,
+      "isActive": true,
+      "description": "Base de datos interactiva sobre Pokémons.",
+      "highlights": [
+        "GraphQL",
+        "Animaciones",
+        "Cross Platform"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Mekanic",
+      "company": null,
+      "isActive": true,
+      "description": "Herramienta para el seguimiento y mantenimiento de vehículos.",
+      "highlights": [],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Fiper",
+      "company": null,
+      "isActive": true,
+      "description": "Aplicación para la gestión financiera personal.",
+      "highlights": [],
+      "url": null,
+      "github": null
+    }
+  ]
+}

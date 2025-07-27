@@ -1,0 +1,48 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+import About from "@/components/sections/About.astro"
+import Education from "@/components/sections/Education.astro"
+import Experience from "@/components/sections/Experience.astro"
+import Certifiates from "@/components/sections/Certifiates.astro"
+import Hero from "@/components/sections/Hero.astro"
+import Skills from "@/components/sections/Skills.astro"
+import KeyboardManager from "@/components/KeyboardManager.astro"
+import { basics } from "@cv"
+import Projects from "@/components/sections/Projects.astro"
+import Languages from "@/components/sections/Languages.astro"
+import Courses from "@/components/sections/Courses.astro"
+import Hobbies from "@/components/sections/Hobbies.astro"
+const { name, label } = basics
+---
+
+<Layout title={`Portafolio de ${name} - ${label}`}>
+  <main>
+    <Hero />
+    <About />
+    <Languages />
+    <Experience />
+    <Education />
+    <Certifiates />
+    <Courses />
+    <Skills />
+    <Hobbies />
+    <Projects />
+  </main>
+
+  <KeyboardManager />
+</Layout>
+
+<style>
+  main {
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+  }
+
+  @media (width <= 700px) {
+    main {
+      padding: 2rem;
+    }
+  }
+</style>
