@@ -6,7 +6,7 @@
 
 ## 🚀 Empezar
 
-- Yo uso [pnpm](https://pnpm.io/installation) como gestor de dependencias y empaquetador.
+npm install
 
 ### 1. Añade tu contenido
 
@@ -27,13 +27,26 @@ También puedes usar un archivo `cv_english.json` para contenido en inglés.
   }
 }
 ```
-### 2. Lanza el servidor de desarrollo
 
-```bash
-pnpm dev
+### 2. Configura Pages
+
+Para que tu sitio Astro funcione correctamente en GitHub Pages, debes asegurarte de que tu archivo [astro.config.mjs](./astro.config.mjs) esté configurado con las rutas correctas:
+```astro
+import { defineConfig } from 'astro/config';
+
+export default defineConfig({
+  site: 'https://johnathan23.github.io/portfolio-minimalist', // URL pública completa de tu sitio
+  base: '/portfolio-minimalist/', // Ruta base (subdirectorio del repositorio)
+});
 ```
 
-1. Abre [**http://localhost:4321**](http://localhost:4321/) en tu navegador para ver el resultado 🚀
+### 3. Lanza el servidor de desarrollo
+
+```bash
+npm run dev
+```
+
+### 4. Abre [**http://localhost:4321/portfolio-minimalist/**](http://localhost:4321/portfolio-minimalist/) en tu navegador para ver el resultado 🚀
 
 ## 🧞 Comandos
 
