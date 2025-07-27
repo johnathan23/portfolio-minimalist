@@ -31,10 +31,10 @@ jobs:
           node-version: "20"
           cache: pnpm
 
-      - name: Install pnpm globally
+      - name: Install pnpm manually and set PATH
         run: |
-          corepack enable
-          corepack prepare pnpm@8 --activate
+          npm install -g pnpm@8
+          echo "$(npm bin -g)" >> $GITHUB_PATH
 
       - name: Setup GitHub Pages
         id: pages
