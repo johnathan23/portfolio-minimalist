@@ -1,3 +1,4 @@
+
 name: Deploy Astro site to Pages
 
 on:
@@ -24,12 +25,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Build with Astro
-        run: pnpm astro build
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -39,7 +34,7 @@ jobs:
       - name: Install pnpm
         run: npm install -g pnpm
 
-      - name: Setup Pages
+      - name: Setup GitHub Pages
         id: pages
         uses: actions/configure-pages@v5
 
