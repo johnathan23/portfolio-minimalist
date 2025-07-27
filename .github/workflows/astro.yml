@@ -1,3 +1,4 @@
+
 name: Deploy Astro site to Pages
 
 on:
@@ -34,6 +35,7 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: 8
+          run_install: false
 
       - name: Setup GitHub Pages
         id: pages
@@ -42,6 +44,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
         working-directory: ${{ env.BUILD_PATH }}
+        shell: bash
 
       - name: Build with Astro
         run: |
@@ -49,6 +52,7 @@ jobs:
             --site "${{ steps.pages.outputs.origin }}" \
             --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH }}
+        shell: bash
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
