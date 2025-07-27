@@ -37,6 +37,9 @@ jobs:
           version: 8
           run_install: false
 
+      - name: Add pnpm to PATH manually
+        run: echo "$(pnpm bin -g)" >> $GITHUB_PATH
+
       - name: Setup GitHub Pages
         id: pages
         uses: actions/configure-pages@v5
