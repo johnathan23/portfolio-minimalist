@@ -6,10 +6,10 @@
     "email": "johnathanyesid@gmail.com",
     "phone": "+57 3182921612",
     "url": "https://johnathan23.github.io/",
-    "summary": "Como Mobile Developer, me destaco por mi habilidad para colaborar eficazmente en equipo, adaptarme a nuevos entornos y aprender con rapidez. Poseo las competencias técnicas necesarias para desempeñarme con excelencia en el ámbito laboral, contribuyendo al crecimiento empresarial mediante la entrega de resultados positivos. Mi enfoque está en satisfacer plenamente las necesidades de los clientes, asegurando una experiencia de usuario óptima y generando valor agregado para la organización.",
+    "summary": "Como Developer, me destaco por mi habilidad para colaborar eficazmente en equipo, adaptarme a nuevos entornos y aprender con rapidez. Poseo las competencias técnicas necesarias para desempeñarme con excelencia en el ámbito laboral, contribuyendo al crecimiento empresarial mediante la entrega de resultados positivos. Mi enfoque está en satisfacer plenamente las necesidades de los clientes, asegurando una experiencia de usuario óptima y generando valor agregado para la organización.",
     "location": {
       "address": "",
-      "postalCode": "681002",
+      "postalCode": "",
       "city": "Floridablanca",
       "countryCode": "Co",
       "region": "Colombia"
@@ -29,14 +29,40 @@
   },
   "work": [
     {
+      "name": "Epam",
+      "position": "Sr Flutter Developer",
+      "url": "https://www.epam.com/",
+      "startDate": "2025-09-23",
+      "endDate": "",
+      "summary": "Participé en el diseño, desarrollo e implementación de soluciones para el sector financiero, enfocándome en la creación de aplicaciones móviles seguras y eficientes que cumplen con los estándares regulatorios y las necesidades del cliente.",
+      "highlights": [
+        "Implemente CD/CI con Aws",
+        "Micro-frontends",
+        "Implementacion de pruebas unitarias y de integración",
+        "Ethical Hacking"
+      ]
+    },
+    {
+      "name": "Tres Astronautas",
+      "position": "Sr Flutter Developer",
+      "url": "https://www.tresastronautas.com/es",
+      "startDate": "2025-07-16",
+      "endDate": "2025-10-10",
+      "summary": "Participé en el diseño, desarrollo e implementación de soluciones web B2B, Saas, Bias",
+      "highlights": [
+        "Implemente CD/CI con Aws y Azure",
+        "Realice la integración de Firebase a nivel de host y aplicación",
+        "Desarrolle funciones en Cloud Functions para la gestión de usuarios y autenticación"
+      ]
+    },
+    {
       "name": "Apex Global Mobility",
-      "position": "Dev Architect with Flutter",
+      "position": "Front Mobile Developer",
       "url": "https://apexglobal.co/",
       "startDate": "2024-08-01",
       "endDate": "2025-03-31",
       "summary": "Participé en el diseño, desarrollo e implementación de soluciones móviles y web B2B y B2C para la distribución de productos CBC, con foco en eficiencia, automatización y soporte multiplataforma.",
       "highlights": [
-        "Desempeñé el rol de Technical Leader, liderando 3 equipos de trabajo involucrandome en todo el flujo de desarrollo, desde la planificación hasta la entrega final.",
         "Realicé los despliegues de las aplicaciones móviles en las tiendas de Google Play y Apple Store",
         "Implemente CD con Bitrise para las aplicaciones móviles, logrando una entrega continua y eficiente."
       ]
@@ -47,7 +73,7 @@
       "url": "https://yalutec.com/",
       "startDate": "2024-06-24",
       "endDate": "2024-07-31",
-      "summary": "Lideré el desarrollo de “Loyalty”, un programa de fidelización creado con Flutter, logrando una experiencia de usuario consistente en iOS, Android y Web.",
+      "summary": "Participé en el desarrollo de “Loyalty”, un programa de fidelización creado con Flutter, logrando una experiencia de usuario consistente en iOS, Android y Web.",
       "highlights": null
     },
     {
@@ -82,6 +108,14 @@
     }
   ],
   "education": [
+    {
+      "institution": "Netzun & San Ignacio University",
+      "area": "Programación Web y Apps",
+      "paused": false,
+      "studyType": "Diploma",
+      "startDate": null,
+      "endDate": "2025-07-16"
+    },
     {
       "institution": "Netzun & San Ignacio University",
       "area": "Metodologías Ágiles",
@@ -162,6 +196,12 @@
       "area": "Programación",
       "studyType": "Career tracks",
       "courses": [
+        "Go y Rust",
+        "Ciberseguridad para desarrolladores",
+        "Automatización de Procesos con N8N",
+        "Cloud Azure",
+        "Cloud AWS",
+        "Apps Multiplataforma",
         "Google Cloud Platform",
         "Arquitectura y Patrones de Diseño",
         "Diseño UI/UX",
@@ -235,6 +275,14 @@
       "level": "Intermedio"
     },
     {
+      "name": "Tensor Flow",
+      "level": "Avanzado"
+    },
+    {
+      "name": "N8N",
+      "level": "Avanzado"
+    },
+    {
       "name": "Google Cloud",
       "level": "Experto"
     },
@@ -268,7 +316,7 @@
     },
     {
       "name": "React Native",
-      "level": "Basico"
+      "level": "Intermedio"
     },
     {
       "name": "Xamarin Forms",
@@ -279,8 +327,20 @@
       "level": "Basico"
     },
     {
+      "name": "PHP",
+      "level": "Avanzado"
+    },
+    {
+      "name": "Go",
+      "level": "Avanzado"
+    },
+    {
+      "name": "Node Js",
+      "level": "Intermedio"
+    },
+    {
       "name": "JavaScript",
-      "level": "Basico"
+      "level": "Avanzado"
     },
     {
       "name": "GraphQL",
@@ -371,10 +431,6 @@
     {
       "language": "Portugués",
       "fluency": "B1"
-    },
-    {
-      "language": "Ruso",
-      "fluency": "A2"
     }
   ],
   "hobbies": [
@@ -384,6 +440,32 @@
     "Manualidades"
   ],
   "projects": [
+    {
+      "name": "Itau",
+      "company": "Epam",
+      "isActive": true,
+      "description": "Aplicación bancaria que concentra todas tus operaciones financieras en un solo lugar, con seguridad y facilidad.",
+      "highlights": [
+        "Saas",
+        "Firebase",
+        "3 Países"
+      ],
+      "url": "https://banco.itau.co/web/corporate",
+      "github": null
+    },
+    {
+      "name": "Divisa",
+      "company": "Tres Astronautas",
+      "isActive": true,
+      "description": "Plataforma Saas financiera que automatiza la liquidación de facturas y pagos, integrándose con la banca para una gestión eficiente.",
+      "highlights": [
+        "Saas",
+        "Firebase",
+        "3 Países"
+      ],
+      "url": "https://divisa-464116.web.app/sign-in",
+      "github": null
+    },
     {
       "name": "Pepsi Chat",
       "company": "Apex Global Mobility",
@@ -544,15 +626,6 @@
       "github": null
     },
     {
-      "name": "konjunto",
-      "company": "High Developer",
-      "isActive": true,
-      "description": "Aplicación centrada en la administración y gestión de propiedad horizontal.",
-      "highlights": [],
-      "url": null,
-      "github": null
-    },
-    {
       "name": "Reservato",
       "company": "High Developer",
       "isActive": true,
@@ -608,10 +681,69 @@
       "isActive": true,
       "description": "Aplicación para la gestión de sensores.",
       "highlights": [
-        "IoT", 
+        "IoT",
         "BLE"
       ],
       "url": null,
+      "github": null
+    },
+    {
+      "name": "Amigo Doc",
+      "isActive": true,
+      "company": "Freelance",
+      "description": "CRM médico que centraliza la gestión de pacientes, citas y comunicaciones, optimizando la atención y el seguimiento clínico.",
+      "highlights": [
+        "IA",
+        "Cross Platform"
+      ],
+      "url": "https://admin.amigodocapp.com/login",
+      "github": null
+    },
+    {
+      "name": "NetChef",
+      "isActive": true,
+      "company": "Freelance",
+      "description": "Aplicación completa para restaurantes que centraliza pedidos, menú, cocina y pagos, simplificando la gestión y mejorando la atención al cliente.",
+      "highlights": [
+        "Pagos",
+        "Cross Platform",
+        "PHP Laravel"
+      ],
+      "url": "https://netchef-712d8.firebaseapp.com/login-page",
+      "github": null
+    },
+    {
+      "name": "Gente Mejor",
+      "isActive": true,
+      "company": "Freelance",
+      "description": "CRM para nutricionistas que centraliza la atención, seguimiento y comunicación con los pacientes.",
+      "highlights": [
+        "IA"
+      ],
+      "url": "https://admin.gentemejor.com/login",
+      "github": null
+    },
+    {
+      "name": "Efood",
+      "isActive": true,
+      "company": "Freelance",
+      "description": "Aplicación para restaurantes centrada en delivery, que integra menús, pedidos y pagos en línea al estilo Rappi.",
+      "highlights": [
+        "Cross Platform"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Auto Rent Pro",
+      "isActive": true,
+      "company": "Freelance",
+      "description": "Aplicación que gestiona el alquiler de vehículos por tiempo, integrando reservas, pagos y control de flota.",
+      "highlights": [
+        "Open Pay",
+        "Twilio"
+      ],
+      "url": "https://autogps.iqnetingtest.site/",
       "github": null
     },
     {
@@ -644,6 +776,27 @@
       "company": "Freelance",
       "description": "Aplicación de reservaciones hoteleras.",
       "highlights": [],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "konjunto app",
+      "company": null,
+      "isActive": true,
+      "description": "Aplicación centrada en la administración y gestión de propiedad horizontal.",
+      "highlights": [],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Dragon books",
+      "company": null,
+      "isActive": true,
+      "description": "Libro de dragones interactivo para niños.",
+      "highlights": [
+        "Animaciones",
+        "Cross Platform"
+      ],
       "url": null,
       "github": null
     },
