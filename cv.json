@@ -36,10 +36,10 @@
       "endDate": "",
       "summary": "Participé en el diseño, desarrollo e implementación de soluciones para el sector financiero, enfocándome en la creación de aplicaciones móviles seguras y eficientes que cumplen con los estándares regulatorios y las necesidades del cliente.",
       "highlights": [
-        "Implemente CD/CI con Aws",
-        "Micro-frontends",
-        "Implementacion de pruebas unitarias y de integración",
-        "Ethical Hacking"
+        "Implementación de pipelines CI/CD sobre AWS",
+        "Arquitectura basada en micro-frontends",
+        "Cobertura con pruebas unitarias e integración",
+        "Prácticas de seguridad y ethical hacking"
       ]
     },
     {
@@ -50,9 +50,9 @@
       "endDate": "2025-10-10",
       "summary": "Participé en el diseño, desarrollo e implementación de soluciones web B2B, Saas, Bias",
       "highlights": [
-        "Implemente CD/CI con Aws y Azure",
-        "Realice la integración de Firebase a nivel de host y aplicación",
-        "Desarrolle funciones en Cloud Functions para la gestión de usuarios y autenticación"
+        "Implementación de CI/CD en entornos AWS y Azure",
+        "Integración de Firebase a nivel host y aplicación",
+        "Desarrollo de Cloud Functions para autenticación y gestión de usuarios"
       ]
     },
     {
@@ -63,8 +63,8 @@
       "endDate": "2025-03-31",
       "summary": "Participé en el diseño, desarrollo e implementación de soluciones móviles y web B2B y B2C para la distribución de productos CBC, con foco en eficiencia, automatización y soporte multiplataforma.",
       "highlights": [
-        "Realicé los despliegues de las aplicaciones móviles en las tiendas de Google Play y Apple Store",
-        "Implemente CD con Bitrise para las aplicaciones móviles, logrando una entrega continua y eficiente."
+        "Publicación y mantenimiento de releases en Google Play y App Store",
+        "Automatización de despliegues móviles con Bitrise"
       ]
     },
     {
@@ -74,7 +74,10 @@
       "startDate": "2024-06-24",
       "endDate": "2024-07-31",
       "summary": "Participé en el desarrollo de “Loyalty”, un programa de fidelización creado con Flutter, logrando una experiencia de usuario consistente en iOS, Android y Web.",
-      "highlights": null
+      "highlights": [
+        "Desarrollo cross-platform con Flutter para iOS, Android y Web",
+        "Experiencia de usuario consistente en múltiples plataformas"
+      ]
     },
     {
       "name": "Venko",
@@ -84,8 +87,8 @@
       "endDate": "2024-06-24",
       "summary": "Participé en el diseño, desarrollo e implementación de soluciones móviles y multiplataforma orientadas a la automatización, productividad, salud y generación de código, utilizando tecnologías como Flutter, Kotlin y OpenCV.",
       "highlights": [
-        "Desempeñé el rol de Mobile Leader, involucrandome en todo el flujo de desarrollo, desde la planificación hasta la entrega final.",
-        "Brinde servicios de consultoria a nombre de Venko, ayudando a empresas a mejorar sus procesos de desarrollo y optimización de recursos."
+        "Liderazgo técnico mobile de punta a punta, desde planificación hasta entrega",
+        "Consultoría para optimización de procesos de desarrollo y uso de recursos"
       ]
     },
     {
@@ -95,7 +98,10 @@
       "startDate": "2021-01-01",
       "endDate": "2021-05-31",
       "summary": "Participé en el diseño, desarrollo e implementación de “IvAdventure”, una aplicación de automatización y control inteligente de dispositivos basada en BLE y WiFi, orientada a optimizar interruptores y medidores tradicionales mediante un sistema centralizado con ESP32.",
-      "highlights": null
+      "highlights": [
+        "Integración de conectividad BLE y WiFi con dispositivos ESP32",
+        "Automatización y control remoto sobre hardware IoT"
+      ]
     },
     {
       "name": "High Developer",
@@ -104,58 +110,13 @@
       "startDate": "2018-02-01",
       "endDate": "2021-06-30",
       "summary": "Participé en el diseño, desarrollo e implementación de soluciones móviles orientadas a IoT, salud, seguridad, administración y servicios, utilizando tecnologías como Android-Java, Xamarin, Flutter, Swift y Firebase.",
-      "highlights": null
+      "highlights": [
+        "Desarrollo mobile multi-stack con Android, Xamarin, Flutter y Swift",
+        "Soluciones para IoT, salud, seguridad y servicios digitales"
+      ]
     }
   ],
   "education": [
-    {
-      "institution": "Netzun & San Ignacio University",
-      "area": "Programación Web y Apps",
-      "paused": false,
-      "studyType": "Diploma",
-      "startDate": null,
-      "endDate": "2025-07-16"
-    },
-    {
-      "institution": "Netzun & San Ignacio University",
-      "area": "Metodologías Ágiles",
-      "paused": false,
-      "studyType": "Diploma",
-      "startDate": null,
-      "endDate": "2025-06-17"
-    },
-    {
-      "institution": "Netzun & San Ignacio University",
-      "area": "Diseño de Experiencia de Usuario",
-      "paused": false,
-      "studyType": "Diploma",
-      "startDate": null,
-      "endDate": "2025-04-22"
-    },
-    {
-      "institution": "Netzun & San Ignacio University",
-      "area": "Desarrollo de Aplicaciones Móviles",
-      "paused": false,
-      "studyType": "Diploma",
-      "startDate": null,
-      "endDate": "2025-04-20"
-    },
-    {
-      "institution": "Netzun & San Ignacio University",
-      "area": "iOS",
-      "paused": false,
-      "studyType": "Diploma",
-      "startDate": null,
-      "endDate": "2025-04-20"
-    },
-    {
-      "institution": "Netzun & San Ignacio University",
-      "area": "Android",
-      "paused": false,
-      "studyType": "Diploma",
-      "startDate": null,
-      "endDate": "2025-04-19"
-    },
     {
       "institution": "Universidad Pontificia Bolivariana",
       "area": "Ingenieria de Sistemas e Informática",
@@ -179,6 +140,30 @@
       "studyType": "High School",
       "startDate": null,
       "endDate": "2014-12-06"
+    }
+  ],
+  "diplomas": [
+    {
+      "institution": "Netzun & Dionisio Romero University",
+      "area": "Analítica",
+      "studyType": "Diploma",
+      "courses": [
+        "Power Bi y Tableau",
+        "Data Analytics"
+      ]
+    },
+    {
+      "institution": "Netzun & San Ignacio University",
+      "area": "Tecnología",
+      "studyType": "Diploma",
+      "courses": [
+        "Programación Web y Apps",
+        "Metodologías Ágiles",
+        "Diseño de Experiencia de Usuario",
+        "Desarrollo de Aplicaciones Móviles",
+        "iOS",
+        "Android"
+      ]
     }
   ],
   "certificates": [
@@ -440,15 +425,32 @@
     "Manualidades"
   ],
   "projects": [
+     {
+      "name": "Itau Trader",
+      "company": "Epam",
+      "isActive": true,
+      "description": "Plataforma de trading de Itaú que te permite gestionar inversiones, ejecutar operaciones en tiempo real y monitorear los mercados con herramientas seguras y eficientes desde un solo lugar.",
+      "highlights": [
+        "Trading en tiempo real",
+        "Streaming de datos de mercado",
+        "Gestión de portafolio de inversión",
+        "Arquitectura escalable para productos financieros",
+        "Transacciones seguras"
+      ],
+      "url": "https://banco.itau.co/web/corporate",
+      "github": null
+    },
     {
-      "name": "Itau",
+      "name": "Itau Corporate",
       "company": "Epam",
       "isActive": true,
       "description": "Aplicación bancaria que concentra todas tus operaciones financieras en un solo lugar, con seguridad y facilidad.",
       "highlights": [
-        "Saas",
-        "Firebase",
-        "3 Países"
+        "Plataforma de banca corporativa",
+        "Pagos y cash management",
+        "Soporte multiempresa",
+        "Alta disponibilidad",
+        "Acceso seguro"
       ],
       "url": "https://banco.itau.co/web/corporate",
       "github": null
@@ -459,9 +461,9 @@
       "isActive": true,
       "description": "Plataforma Saas financiera que automatiza la liquidación de facturas y pagos, integrándose con la banca para una gestión eficiente.",
       "highlights": [
-        "Saas",
-        "Firebase",
-        "3 Países"
+        "SaaS financiero",
+        "Integración con Firebase",
+        "Operación en 3 países"
       ],
       "url": "https://divisa-464116.web.app/sign-in",
       "github": null
@@ -472,8 +474,8 @@
       "isActive": true,
       "description": "Plataforma B2B de comercio electrónico para facilitar la distribución de productos de CBC a tenderos y proveedores",
       "highlights": [
-        "Cross Platform",
-        "17 Países"
+        "Aplicación cross-platform",
+        "Despliegue regional en 17 países"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.apexdigital.b2b_app&hl=es_CO",
       "github": null
@@ -484,7 +486,7 @@
       "isActive": true,
       "description": "Aplicación B2C de comercio electrónico que permite a los consumidores adquirir productos de CBC directamente.",
       "highlights": [
-        "Survey Monkey"
+        "Integración con SurveyMonkey"
       ],
       "url": null,
       "github": null
@@ -495,9 +497,9 @@
       "isActive": true,
       "description": "Plataforma de seguimiento y gestión de entregas para optimizar la logística de distribución de productos CBC.",
       "highlights": [
-        "Google Maps",
-        "Google Routes",
-        "8 Países"
+        "Geolocalización con Google Maps",
+        "Enrutamiento con Google Routes",
+        "Operación en 8 países"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.capullo.delivery.app&hl=es_CO",
       "github": null
@@ -508,7 +510,7 @@
       "isActive": true,
       "description": "Un mono-repo para administrar múltiples proyectos empresariales.",
       "highlights": [
-        "Melos"
+        "Gestión monorepo con Melos"
       ],
       "url": null,
       "github": null
@@ -519,8 +521,8 @@
       "isActive": true,
       "description": "Programa de fidelización de clientes.",
       "highlights": [
-        "Saas",
-        "5 Países"
+        "Plataforma SaaS de fidelización",
+        "Despliegue en 5 países"
       ],
       "url": null,
       "github": null
@@ -531,8 +533,8 @@
       "isActive": true,
       "description": "Aplicación de generación de Low Code basada en texto descriptivo",
       "highlights": [
-        "IA",
-        "Cross Platform"
+        "Generación low-code asistida por IA",
+        "Aplicación cross-platform"
       ],
       "url": null,
       "github": null
@@ -543,9 +545,9 @@
       "isActive": true,
       "description": "Herramienta de gestión de trabajo y medición de tiempos, facilitando la organización y seguimiento de tareas",
       "highlights": [
-        "Cross Platform",
-        "Jira",
-        "Excel"
+        "Aplicación cross-platform",
+        "Integración con Jira",
+        "Exportación e interoperabilidad con Excel"
       ],
       "url": "https://www.planifique.se/",
       "github": null
@@ -556,7 +558,7 @@
       "isActive": true,
       "description": "Aplicación de firma electrónica, optimizando procesos de autenticación y seguridad digital con la tecnología",
       "highlights": [
-        "Open Cv"
+        "Procesamiento visual con OpenCV"
       ],
       "url": null,
       "github": null
@@ -567,8 +569,8 @@
       "isActive": true,
       "description": "Aplicación para el seguimiento de hematomas y monitoreo de la salud",
       "highlights": [
-        "Google Ml Kit",
-        "Pdf417"
+        "Visión computacional con Google ML Kit",
+        "Lectura de documentos con PDF417"
       ],
       "url": "https://www.firme.se/",
       "github": null
@@ -579,8 +581,8 @@
       "isActive": true,
       "description": "Plugin especializado en el procesamiento y serialización de datos de documentos de identidad",
       "highlights": [
-        "Google Ml Kit",
-        "OCR"
+        "OCR con Google ML Kit",
+        "Serialización de datos de identidad"
       ],
       "url": null,
       "github": null
@@ -591,11 +593,11 @@
       "isActive": true,
       "description": "Aplicación para la consulta y visualización de información personal a través de fuentes públicas",
       "highlights": [
-        "Mobile Cross Platform",
-        "Pdf417",
-        "Google Drive",
-        "Google Ads",
-        "12 Países"
+        "Aplicación mobile cross-platform",
+        "Captura documental con PDF417",
+        "Integración con Google Drive",
+        "Monetización con Google Ads",
+        "Presencia en 12 países"
       ],
       "url": "https://www.verifique.se/",
       "github": null
@@ -606,8 +608,8 @@
       "isActive": true,
       "description": "Plataforma multipropósito para yates que permite el control remoto seguro mediante automatización de tareas a bordo, con acceso a información en tiempo real 24/7 desde cualquier lugar, priorizando la seguridad y la toma de decisiones eficientes durante la navegación.",
       "highlights": [
-        "IoT",
-        "WiFi"
+        "Plataforma IoT para control remoto",
+        "Conectividad WiFi para monitoreo en tiempo real"
       ],
       "url": "https://readytosail.eu/",
       "github": null
@@ -618,9 +620,9 @@
       "isActive": true,
       "description": "Aplicación innovadora que permite optimizar la funcionalidad de interruptores y medidores tradicionales a través de un sistema de mando central inteligente.",
       "highlights": [
-        "IoT",
-        "BLE",
-        "SPN32"
+        "Automatización IoT",
+        "Comunicación BLE",
+        "Integración con ESP32"
       ],
       "url": "https://ivadventure.com/",
       "github": null
@@ -630,7 +632,10 @@
       "company": "High Developer",
       "isActive": true,
       "description": "Aplicación para realizar reservaciones para diversas actividades comerciales.",
-      "highlights": [],
+      "highlights": [
+        "Gestión digital de reservas",
+        "Flujo de disponibilidad y agendamiento"
+      ],
       "url": null,
       "github": null
     },
@@ -640,11 +645,10 @@
       "isActive": true,
       "description": "Aplicación destinada a la seguridad y convivencia ciudadana.",
       "highlights": [
-        "IoT",
-        "BLE",
-        "Google Maps",
-        "Broadcast",
-        "Firebase"
+        "Integración IoT y BLE",
+        "Geolocalización con Google Maps",
+        "Eventos en tiempo real mediante broadcast",
+        "Backend y mensajería con Firebase"
       ],
       "url": null,
       "github": null
@@ -655,13 +659,11 @@
       "isActive": true,
       "description": "Aplicación que permite una atención inmediata y seguimiento de incidencias.",
       "highlights": [
-        "IoT",
-        "BLE",
-        "Google Maps",
-        "Google Routes",
-        "Broadcast",
-        "MQTT",
-        "GeoCercas"
+        "Integración IoT y BLE",
+        "Geolocalización con Google Maps",
+        "Optimización de rutas con Google Routes",
+        "Comunicación en tiempo real con broadcast y MQTT",
+        "Gestión de geocercas"
       ],
       "url": null,
       "github": null
@@ -671,7 +673,10 @@
       "company": "High Developer",
       "isActive": true,
       "description": "Aplicación enfocada en el sector de la salud, facilitando la gestión de facturas y pacientes.",
-      "highlights": [],
+      "highlights": [
+        "Gestión de pacientes y facturación",
+        "Digitalización de procesos para salud"
+      ],
       "url": null,
       "github": null
     },
@@ -681,8 +686,8 @@
       "isActive": true,
       "description": "Aplicación para la gestión de sensores.",
       "highlights": [
-        "IoT",
-        "BLE"
+        "Monitoreo de sensores IoT",
+        "Comunicación BLE"
       ],
       "url": null,
       "github": null
@@ -693,8 +698,8 @@
       "company": "Freelance",
       "description": "CRM médico que centraliza la gestión de pacientes, citas y comunicaciones, optimizando la atención y el seguimiento clínico.",
       "highlights": [
-        "IA",
-        "Cross Platform"
+        "Automatización asistida por IA",
+        "Arquitectura cross-platform"
       ],
       "url": "https://admin.amigodocapp.com/login",
       "github": null
@@ -705,9 +710,9 @@
       "company": "Freelance",
       "description": "Aplicación completa para restaurantes que centraliza pedidos, menú, cocina y pagos, simplificando la gestión y mejorando la atención al cliente.",
       "highlights": [
-        "Pagos",
-        "Cross Platform",
-        "PHP Laravel"
+        "Integración de pagos",
+        "Arquitectura cross-platform",
+        "Backend sobre PHP Laravel"
       ],
       "url": "https://netchef-712d8.firebaseapp.com/login-page",
       "github": null
@@ -718,7 +723,7 @@
       "company": "Freelance",
       "description": "CRM para nutricionistas que centraliza la atención, seguimiento y comunicación con los pacientes.",
       "highlights": [
-        "IA"
+        "Automatización y asistencia con IA"
       ],
       "url": "https://admin.gentemejor.com/login",
       "github": null
@@ -729,7 +734,7 @@
       "company": "Freelance",
       "description": "Aplicación para restaurantes centrada en delivery, que integra menús, pedidos y pagos en línea al estilo Rappi.",
       "highlights": [
-        "Cross Platform"
+        "Plataforma cross-platform para delivery"
       ],
       "url": null,
       "github": null
@@ -740,8 +745,8 @@
       "company": "Freelance",
       "description": "Aplicación que gestiona el alquiler de vehículos por tiempo, integrando reservas, pagos y control de flota.",
       "highlights": [
-        "Open Pay",
-        "Twilio"
+        "Integración de pagos con OpenPay",
+        "Notificaciones y comunicación con Twilio"
       ],
       "url": "https://autogps.iqnetingtest.site/",
       "github": null
@@ -752,8 +757,8 @@
       "company": "Freelance",
       "description": "Aplicación  que facilita la solicitud de servicios de transporte hacia y desde el aeropuerto Palonegro.",
       "highlights": [
-        "Google Maps",
-        "Google Routes"
+        "Geolocalización con Google Maps",
+        "Cálculo de rutas con Google Routes"
       ],
       "url": null,
       "github": null
@@ -764,8 +769,8 @@
       "company": "Freelance",
       "description": "Aplicación móvil enfocado en entregas bajo demanda",
       "highlights": [
-        "Rappi",
-        "Stripe"
+        "Modelo on-demand tipo Rappi",
+        "Pagos integrados con Stripe"
       ],
       "url": null,
       "github": null
@@ -775,7 +780,10 @@
       "isActive": true,
       "company": "Freelance",
       "description": "Aplicación de reservaciones hoteleras.",
-      "highlights": [],
+      "highlights": [
+        "Gestión de reservas hoteleras",
+        "Flujo de disponibilidad y confirmación"
+      ],
       "url": null,
       "github": null
     },
@@ -784,8 +792,11 @@
       "company": null,
       "isActive": true,
       "description": "Aplicación centrada en la administración y gestión de propiedad horizontal.",
-      "highlights": [],
-      "url": null,
+      "highlights": [
+        "Gestión administrativa de propiedad horizontal",
+        "Digitalización de procesos operativos"
+      ],
+      "url": "https://dashboard.konjuntoapp.com/",
       "github": null
     },
     {
@@ -794,8 +805,8 @@
       "isActive": true,
       "description": "Libro de dragones interactivo para niños.",
       "highlights": [
-        "Animaciones",
-        "Cross Platform"
+        "Experiencia interactiva con animaciones",
+        "Desarrollo cross-platform"
       ],
       "url": null,
       "github": null
@@ -806,8 +817,8 @@
       "isActive": true,
       "description": "Aplicación educativa para niños que enseña sobre los planetas.",
       "highlights": [
-        "Animaciones",
-        "Cross Platform"
+        "Contenido educativo interactivo",
+        "Animaciones multiplataforma"
       ],
       "url": "https://johnathan23.github.io/planets-3a",
       "github": "https://github.com/johnathan23/planets-3a"
@@ -818,7 +829,7 @@
       "isActive": true,
       "description": "App educativa sobre gatitos que enseña a conocer sus razas, necesidades de cuidado, tipo de alimentación y entorno ideal.",
       "highlights": [
-        "Cross Platform"
+        "Aplicación educativa cross-platform"
       ],
       "url": null,
       "github": null
@@ -829,9 +840,9 @@
       "isActive": true,
       "description": "App todo-en-uno que diseña tu CV y portafolio visual para destacar habilidades, proyectos y experiencia de forma profesional y atractiva.",
       "highlights": [
-        "Cross Platform",
-        "Firebase",
-        "Adaptativa"
+        "Generación de CV y portafolio cross-platform",
+        "Integración con Firebase",
+        "Diseño adaptativo"
       ],
       "url": null,
       "github": null
@@ -841,7 +852,10 @@
       "company": null,
       "isActive": true,
       "description": "Red social para mascotas que facilita la adopción, monta y venta de animales",
-      "highlights": [],
+      "highlights": [
+        "Red social vertical para mascotas",
+        "Flujos de adopción, cruza y venta"
+      ],
       "url": "https://play.google.com/apps/testing/co.churquitos.pet_society.pet_society",
       "github": null
     },
@@ -850,7 +864,10 @@
       "company": null,
       "isActive": true,
       "description": "Aplicación para almacenar y gestionar recetas culinarias",
-      "highlights": [],
+      "highlights": [
+        "Gestión de recetas y contenido culinario",
+        "Organización de información gastronómica"
+      ],
       "url": null,
       "github": null
     },
@@ -859,7 +876,10 @@
       "company": null,
       "isActive": true,
       "description": "Aplicación para el seguimiento de vacunación.",
-      "highlights": [],
+      "highlights": [
+        "Seguimiento de esquemas de vacunación",
+        "Gestión de recordatorios de salud"
+      ],
       "url": null,
       "github": null
     },
@@ -869,9 +889,9 @@
       "isActive": true,
       "description": "Base de datos interactiva sobre Pokémons.",
       "highlights": [
-        "GraphQL",
-        "Animaciones",
-        "Cross Platform"
+        "Consumo de datos con GraphQL",
+        "Experiencia animada e interactiva",
+        "Aplicación cross-platform"
       ],
       "url": null,
       "github": null
@@ -881,7 +901,10 @@
       "company": null,
       "isActive": true,
       "description": "Herramienta para el seguimiento y mantenimiento de vehículos.",
-      "highlights": [],
+      "highlights": [
+        "Seguimiento de mantenimiento vehicular",
+        "Gestión operativa de revisiones y servicios"
+      ],
       "url": null,
       "github": null
     },
@@ -890,7 +913,10 @@
       "company": null,
       "isActive": true,
       "description": "Aplicación para la gestión financiera personal.",
-      "highlights": [],
+      "highlights": [
+        "Gestión de finanzas personales",
+        "Control y trazabilidad de movimientos"
+      ],
       "url": null,
       "github": null
     }

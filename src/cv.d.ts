@@ -2,8 +2,9 @@ export interface CV {
   basics: Basics
   work: Array<Work>
   education: Array<Education>
+  diplomas: Array<StudyGroup>
   certificates: Array<Certificates>
-  courses: Array<Courses>
+  courses: Array<StudyGroup>
   skills: Array<Skills>
   languages: Array<Languages>
   hobbies: Hobbies
@@ -61,7 +62,7 @@ interface Certificates {
   url: string
 }
 
-interface Courses {
+interface StudyGroup {
   institution: string,
   area: string,
   studyType: string,
@@ -73,8 +74,8 @@ interface Education {
   area: string
   paused: boolean
   studyType: string
-  startDate: DateStr
-  endDate: DateStr
+  startDate: DateStr | null
+  endDate: DateStr | null
 }
 
 interface Languages {

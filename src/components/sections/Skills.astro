@@ -9,6 +9,18 @@ import Node from "@/icons/node.astro";
 import MySQL from "@/icons/sql.astro";
 import Git from "@/icons/git.astro";
 import GitHub from "@/icons/GitHub.astro";
+import GitLab from "@/icons/gitlab.astro";
+import Bitbucket from "@/icons/bitbucket.astro";
+import Jira from "@/icons/jira.astro";
+import Asana from "@/icons/asana.astro";
+import Trello from "@/icons/trello.astro";
+import Confluence from "@/icons/confluence.astro";
+import Miro from "@/icons/miro.astro";
+import TensorFlow from "@/icons/tensorflow.astro";
+import N8N from "@/icons/n8n.astro";
+import GoogleCloud from "@/icons/googlecloud.astro";
+import Azure from "@/icons/azure.astro";
+import AWS from "@/icons/aws.astro";
 import Tailwind from "@/icons/tailwind.astro";
 import Next from "@/icons/next.astro";
 import { skills } from "@cv";
@@ -16,6 +28,24 @@ import Swift from "@/icons/swift.astro";
 import SwiftUI from "@/icons/swiftui.astro";
 import Kotlin from "@/icons/kotlin.astro";
 import Flutter from "@/icons/flutter.astro";
+import Java from "@/icons/java.astro";
+import ObjectiveC from "@/icons/objectivec.astro";
+import Python from "@/icons/python.astro";
+import PHP from "@/icons/php.astro";
+import Go from "@/icons/go.astro";
+import GraphQL from "@/icons/graphql.astro";
+import MongoDB from "@/icons/mongodb.astro";
+import Firebase from "@/icons/firebase.astro";
+import Supabase from "@/icons/supabase.astro";
+import Postman from "@/icons/postman.astro";
+import Figma from "@/icons/figma.astro";
+import Docker from "@/icons/docker.astro";
+import Bitrise from "@/icons/bitrise.astro";
+import CodeMagic from "@/icons/codemagic.astro";
+import PlayStore from "@/icons/playstore.astro";
+import AppleStore from "@/icons/applestore.astro";
+import AppGallery from "@/icons/appgallery.astro";
+import SkillFallbackIcon from "@/icons/SkillFallbackIcon.astro";
 
 const SKILLS_ICONS: Record<string, any> = {
   HTML,
@@ -27,17 +57,56 @@ const SKILLS_ICONS: Record<string, any> = {
   MySQL,
   Git,
   GitHub,
+  GitLab,
+  Bitbucket,
+  Jira,
+  Asana,
+  Trello,
+  Confluence,
+  Miro,
+  TensorFlow,
+  N8N,
+  GoogleCloud,
+  Azure,
+  AWS,
   Next,
   Tailwind,
   Swift,
   SwiftUI,
   Kotlin,
   Flutter,
+  Java,
+  ObjectiveC,
+  Python,
+  PHP,
+  Go,
+  GraphQL,
+  MongoDB,
+  Firebase,
+  Supabase,
+  Postman,
+  Figma,
+  Docker,
+  Bitrise,
+  CodeMagic,
+  PlayStore,
+  AppleStore,
+  AppGallery,
 };
 
 const ICON_ALIASES: Record<string, string> = {
   "Next.js": "Next",
   "React Native": "React",
+  "Node Js": "Node",
+  SQL: "MySQL",
+  Gitlab: "GitLab",
+  Gilab: "GitLab",
+  "Tensor Flow": "TensorFlow",
+  "Google Cloud": "GoogleCloud",
+  "Objective-C": "ObjectiveC",
+  "Play Store": "PlayStore",
+  "Apple Store": "AppleStore",
+  "App Gallery": "AppGallery",
 };
 ---
 
@@ -50,7 +119,7 @@ const ICON_ALIASES: Record<string, string> = {
 
         return (
           <li>
-            {Icon && <Icon />}
+            {Icon ? <Icon /> : <SkillFallbackIcon />}
             <span>{name}</span>
             {level && <small>({level})</small>}
           </li>
