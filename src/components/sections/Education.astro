@@ -1,9 +1,12 @@
 ---
 import Section from "../Section.astro";
-import { education } from "@cv";
+import { getCv } from "@/lib/cv";
+import { getLabels } from "@/lib/i18n";
+const { education } = getCv(Astro.url.pathname)
+const labels = getLabels(Astro.url.pathname)
 ---
 
-<Section title="Educación">
+<Section title={labels.education}>
   <ul>
     {
       education.map(({ institution, startDate, endDate, area, paused, studyType }) => {
@@ -72,5 +75,10 @@ import { education } from "@cv";
     time {
       text-align: right;
     }
+  }
+
+  @media print {
+    ul { gap: 0.25rem; }
+    article h3, footer p, time { font-size: 0.72rem; }
   }
 </style>

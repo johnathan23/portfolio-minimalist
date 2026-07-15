@@ -1,9 +1,12 @@
 ---
 import Section from "../Section.astro"
-import { languages } from "@cv"
+import { getCv } from "@/lib/cv"
+import { getLabels } from "@/lib/i18n"
+const { languages } = getCv(Astro.url.pathname)
+const labels = getLabels(Astro.url.pathname)
 ---
 
-<Section title="Idiomas">
+<Section title={labels.languages}>
   <ul>
     {
       languages.map(({ language, fluency }) => (

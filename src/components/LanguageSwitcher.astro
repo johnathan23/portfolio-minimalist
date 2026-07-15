@@ -1,0 +1,20 @@
+---
+import { getLocale } from "@/lib/cv"
+
+const locale = getLocale(Astro.url.pathname)
+const spanishUrl = locale === "en" ? "../" : "./"
+const englishUrl = locale === "en" ? "./" : "en/"
+---
+
+<nav class="language-switcher no-print" aria-label="Seleccionar idioma">
+  <a href={spanishUrl} aria-current={locale === "es" ? "page" : undefined}>ES</a>
+  <span aria-hidden="true">/</span>
+  <a href={englishUrl} aria-current={locale === "en" ? "page" : undefined}>EN</a>
+</nav>
+
+<style>
+  .language-switcher { display: flex; gap: 0.35rem; justify-content: flex-end; margin: 0 auto -1.25rem; max-width: 700px; }
+  a { color: #777; font-size: 0.72rem; }
+  a[aria-current="page"] { color: #111; font-weight: 700; }
+  span { color: #bbb; font-size: 0.72rem; }
+</style>

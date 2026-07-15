@@ -8,28 +8,35 @@ import Certifiates from "@/components/sections/Certifiates.astro"
 import Hero from "@/components/sections/Hero.astro"
 import Skills from "@/components/sections/Skills.astro"
 import KeyboardManager from "@/components/KeyboardManager.astro"
-import { basics } from "@cv"
+import { getCv } from "@/lib/cv"
+import { getLabels } from "@/lib/i18n"
+import LanguageSwitcher from "@/components/LanguageSwitcher.astro"
 import Projects from "@/components/sections/Projects.astro"
 import Languages from "@/components/sections/Languages.astro"
 import Courses from "@/components/sections/Courses.astro"
 import Diplomas from "@/components/sections/Diplomas.astro"
 import Hobbies from "@/components/sections/Hobbies.astro"
-const { name, label } = basics
+const { basics: { name, label } } = getCv(Astro.url.pathname)
+const labels = getLabels(Astro.url.pathname)
 ---
 
 <Layout title={`Portafolio de ${name} - ${label}`}>
   <main>
+    <LanguageSwitcher />
     <Hero />
     <About />
-    <Languages />
+    <Skills />
     <Experience />
     <Education />
-    <Diplomas />
     <Certifiates />
-    <Courses />
-    <Skills />
-    <Hobbies />
     <Projects />
+    <details class="additional-details no-print">
+      <summary>{labels.additional}</summary>
+      <Languages />
+      <Diplomas />
+      <Courses />
+      <Hobbies />
+    </details>
   </main>
 
   <KeyboardManager />
@@ -37,14 +44,59 @@ const { name, label } = basics
 
 <style>
   main {
-    padding: 4rem;
+    padding: 2.5rem 1.5rem;
     margin: auto;
     width: 100%;
   }
 
   @media (width <= 700px) {
     main {
-      padding: 2rem;
+      padding: 1.5rem 1rem;
     }
+  }
+
+  .additional-details {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 0 1rem;
+  }
+
+  .additional-details > summary {
+    cursor: pointer;
+    color: #444;
+    display: flex;
+    font-size: 0.9rem;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0.85rem 0;
+  }
+
+  .additional-details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .additional-details > summary::after {
+    color: #777;
+    content: "+";
+    font-size: 1.1rem;
+  }
+
+  .additional-details[open] > summary::after {
+    content: "−";
+  }
+
+  .additional-details[open] > summary {
+    border-bottom: 1px solid #eee;
+  }
+
+  .additional-details[open] {
+    padding-bottom: 0.25rem;
+  }
+
+  .additional-details :global(section) {
+    margin-bottom: 1.25rem;
+    margin-top: 1rem;
   }
 </style>

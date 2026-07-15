@@ -1,6 +1,9 @@
 ---
 import Section from "../Section.astro"
-import { courses } from "@cv"
+import { getCv } from "@/lib/cv"
+import { getLabels } from "@/lib/i18n"
+const { courses } = getCv(Astro.url.pathname)
+const labels = getLabels(Astro.url.pathname)
 
 type CourseGroup = {
   institution: string
@@ -24,7 +27,7 @@ function groupByInstitution(courses: CourseGroup[]): Record<string, CourseGroup[
 const groupedCourses = groupByInstitution(courses as CourseGroup[])
 ---
 
-<Section title="Cursos">
+<Section title={labels.courses}>
   {
     Object.entries(groupedCourses).map(([institution, courseGroups]) => (
       <div>

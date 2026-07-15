@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Johnathan Yesid Silva Parra",
-    "label": "Mobile Developer",
+    "label": "Experienced Developer",
     "image": "/me.webp",
     "email": "johnathanyesid@gmail.com",
     "phone": "+57 3182921612",
-    "url": "https://johnathan23.github.io/",
-    "summary": "As a Mobile Developer, I stand out for my ability to collaborate effectively in a team, adapt to new environments, and learn quickly. I possess the technical skills necessary to perform excellently in the workplace, contributing to business growth through the delivery of positive results. My focus is on fully satisfying client needs, ensuring an optimal user experience, and generating added value for the organization.",
+    "url": "https://johnathan23.github.io/portfolio-minimalist/",
+    "summary": "As a Developer, I excel in collaborating effectively within teams, adapting to new environments, and learning quickly. I possess the technical skills required to deliver excellence in the workplace, contributing to business growth by achieving positive results. My focus is on fully satisfying client needs, ensuring an optimal user experience, and generating added value for the organization.",
     "location": {
       "address": "",
       "postalCode": "681002",
@@ -29,6 +29,24 @@
   },
   "work": [
     {
+      "name": "Epam",
+      "position": "Experienced Developer L3",
+      "url": "https://www.epam.com/",
+      "startDate": "2025-09-23",
+      "endDate": "",
+      "summary": "I contributed to the design, development, and implementation of financial-sector solutions, focused on secure and efficient mobile applications that meet regulatory standards and client needs.",
+      "highlights": ["CI/CD pipeline implementation on AWS", "Micro-frontend-based architecture", "Unit and integration test coverage", "Security and ethical hacking practices"]
+    },
+    {
+      "name": "Tres Astronautas",
+      "position": "Senior Flutter Developer",
+      "url": "https://www.tresastronautas.com/es",
+      "startDate": "2025-07-16",
+      "endDate": "2025-10-10",
+      "summary": "I contributed to the design, development, and implementation of B2B, SaaS, and BaaS web solutions.",
+      "highlights": ["CI/CD implementation in AWS and Azure environments", "Firebase integration at host and application level", "Cloud Functions development for authentication and user management"]
+    },
+    {
       "name": "Apex Global Mobility",
       "position": "Dev Architect with Flutter",
       "url": "https://apexglobal.co/",
@@ -48,7 +66,7 @@
       "startDate": "2024-06-24",
       "endDate": "2024-07-31",
       "summary": "I led the development of 'Loyalty', a loyalty program created with Flutter, achieving a consistent user experience on iOS, Android, and Web.",
-      "highlights": null
+      "highlights": ["Cross-platform Flutter development for iOS, Android, and Web", "Consistent user experience across multiple platforms"]
     },
     {
       "name": "Venko",
@@ -69,7 +87,7 @@
       "startDate": "2021-01-01",
       "endDate": "2021-05-31",
       "summary": "I participated in the design, development, and implementation of 'IvAdventure', an application for automation and intelligent control of devices based on BLE and WiFi, aimed at optimizing traditional switches and meters through a centralized system with ESP32.",
-      "highlights": null
+      "highlights": ["BLE and WiFi connectivity integration with ESP32 devices", "IoT hardware automation and remote control"]
     },
     {
       "name": "High Developer",
@@ -78,50 +96,10 @@
       "startDate": "2018-02-01",
       "endDate": "2021-06-30",
       "summary": "I participated in the design, development, and implementation of mobile solutions oriented towards IoT, health, security, management, and services, using technologies such as Android-Java, Xamarin, Flutter, Swift, and Firebase.",
-      "highlights": null
+      "highlights": ["Multi-stack mobile development with Android, Xamarin, Flutter, and Swift", "Solutions for IoT, healthcare, security, and digital services"]
     }
   ],
   "education": [
-    {
-      "institution": "Netzun & San Ignacio University",
-      "area": "Agile Methodologies",
-      "paused": false,
-      "studyType": "Diploma",
-      "startDate": null,
-      "endDate": "2025-06-17"
-    },
-    {
-      "institution": "Netzun & San Ignacio University",
-      "area": "User  Experience Design",
-      "paused": false,
-      "studyType": "Diploma",
-      "startDate": null,
-      "endDate": "2025-04-22"
-    },
-    {
-      "institution": "Netzun & San Ignacio University",
-      "area": "Mobile Application Development",
-      "paused": false,
-      "studyType": "Diploma",
-      "startDate": null,
-      "endDate": "2025-04-20"
-    },
-    {
-      "institution": "Netzun & San Ignacio University",
-      "area": "iOS",
-      "paused": false,
-      "studyType": "Diploma",
-      "startDate": null,
-      "endDate": "2025-04-20"
-    },
-    {
-      "institution": "Netzun & San Ignacio University",
-      "area": "Android",
-      "paused": false,
-      "studyType": "Diploma",
-      "startDate": null,
-      "endDate": "2025-04-19"
-    },
     {
       "institution": "Pontifical Bolivarian University",
       "area": "Systems Engineering and Computer Science",
@@ -146,6 +124,10 @@
       "startDate": null,
       "endDate": "2014-12-06"
     }
+  ],
+  "diplomas": [
+    { "institution": "Netzun & Dionisio Romero University", "area": "Analytics", "studyType": "Diploma", "courses": ["Power BI and Tableau", "Data Analytics"] },
+    { "institution": "Netzun & San Ignacio University", "area": "Technology", "studyType": "Diploma", "courses": ["Web Programming and Apps", "Agile Methodologies", "User Experience Design", "Mobile Application Development", "iOS", "Android"] }
   ],
   "certificates": [
     {
@@ -203,7 +185,7 @@
       "level": "Advanced"
     },
     {
-      "name": "Gilab",
+      "name": "GitLab",
       "level": "Advanced"
     },
     {
@@ -235,6 +217,14 @@
       "level": "Intermediate"
     },
     {
+      "name": "Tensor Flow",
+      "level": "Advanced"
+    },
+    {
+      "name": "N8N",
+      "level": "Advanced"
+    },
+    {
       "name": "Google Cloud",
       "level": "Expert"
     },
@@ -249,6 +239,10 @@
     {
       "name": "Flutter",
       "level": "Master"
+    },
+    {
+      "name": "Dart",
+      "level": "Advanced"
     },
     {
       "name": "Kotlin",
@@ -277,6 +271,18 @@
     {
       "name": "Python",
       "level": "Basic"
+    },
+    {
+      "name": "PHP",
+      "level": "Advanced"
+    },
+    {
+      "name": "Go",
+      "level": "Advanced"
+    },
+    {
+      "name": "Node Js",
+      "level": "Intermediate"
     },
     {
       "name": "JavaScript",
@@ -371,10 +377,6 @@
     {
       "language": "Portuguese",
       "fluency": "B1"
-    },
-    {
-      "language": "Russian",
-      "fluency": "A2"
     }
   ],
   "hobbies": [
@@ -384,6 +386,9 @@
     "Crafts"
   ],
   "projects": [
+    { "name": "Itau Trader", "company": "Epam", "isActive": true, "description": "Itaú trading platform for managing investments, executing real-time trades, and monitoring markets through secure and efficient tools.", "highlights": ["Real-time trading", "Market data streaming", "Investment portfolio management", "Scalable financial-product architecture", "Secure transactions"], "url": "https://banco.itau.co/web/corporate", "github": null },
+    { "name": "Itau Corporate", "company": "Epam", "isActive": true, "description": "Corporate banking application that centralizes financial operations with security and ease of use.", "highlights": ["Corporate banking platform", "Payments and cash management", "Multi-company support", "High availability", "Secure access"], "url": "https://banco.itau.co/web/corporate", "github": null },
+    { "name": "Divisa", "company": "Tres Astronautas", "isActive": true, "description": "Financial SaaS platform that automates invoice settlement and payments through banking integrations.", "highlights": ["Financial SaaS", "Firebase integration", "Operations in 3 countries"], "url": "https://divisa-464116.web.app/sign-in", "github": null },
     {
       "name": "Pepsi Chat",
       "company": "Apex Global Mobility",
@@ -544,11 +549,11 @@
       "github": null
     },
     {
-      "name": "konjunto",
-      "company": "High Developer",
+      "name": "konjunto app",
+      "company": null,
       "isActive": true,
       "description": "Application focused on the administration and management of horizontal property.",
-      "highlights": [],
+      "highlights": ["Property management administration", "Operational process digitization"],
       "url": null,
       "github": null
     },
@@ -557,7 +562,7 @@
       "company": "High Developer",
       "isActive": true,
       "description": "Application for making reservations for various commercial activities.",
-      "highlights": [],
+      "highlights": ["Digital reservation management", "Availability and scheduling workflow"],
       "url": null,
       "github": null
     },
@@ -598,7 +603,7 @@
       "company": "High Developer",
       "isActive": true,
             "description": "Application focused on the health sector, facilitating the management of invoices and patients.",
-      "highlights": [],
+      "highlights": ["Patient and billing management", "Healthcare process digitization"],
       "url": null,
       "github": null
     },
@@ -614,6 +619,11 @@
       "url": null,
       "github": null
     },
+    { "name": "Amigo Doc", "company": "Freelance", "isActive": true, "description": "Medical CRM that centralizes patient, appointment, and communication management to improve clinical follow-up.", "highlights": ["AI-assisted automation", "Cross-platform architecture"], "url": "https://admin.amigodocapp.com/login", "github": null },
+    { "name": "NetChef", "company": "Freelance", "isActive": true, "description": "Restaurant application that centralizes orders, menus, kitchen workflows, and payments.", "highlights": ["Payment integration", "Cross-platform architecture", "PHP Laravel backend"], "url": "https://netchef-712d8.firebaseapp.com/login-page", "github": null },
+    { "name": "Gente Mejor", "company": "Freelance", "isActive": true, "description": "CRM for nutritionists that centralizes patient care, follow-up, and communication.", "highlights": ["AI automation and assistance"], "url": "https://admin.gentemejor.com/login", "github": null },
+    { "name": "Efood", "company": "Freelance", "isActive": true, "description": "Restaurant delivery application integrating menus, orders, and online payments.", "highlights": ["Cross-platform delivery platform"], "url": null, "github": null },
+    { "name": "Auto Rent Pro", "company": "Freelance", "isActive": true, "description": "Vehicle rental management application integrating bookings, payments, and fleet control.", "highlights": ["OpenPay payment integration", "Twilio notifications and communication"], "url": "https://autogps.iqnetingtest.site/", "github": null },
     {
       "name": "Taxi Renta",
       "isActive": true,
@@ -643,10 +653,11 @@
       "isActive": true,
       "company": "Freelance",
       "description": "Hotel reservation application.",
-      "highlights": [],
+      "highlights": ["Hotel reservation management", "Availability and confirmation workflow"],
       "url": null,
       "github": null
     },
+    { "name": "Dragon Books", "company": null, "isActive": true, "description": "Interactive dragon book for children.", "highlights": ["Interactive animated experience", "Cross-platform development"], "url": null, "github": null },
     {
       "name": "Planets",
       "company": null,
@@ -688,7 +699,7 @@
       "company": null,
       "isActive": true,
       "description": "Social network for pets that facilitates adoption, breeding, and sale of animals.",
-      "highlights": [],
+      "highlights": ["Vertical social network for pets", "Adoption, breeding, and sale workflows"],
       "url": "https://play.google.com/apps/testing/co.churquitos.pet_society.pet_society",
       "github": null
     },
@@ -697,7 +708,7 @@
       "company": null,
       "isActive": true,
       "description": "Application for storing and managing culinary recipes.",
-      "highlights": [],
+      "highlights": ["Recipe and culinary content management", "Gastronomic information organization"],
       "url": null,
       "github": null
     },
@@ -706,7 +717,7 @@
       "company": null,
       "isActive": true,
       "description": "Application for tracking vaccinations.",
-      "highlights": [],
+      "highlights": ["Vaccination schedule tracking", "Health reminder management"],
       "url": null,
       "github": null
     },
@@ -728,7 +739,7 @@
       "company": null,
       "isActive": true,
       "description": "Tool for tracking and maintaining vehicles.",
-      "highlights": [],
+      "highlights": ["Vehicle maintenance tracking", "Operational management of inspections and services"],
       "url": null,
       "github": null
     },
@@ -737,7 +748,7 @@
       "company": null,
       "isActive": true,
       "description": "Application for personal financial management.",
-      "highlights": [],
+      "highlights": ["Personal finance management", "Transaction control and traceability"],
       "url": null,
       "github": null
     }

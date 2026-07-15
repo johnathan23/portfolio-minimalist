@@ -1,5 +1,5 @@
 ---
-import { basics } from "@cv"
+import { getCv } from "@/lib/cv"
 import Section from "@/components/Section.astro"
 import Mail from "@/icons/Mail.astro"
 import Phone from "@/icons/Phone.astro"
@@ -9,7 +9,7 @@ import GitHub from "@/icons/GitHub.astro"
 import WorldMap from "@/icons/WorldMap.astro"
 import type { SocialIcon } from "@/types"
 
-const { name, label, image, location, profiles, phone, email } = basics
+const { name, label, location, profiles, phone, email, url } = getCv(Astro.url.pathname).basics
 const { city, region } = location
 
 const SOCIAL_ICONS: SocialIcon = {
@@ -18,10 +18,8 @@ const SOCIAL_ICONS: SocialIcon = {
   X,
 }
 
-const linkedInfo = profiles.find(({ network }) => network === "LinkedIn")
-const linkedUrl = linkedInfo?.url
-
-const printInfo = [email, phone, /* linkedUrl */].filter(Boolean).join(" • ")
+const profileUrls = profiles.map(({ url }) => url)
+const printInfo = [`${city}, ${region}`, email, phone, url, ...profileUrls].filter(Boolean).join(" | ")
 ---
 
 <Section>
@@ -62,7 +60,7 @@ const printInfo = [email, phone, /* linkedUrl */].filter(Boolean).join(" • ")
           )
         }
         {
-          profiles.map(({ network, url, username }) => {
+          profiles.map(({ network, url }) => {
             const Icon = SOCIAL_ICONS[network]
 
             return (
@@ -180,5 +178,14 @@ const printInfo = [email, phone, /* linkedUrl */].filter(Boolean).join(" • ")
     figure {
       margin: 0 auto;
     }
+  }
+
+  @media print {
+    .container { display: block; }
+    .info { display: block; padding: 0; }
+    h1 { font-size: 1.5rem; letter-spacing: 0; }
+    h2 { color: #222; font-size: 0.95rem; margin-top: 0.1rem; }
+    .info > span { display: none; }
+    footer.print { color: #333; display: block !important; font-size: 0.7rem; line-height: 1.35; margin-top: 0.3rem; overflow-wrap: anywhere; }
   }
 </style>
