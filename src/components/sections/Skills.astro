@@ -23,7 +23,9 @@ import Azure from "@/icons/azure.astro";
 import AWS from "@/icons/aws.astro";
 import Tailwind from "@/icons/tailwind.astro";
 import Next from "@/icons/next.astro";
-import { skills } from "@cv";
+import { getCv } from "@/lib/cv";
+import { getLocale } from "@/lib/cv";
+import { getLabels } from "@/lib/i18n";
 import Swift from "@/icons/swift.astro";
 import SwiftUI from "@/icons/swiftui.astro";
 import Kotlin from "@/icons/kotlin.astro";
@@ -108,29 +110,57 @@ const ICON_ALIASES: Record<string, string> = {
   "Apple Store": "AppleStore",
   "App Gallery": "AppGallery",
 };
+
+const { skills } = getCv(Astro.url.pathname)
+const labels = getLabels(Astro.url.pathname)
+const locale = getLocale(Astro.url.pathname)
+
+const LEVEL_ORDER = locale === "en"
+  ? ["Master", "Expert", "Advanced", "Intermediate", "Basic"]
+  : ["Master", "Experto", "Avanzado", "Intermedio", "Basico"]
+const PRINTABLE_LEVELS = new Set(LEVEL_ORDER.slice(0, -1))
+const printableSkills = skills.filter(({ level }) => PRINTABLE_LEVELS.has(level))
+
+const skillGroups = LEVEL_ORDER.map((level) => ({
+  level,
+  skills: skills.filter((skill) => skill.level === level),
+})).filter(({ skills }) => skills.length > 0)
 ---
 
-<Section title="Habilidades">
-  <ul>
-    {
-      skills.map(({ name, level }) => {
-        const iconName = ICON_ALIASES[name] || name;
-        const Icon = SKILLS_ICONS[iconName];
+<Section title={labels.skills}>
+  <div class="ats-skills print">
+    <p>{printableSkills.map(({ name }) => name).join(" · ")}</p>
+  </div>
 
-        return (
-          <li>
-            {Icon ? <Icon /> : <SkillFallbackIcon />}
-            <span>{name}</span>
-            {level && <small>({level})</small>}
-          </li>
-        );
-      })
-    }
-  </ul>
+  <div class="skills-groups no-print">
+    {skillGroups.map(({ level, skills: groupSkills }) => (
+      <div class="skill-group">
+        <h3>{locale === "en" ? "Level" : "Nivel"} {level}</h3>
+        <ul class="skills-list">
+          {groupSkills.map((skill) => {
+            const iconName = ICON_ALIASES[skill.name] || skill.name
+            const Icon = SKILLS_ICONS[iconName]
+
+            return <li>{Icon ? <Icon /> : <SkillFallbackIcon />}<span>{skill.name}</span></li>
+          })}
+        </ul>
+      </div>
+    ))}
+  </div>
 </Section>
 
 <style>
-  ul {
+  .skills-groups { display: grid; gap: 1rem; }
+
+  .skill-group h3, .other-skills summary {
+    color: #555;
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin: 0 0 0.45rem;
+  }
+
+  .skills-list {
     display: inline-flex;
     gap: 8px;
     flex-wrap: wrap;
@@ -148,9 +178,6 @@ const ICON_ALIASES: Record<string, string> = {
     padding: 0.2rem 0.6rem;
   }
 
-  li small {
-    font-size: 0.7rem;
-    color: #666;
-    margin-left: 2px;
-  }
+  .ats-skills p { color: #222; font-size: 0.7rem; line-height: 1.3; margin: 0; }
+  .ats-skills strong { color: #111; }
 </style>

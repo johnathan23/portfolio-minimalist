@@ -1,135 +1,134 @@
 ---
-import Section from "../Section.astro";
-import { work } from "@cv";
-import GitHub from "@/icons/GitHub.astro";
+import Section from "../Section.astro"
+import { getCv } from "@/lib/cv"
+import { getLabels } from "@/lib/i18n"
+
+type Project = {
+  name: string
+  company?: string | null
+  description: string
+  highlights: string[]
+  url?: string | null
+}
+
+const normalizeCompany = (value?: string | null) => (value ?? "").toLowerCase().replace(/[^a-z0-9]/g, "")
+const { work, projects } = getCv(Astro.url.pathname)
+const labels = getLabels(Astro.url.pathname)
+const projectList = projects as unknown as Project[]
+
+const formatDate = (dateStr: string | number | Date | null) => {
+  if (!dateStr) return labels.current
+  return new Date(dateStr).toLocaleDateString(Astro.url.pathname.includes("/en") ? "en-US" : "es-ES", { month: "short", year: "numeric" })
+}
+
+const getDuration = (start: string | number | Date, end: string | number | Date | null) => {
+  const startDate = new Date(start)
+  const endDate = end ? new Date(end) : new Date()
+  const months = (endDate.getFullYear() - startDate.getFullYear()) * 12 + endDate.getMonth() - startDate.getMonth()
+  const years = Math.floor(months / 12)
+  const remainingMonths = months % 12
+  const parts = []
+  if (years) parts.push(`${years} año${years > 1 ? "s" : ""}`)
+  if (remainingMonths) parts.push(`${remainingMonths} mes${remainingMonths > 1 ? "es" : ""}`)
+  return parts.join(" ") || "Menos de 1 mes"
+}
 ---
 
-<Section title="Experiencia laboral">
-  <ul>
+<Section title={labels.experience}>
+  <div class="experience-list">
     {
-      work.map(({ name, startDate, endDate, position, summary, highlights, url }) => {
-        const formatDate = (dateStr: string | number | Date) => {
-          if (!dateStr) return "Actual";
-          const date = new Date(dateStr);
-          return date.toLocaleDateString("es-ES", {
-            day: "2-digit",
-            month: "2-digit",
-            year: "numeric",
-          });
-        };
-
-        const getDuration = (start: string | number | Date, end: string | number | Date) => {
-          const startDate = new Date(start);
-          const endDate = end ? new Date(end) : new Date();
-
-          let months =
-            (endDate.getFullYear() - startDate.getFullYear()) * 12 +
-            (endDate.getMonth() - startDate.getMonth());
-
-          const years = Math.floor(months / 12);
-          const remainingMonths = months % 12;
-
-          const parts = [];
-          if (years > 0) parts.push(`${years} año${years > 1 ? "s" : ""}`);
-          if (remainingMonths > 0) parts.push(`${remainingMonths} mes${remainingMonths > 1 ? "es" : ""}`);
-
-          return parts.length ? parts.join(" ") : "Menos de 1 mes";
-        };
+      work.map((job, index) => {
+        const highlights = job.highlights ?? []
+        const jobProjects = projectList.filter(
+          (project) => normalizeCompany(project.company) === normalizeCompany(job.name),
+        )
 
         return (
-          <li>
-            <article>
-              <header>
-                <div>
-                  <h3>
-                    <a href={url} title={`Ver ${name}`} target="_blank">
-                      {name}
-                    </a>
-                  </h3>
-                  <h4>{position}</h4>
-                </div>
+          <details class="experience" open={index === 0}>
+            <summary>
+              <span class="role">
+                <strong>{job.position}</strong>
+                <span>{job.name}</span>
+              </span>
+              <span class="period">
+                {formatDate(job.startDate)} — {formatDate(job.endDate)}
+              </span>
+            </summary>
 
-                <div class="date-info">
-                  <time datetime={startDate} data-title={startDate}>
-                    {formatDate(startDate)}
-                  </time>
-                  {" - "}
-                  <time datetime={endDate} data-title={endDate}>
-                    {formatDate(endDate)}
-                  </time>
-                  <span class="duration">({getDuration(startDate, endDate)})</span>
-                </div>
-              </header>
+            <div class="experience-content">
+              <p>{job.summary}</p>
+              {highlights.length > 0 && (
+                <ul class="work-highlights">
+                  {highlights.map((item) => <li>{item}</li>)}
+                </ul>
+              )}
 
-              <footer>
-                <p>{summary}</p>
-                {highlights && highlights.length > 0 && (
-                  <ul class="work-highlights">
-                    {highlights.map((item) => (
-                      <li>{item}</li>
+              {jobProjects.length > 0 && (
+                <details class="project-details">
+                  <summary>{labels.featuredProjects} ({jobProjects.length})</summary>
+                  <ul class="project-list">
+                    {jobProjects.map((project) => (
+                      <li>
+                        <div>
+                          {project.url ? (
+                            <a href={project.url} target="_blank" rel="noopener noreferrer">{project.name}</a>
+                          ) : <strong>{project.name}</strong>}
+                          <p>{project.description}</p>
+                        </div>
+                        {project.highlights?.length > 0 && <span>{project.highlights.join(" · ")}</span>}
+                      </li>
                     ))}
                   </ul>
-                )}
-              </footer>
-            </article>
-          </li>
-        );
+                </details>
+              )}
+            </div>
+            <span class="print-duration">{getDuration(job.startDate, job.endDate)}</span>
+          </details>
+        )
       })
     }
-  </ul>
+  </div>
 </Section>
 
 <style>
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  article h3 {
-    font-weight: 500;
-    color: #111;
-  }
-
-  article h3 a {
-    color: #111;
-  }
-
-  article h3 a:hover {
-    text-decoration: underline;
-  }
-
-  article h4 {
-    color: #222;
-    font-weight: 400;
-    margin: 4px 0;
-  }
-
-  .date-info {
-    display: flex;
-    gap: 0.25rem;
-    flex-wrap: wrap;
-    font-size: 0.85rem;
-    color: #555;
-  }
-
-  .duration {
-    font-style: italic;
-    opacity: 0.8;
-  }
-
-  footer p {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-
-  .work-highlights {
-    margin-top: 0.5rem;
-    padding-left: 1rem;
-    list-style-type: disc;
-    font-size: 0.75rem;
-    line-height: 1.3;
-    color: #444;
+  .experience-list { display: grid; gap: 0.65rem; }
+  .experience { border: 1px solid #e8e8e8; border-radius: 8px; background: #fff; }
+  summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.85rem 1rem; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: #777; font-size: 1.1rem; }
+  details[open] > summary::after { content: "−"; }
+  .role { display: grid; gap: 0.15rem; }
+  .role strong { color: #111; font-family: system-ui, sans-serif; font-size: 0.95rem; }
+  .role span, .period { color: #666; font-size: 0.82rem; }
+  .period { white-space: nowrap; }
+  .experience-content { border-top: 1px solid #eee; padding: 0.85rem 1rem 1rem; }
+  .experience-content > p { font-size: 0.85rem; }
+  .work-highlights { display: grid; gap: 0.35rem; margin: 0.7rem 0 0; }
+  .work-highlights li { border-left: 2px solid #cfcfcf; color: #444; font-size: 0.78rem; line-height: 1.4; padding-left: 0.6rem; }
+  .project-details { margin-top: 0.8rem; }
+  .project-details > summary { border-top: 1px solid #eee; color: #333; font-size: 0.82rem; padding: 0.7rem 0 0; }
+  .project-list { display: grid; gap: 0.65rem; margin: 0.75rem 0 0; }
+  .project-list li { border-left: 2px solid #ddd; padding-left: 0.7rem; }
+  .project-list a, .project-list strong { color: #111; font-size: 0.85rem; }
+  .project-list a:hover { text-decoration: underline; }
+  .project-list p { font-size: 0.78rem; margin-top: 0.15rem; }
+  .project-list span { color: #666; display: block; font-size: 0.72rem; line-height: 1.4; margin-top: 0.25rem; }
+  .print-duration { display: none; }
+  @media (width <= 700px) { summary { align-items: flex-start; } .period { font-size: 0.72rem; } }
+  @media print {
+    .experience { border: 0; border-radius: 0; break-inside: avoid; position: relative; }
+    .experience:not(:last-child) { border-bottom: 1px solid #ddd; }
+    .experience summary { cursor: default; display: block; padding: 0.35rem 0 0.15rem; }
+    .experience summary::after { display: none; }
+    .role { display: inline; }
+    .role strong::after { content: " · "; }
+    .role span { color: #222; }
+    .period { display: block; font-size: 0.72rem; margin-top: 0.1rem; }
+    .experience-content { border: 0; display: block; padding: 0 0 0.4rem; }
+    .experience-content > p { display: none; }
+    .work-highlights { display: block; list-style: disc; margin: 0.15rem 0 0; padding-left: 1rem; }
+    .work-highlights li { border: 0; font-size: 0.7rem; line-height: 1.25; padding-left: 0; }
+    .work-highlights li:nth-child(n + 3) { display: none; }
+    .project-details, .print-duration { display: none !important; }
   }
 </style>

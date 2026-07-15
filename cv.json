@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Johnathan Yesid Silva Parra",
-    "label": "Mobile Developer",
+    "label": "Experienced Developer",
     "image": "/me.webp",
     "email": "johnathanyesid@gmail.com",
     "phone": "+57 3182921612",
-    "url": "https://johnathan23.github.io/",
-    "summary": "Como Developer, me destaco por mi habilidad para colaborar eficazmente en equipo, adaptarme a nuevos entornos y aprender con rapidez. Poseo las competencias técnicas necesarias para desempeñarme con excelencia en el ámbito laboral, contribuyendo al crecimiento empresarial mediante la entrega de resultados positivos. Mi enfoque está en satisfacer plenamente las necesidades de los clientes, asegurando una experiencia de usuario óptima y generando valor agregado para la organización.",
+    "url": "https://johnathan23.github.io/portfolio-minimalist/",
+    "summary": "Como Desarrollador, me destaco por mi habilidad para colaborar eficazmente en equipo, adaptarme a nuevos entornos y aprender con rapidez. Poseo las competencias técnicas necesarias para desempeñarme con excelencia en el ámbito laboral, contribuyendo al crecimiento empresarial mediante la entrega de resultados positivos. Mi enfoque está en satisfacer plenamente las necesidades de los clientes, asegurando una experiencia de usuario óptima y generando valor agregado para la organización.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -30,7 +30,7 @@
   "work": [
     {
       "name": "Epam",
-      "position": "Sr Flutter Developer",
+      "position": "Experienced Developer L3",
       "url": "https://www.epam.com/",
       "startDate": "2025-09-23",
       "endDate": "",
@@ -228,7 +228,7 @@
       "level": "Avanzado"
     },
     {
-      "name": "Gilab",
+      "name": "GitLab",
       "level": "Avanzado"
     },
     {
@@ -282,6 +282,10 @@
     {
       "name": "Flutter",
       "level": "Master"
+    },
+    {
+      "name": "Dart",
+      "level": "Avanzado"
     },
     {
       "name": "Kotlin",

@@ -1,11 +1,13 @@
 ---
 import Section from "../Section.astro"
 
-import { basics } from "@cv"
-const { summary } = basics
+import { getCv } from "@/lib/cv"
+import { getLabels } from "@/lib/i18n"
+const { summary } = getCv(Astro.url.pathname).basics
+const labels = getLabels(Astro.url.pathname)
 ---
 
-<Section title="Sobre mí">
+<Section title={labels.profile}>
   <p>
     {summary}
   </p>

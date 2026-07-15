@@ -1,182 +1,87 @@
 ---
-import GitHub from "@/icons/GitHub.astro"
 import Section from "../Section.astro"
-import { projects } from "@cv"
+import { getCv } from "@/lib/cv"
+import { getLabels } from "@/lib/i18n"
 
-// Definir tipo para proyecto
-type Project = {
-  name: string
-  company?: string
-  isActive?: boolean
-  description: string
-  highlights: string[]
-  url: string
-  github?: string
-}
-
-// Agrupar proyectos por compañía
-function groupByCompany(projects: Project[]): Record<string, Project[]> {
-  const grouped: Record<string, Project[]> = {}
-  for (const project of projects) {
-    const company = project.company || "Proyectos personales"
-    if (!grouped[company]) {
-      grouped[company] = []
-    }
-    grouped[company].push(project)
-  }
-  return grouped
-}
-
-const groupedProjects = groupByCompany(projects as unknown as Project[])
+type Project = { name: string; company?: string | null; description: string; highlights: string[]; url?: string | null }
+const { projects } = getCv(Astro.url.pathname)
+const labels = getLabels(Astro.url.pathname)
+const independentProjects = (projects as unknown as Project[]).filter((project) => !project.company || project.company === "Freelance")
+const freelanceProjects = independentProjects.filter(({ company }) => company === "Freelance")
+const personalProjects = independentProjects.filter(({ company }) => !company)
+const projectGroups = [
+  { title: labels.freelance, projects: freelanceProjects },
+  { title: labels.personal, projects: personalProjects },
+]
 ---
 
-<Section title="Proyectos">
-  {
-    Object.entries(groupedProjects).map(([company, companyProjects]) => (
-      <div>
-        <h3>{company}</h3>
-        <ul>
-          {
-            companyProjects.map((project) => (
-              <li>
-                <article>
-                  <header>
-                    <h4>
-                      <a href={project.url} target="_blank" title={`Ver el proyecto ${project.name}`}>
-                        {project.name}
-                      </a>
-                      {project.isActive && <span>•</span>}
-                      {project.github && (
-                        <a
-                          class="github-code-link"
-                          href={project.github}
-                          target="_blank"
-                          title={`Ver código fuente del proyecto ${project.name}`}
-                        >
-                          <GitHub />
-                        </a>
-                      )}
-                    </h4>
-                    <p>{project.description}</p>
-                  </header>
-                  <footer>
-                    {project.highlights.map((highlight) => (
-                      <span>{highlight}</span>
-                    ))}
-                  </footer>
-                </article>
-              </li>
-            ))
-          }
-        </ul>
+<Section title={labels.projects}>
+  <div class="print-projects print">
+    {projectGroups.map(({ title, projects: groupProjects }) => (
+      <div class="project-group">
+        <h3>{title}</h3>
+        <p>
+          {groupProjects.map((project, index) => (
+            <Fragment>
+              {project.url ? <a href={project.url} target="_blank" rel="noopener noreferrer">{project.name}</a> : <span>{project.name}</span>}
+              {index < groupProjects.length - 1 && <span class="separator"> · </span>}
+            </Fragment>
+          ))}
+        </p>
       </div>
-    ))
-  }
+    ))}
+  </div>
+
+  <div class="screen-projects no-print">
+    {projectGroups.map(({ title, projects: groupProjects }) => (
+      <details>
+        <summary>{title} <span>{groupProjects.length} {labels.projectsCount}</span></summary>
+        <ul>
+          {groupProjects.map((project) => (
+            <li>
+              <div>
+                {project.url ? <a href={project.url} target="_blank" rel="noopener noreferrer">{project.name}</a> : <strong>{project.name}</strong>}
+                <p>{project.description}</p>
+              </div>
+              {project.highlights.length > 0 && (
+                <div class="project-highlights">
+                  {project.highlights.map((highlight) => <span>{highlight}</span>)}
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+      </details>
+    ))}
+  </div>
 </Section>
 
 <style>
-  ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-inline: -16px;
-    margin-bottom: 2rem;
-  }
+  .print-projects { display: grid; gap: 0.5rem; }
+  .project-group { border-left: 2px solid #ddd; padding-left: 0.7rem; }
+  h3 { color: #222; font-family: inherit; font-size: 0.78rem; margin: 0 0 0.15rem; }
+  .print-projects p { font-size: 0.78rem; line-height: 1.45; }
+  .print-projects a { color: #222; text-decoration: underline; text-underline-offset: 2px; }
+  .separator { color: #aaa; }
 
-  h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin: 1rem 0 0.5rem 0;
-  }
-
-  article {
-    border-radius: 8px;
-    border: 1px solid #f2f2f2;
-    gap: 16px;
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-    height: 100%;
-  }
-
-  article header {
-    flex: 1;
-  }
-
-  article h4 {
-    margin-bottom: 4px;
-    font-size: 1rem;
-  }
-
-  article a {
-    color: #111;
-  }
-
-  article a:hover {
-    text-decoration: underline;
-  }
-
-  article p {
-    font-size: 0.75rem;
-    line-height: 1.2rem;
-    margin-bottom: 4px;
-  }
-
-  article h4 span {
-    color: rgb(0, 188, 47);
-    animation-name: flicker;
-    animation-duration: 3s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite;
-  }
-
-  footer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    font-size: 0.6rem;
-  }
-
-  footer span {
-    border-radius: 6px;
-    background: #eee;
-    color: #444;
-    font-size: 0.6rem;
-    font-weight: 500;
-    padding: 0.2rem 0.6rem;
-  }
-
-  .github-code-link {
-    margin-left: 5px;
-  }
-
-  @keyframes flicker {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.25;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @media (width <= 700px) {
-    ul {
-      margin-inline: 0px;
-    }
-
-    article {
-      border: none;
-      box-shadow: 0 1px 1px #f2f2f2;
-      padding: 0 0 16px 0;
-    }
-  }
+  .screen-projects { display: grid; gap: 0.65rem; }
+  .screen-projects details { border: 1px solid #e8e8e8; border-radius: 8px; padding: 0 1rem; }
+  .screen-projects summary { cursor: pointer; display: flex; align-items: center; justify-content: space-between; color: #333; font-size: 0.85rem; list-style: none; padding: 0.85rem 0; }
+  .screen-projects summary::-webkit-details-marker { display: none; }
+  .screen-projects summary::after { color: #777; content: "+"; font-size: 1.1rem; }
+  .screen-projects details[open] summary::after { content: "−"; }
+  .screen-projects summary span { color: #777; font-size: 0.72rem; margin-left: 0.35rem; }
+  .screen-projects ul { display: grid; gap: 0.65rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 0 0 1rem; }
+  .screen-projects li { border-left: 2px solid #ddd; padding-left: 0.7rem; }
+  .screen-projects a, .screen-projects strong { color: #111; font-size: 0.85rem; }
+  .screen-projects a:hover { text-decoration: underline; }
+  .screen-projects p { font-size: 0.78rem; margin-top: 0.15rem; }
+  .project-highlights { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.45rem; }
+  .project-highlights span { background: #f3f3f3; border-radius: 999px; color: #555; font-size: 0.65rem; line-height: 1.25; padding: 0.18rem 0.45rem; }
 
   @media print {
-    article h4 span {
-      animation-name: none;
-    }
+    .print-projects { gap: 0.2rem; }
+    .project-group { padding-left: 0.45rem; }
+    h3, p { font-size: 0.68rem; }
   }
 </style>

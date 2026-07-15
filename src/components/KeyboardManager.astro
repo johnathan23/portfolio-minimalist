@@ -2,9 +2,9 @@
 import 'hotkeypad/reset.css'
 import 'hotkeypad/index.css'
 import { type SocialIcon } from "@/types"
-import { basics } from "@cv"
+import { getCv } from "@/lib/cv"
 
-const { profiles } = basics
+const { profiles } = getCv(Astro.url.pathname).basics
 
 const SOCIAL_ICONS: SocialIcon = {
   GitHub: `<svg

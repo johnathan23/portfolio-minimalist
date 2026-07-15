@@ -1,9 +1,12 @@
 ---
 import Section from "../Section.astro";
-import { certificates } from "@cv";
+import { getCv } from "@/lib/cv";
+import { getLabels } from "@/lib/i18n";
+const { certificates } = getCv(Astro.url.pathname)
+const labels = getLabels(Astro.url.pathname)
 ---
 
-<Section title="Certificaciones">
+<Section title={labels.certifications}>
   <ul>
     {
       certificates.map(({ name, date, validThrough, issuer, url }) => {
@@ -100,5 +103,12 @@ import { certificates } from "@cv";
     .cert-date {
       align-self: flex-end;
     }
+  }
+
+  @media print {
+    ul { display: block; }
+    li { break-inside: avoid; }
+    article { border: 0; box-shadow: none; padding: 0.2rem 0; }
+    .cert-info h3, .cert-info p, .cert-date { font-size: 0.68rem; }
   }
 </style>

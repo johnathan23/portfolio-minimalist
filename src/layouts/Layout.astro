@@ -1,5 +1,5 @@
 ---
-import { basics } from "@cv"
+import { getCv } from "@/lib/cv"
 
 interface Props {
   title: string
@@ -7,7 +7,7 @@ interface Props {
 
 const { title } = Astro.props
 
-const { image, summary, url } = basics
+const { image, summary, url } = getCv(Astro.url.pathname).basics
 ---
 
 <!doctype html>
@@ -27,7 +27,7 @@ const { image, summary, url } = basics
     <meta property="og:image" content="" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content={url.split("//")[1] ?? ''} />
+    <meta property="twitter:domain" content={url?.split("//")[1] ?? ''} />
     <meta property="twitter:url" content={url} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={summary} />
@@ -105,7 +105,17 @@ const { image, summary, url } = basics
   }
 
   @media print {
+    @page { margin: 10mm 12mm; }
+
+    html { font-family: Arial, Helvetica, sans-serif; letter-spacing: normal; }
+
+    body { color: #111; font-size: 10pt; }
+
     .no-print {
+      display: none !important;
+    }
+
+    .screen-only {
       display: none !important;
     }
 
@@ -120,5 +130,11 @@ const { image, summary, url } = basics
     article {
       break-inside: avoid;
     }
+
+    section { max-width: none !important; margin-bottom: 0.45rem !important; }
+
+    h2 { border-bottom: 1px solid #222; font-size: 0.95rem !important; line-height: 1.2 !important; margin-bottom: 0.3rem !important; padding-bottom: 0.12rem; text-transform: uppercase; }
+
+    a { color: inherit !important; text-decoration: none !important; }
   }
 </style>
