@@ -64,6 +64,18 @@ const getDuration = (start: string | number | Date, end: string | number | Date 
               )}
 
               {jobProjects.length > 0 && (
+                <p class="print print-project-list">
+                  <strong>{labels.projectsWorked}</strong>{" "}
+                  {jobProjects.map((project, index) => (
+                    <Fragment>
+                      {project.url ? <a href={project.url}>{project.name}</a> : <span>{project.name}</span>}
+                      {index < jobProjects.length - 1 && " · "}
+                    </Fragment>
+                  ))}
+                </p>
+              )}
+
+              {jobProjects.length > 0 && (
                 <details class="project-details">
                   <summary>{labels.featuredProjects} ({jobProjects.length})</summary>
                   <ul class="project-list">
@@ -71,7 +83,10 @@ const getDuration = (start: string | number | Date, end: string | number | Date 
                       <li>
                         <div>
                           {project.url ? (
-                            <a href={project.url} target="_blank" rel="noopener noreferrer">{project.name}</a>
+                            <Fragment>
+                              <strong>{project.name}</strong>
+                              <a class="project-link-hint" href={project.url} target="_blank" rel="noopener noreferrer">{labels.viewProject} ↗</a>
+                            </Fragment>
                           ) : <strong>{project.name}</strong>}
                           <p>{project.description}</p>
                         </div>
@@ -105,12 +120,14 @@ const getDuration = (start: string | number | Date, end: string | number | Date 
   .experience-content > p { font-size: 0.85rem; }
   .work-highlights { display: grid; gap: 0.35rem; margin: 0.7rem 0 0; }
   .work-highlights li { border-left: 2px solid #cfcfcf; color: #444; font-size: 0.78rem; line-height: 1.4; padding-left: 0.6rem; }
+  .print-project-list { display: none; }
   .project-details { margin-top: 0.8rem; }
   .project-details > summary { border-top: 1px solid #eee; color: #333; font-size: 0.82rem; padding: 0.7rem 0 0; }
   .project-list { display: grid; gap: 0.65rem; margin: 0.75rem 0 0; }
   .project-list li { border-left: 2px solid #ddd; padding-left: 0.7rem; }
   .project-list a, .project-list strong { color: #111; font-size: 0.85rem; }
   .project-list a:hover { text-decoration: underline; }
+  .project-link-hint { background: #f3f3f3; border-radius: 999px; color: #444; display: inline-block; font-size: 0.65rem; font-weight: 500; margin-left: 0.45rem; padding: 0.12rem 0.4rem; white-space: nowrap; }
   .project-list p { font-size: 0.78rem; margin-top: 0.15rem; }
   .project-list span { color: #666; display: block; font-size: 0.72rem; line-height: 1.4; margin-top: 0.25rem; }
   .print-duration { display: none; }
@@ -125,10 +142,13 @@ const getDuration = (start: string | number | Date, end: string | number | Date 
     .role span { color: #222; }
     .period { display: block; font-size: 0.72rem; margin-top: 0.1rem; }
     .experience-content { border: 0; display: block; padding: 0 0 0.4rem; }
+    .experience:not([open]) > .experience-content { display: block !important; }
     .experience-content > p { display: none; }
     .work-highlights { display: block; list-style: disc; margin: 0.15rem 0 0; padding-left: 1rem; }
     .work-highlights li { border: 0; font-size: 0.7rem; line-height: 1.25; padding-left: 0; }
     .work-highlights li:nth-child(n + 3) { display: none; }
+    .print-project-list { color: #444; display: block; font-size: 0.7rem; line-height: 1.25; margin-top: 0.25rem; }
+    .print-project-list strong { color: #222; }
     .project-details, .print-duration { display: none !important; }
   }
 </style>

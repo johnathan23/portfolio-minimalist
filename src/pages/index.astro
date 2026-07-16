@@ -24,19 +24,30 @@ const labels = getLabels(Astro.url.pathname)
   <main>
     <LanguageSwitcher />
     <Hero />
-    <About />
-    <Skills />
-    <Experience />
-    <Education />
-    <Certifiates />
-    <Projects />
-    <details class="additional-details no-print">
-      <summary>{labels.additional}</summary>
+    <div class="screen-only">
+      <About />
+      <Skills />
+      <Experience />
+      <Education />
+      <Certifiates />
+      <Projects />
+      <details class="additional-details">
+        <summary>{labels.additional}</summary>
+        <Languages />
+        <Diplomas />
+        <Courses />
+        <Hobbies />
+      </details>
+    </div>
+    <div class="print">
+      <About />
+      <Experience />
+      <Certifiates />
+      <Education />
+      <Skills />
       <Languages />
-      <Diplomas />
-      <Courses />
-      <Hobbies />
-    </details>
+      <Projects />
+    </div>
   </main>
 
   <KeyboardManager />

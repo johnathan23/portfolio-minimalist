@@ -11,6 +11,7 @@ const labels = getLabels(Astro.url.pathname)
     {
       education.map(({ institution, startDate, endDate, area, paused, studyType }) => {
         let years = "";
+        let semesters = 0;
 
         const formatYear = (date: string | number | Date) => new Date(date).getFullYear();
 
@@ -26,6 +27,11 @@ const labels = getLabels(Astro.url.pathname)
           years += " (pausado)";
         }
 
+        if (startDate && (paused || !endDate)) {
+          const lastYear = endDate ? formatYear(endDate) : new Date().getFullYear();
+          semesters = Math.max(0, (lastYear - formatYear(startDate) + 1) * 2);
+        }
+
         return (
           <li>
             <article>
@@ -37,6 +43,7 @@ const labels = getLabels(Astro.url.pathname)
               </header>
               <footer>
                 <p>{studyType} en {area}</p>
+                {semesters > 0 && <small class="print">{semesters} {labels.semesters}</small>}
               </footer>
             </article>
           </li>
@@ -80,5 +87,6 @@ const labels = getLabels(Astro.url.pathname)
   @media print {
     ul { gap: 0.25rem; }
     article h3, footer p, time { font-size: 0.72rem; }
+    footer small { color: #444; display: block; font-size: 0.68rem; margin-top: 0.08rem; }
   }
 </style>
