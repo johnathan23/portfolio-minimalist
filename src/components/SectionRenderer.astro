@@ -1,0 +1,71 @@
+---
+const { sections } = Astro.props;
+---
+
+{sections.map((section: any) => {
+  if (section.type === 'group') {
+    return (
+      <details class="additional-details">
+        <summary>{section.title}</summary>
+        {section.sections.map((s: any) => {
+          const Component = s.component;
+          return <Component {...s.props} />;
+        })}
+      </details>
+    );
+  }
+
+  if (section.condition && !section.condition()) {
+    return null;
+  }
+
+  const Component = section.component;
+  return <Component {...section.props} />;
+})}
+
+<style>
+  .additional-details {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0 1rem;
+  }
+
+  .additional-details > summary {
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    display: flex;
+    font-size: 0.9rem;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0.85rem 0;
+  }
+
+  .additional-details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .additional-details > summary::after {
+    color: var(--color-text-light);
+    content: "+";
+    font-size: 1.1rem;
+  }
+
+  .additional-details[open] > summary::after {
+    content: "−";
+  }
+
+  .additional-details[open] > summary {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .additional-details[open] {
+    padding-bottom: 0.25rem;
+  }
+
+  .additional-details :global(section) {
+    margin-bottom: 1.25rem;
+    margin-top: 1rem;
+  }
+</style>

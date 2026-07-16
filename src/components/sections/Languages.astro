@@ -1,6 +1,6 @@
 ---
 import Section from "../Section.astro"
-import { getCv } from "@/lib/cv"
+import { getCv } from "@/data/cv"
 import { getLabels } from "@/lib/i18n"
 const { languages } = getCv(Astro.url.pathname)
 const labels = getLabels(Astro.url.pathname)

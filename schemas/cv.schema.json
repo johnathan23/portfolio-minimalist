@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:portfolio-minimalist:cv-schema",
+  "title": "Portfolio CV",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["basics", "work", "education", "diplomas", "certificates", "courses", "skills", "languages", "hobbies", "projects"],
+  "properties": {
+    "basics": { "$ref": "#/$defs/basics" },
+    "work": { "type": "array", "items": { "$ref": "#/$defs/work" } },
+    "education": { "type": "array", "items": { "$ref": "#/$defs/education" } },
+    "diplomas": { "type": "array", "items": { "$ref": "#/$defs/studyGroup" } },
+    "certificates": { "type": "array", "items": { "$ref": "#/$defs/certificate" } },
+    "courses": { "type": "array", "items": { "$ref": "#/$defs/studyGroup" } },
+    "skills": { "type": "array", "items": { "$ref": "#/$defs/skill" } },
+    "featuredSkills": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+    "skillsPrintLimit": { "type": "integer", "minimum": 1 },
+    "languages": { "type": "array", "items": { "$ref": "#/$defs/language" } },
+    "hobbies": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "projects": { "type": "array", "items": { "$ref": "#/$defs/project" } }
+  },
+  "$defs": {
+    "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "url": { "type": "string", "format": "uri" },
+    "nullableDate": { "type": ["string", "null"], "pattern": "^$|^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "basics": {
+      "type": "object", "additionalProperties": false,
+      "required": ["name", "label", "image", "email", "phone", "summary", "location", "profiles"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 }, "label": { "type": "string", "minLength": 1 },
+        "image": { "type": "string", "minLength": 1 }, "email": { "type": "string", "format": "email" },
+        "phone": { "type": "string", "minLength": 1 }, "url": { "$ref": "#/$defs/url" }, "summary": { "type": "string", "minLength": 1 },
+        "location": {
+          "type": "object", "additionalProperties": false, "required": ["postalCode", "city", "countryCode", "region"],
+          "properties": { "address": { "type": "string" }, "postalCode": { "type": "string" }, "city": { "type": "string", "minLength": 1 }, "countryCode": { "type": "string", "minLength": 2 }, "region": { "type": "string", "minLength": 1 } }
+        },
+        "profiles": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["network", "username", "url"], "properties": { "network": { "type": "string", "minLength": 1 }, "username": { "type": "string", "minLength": 1 }, "url": { "$ref": "#/$defs/url" } } } }
+      }
+    },
+    "work": {
+      "type": "object", "additionalProperties": false, "required": ["name", "position", "startDate", "endDate", "summary"],
+      "properties": { "name": { "type": "string", "minLength": 1 }, "position": { "type": ["string", "null"], "minLength": 1 }, "url": { "anyOf": [{ "$ref": "#/$defs/url" }, { "const": "" }] }, "startDate": { "$ref": "#/$defs/nullableDate" }, "endDate": { "$ref": "#/$defs/nullableDate" }, "summary": { "type": "string", "minLength": 1 }, "highlights": { "type": "array", "items": { "type": "string", "minLength": 1 } } }
+    },
+    "education": {
+      "type": "object", "additionalProperties": false, "required": ["institution", "area", "paused", "studyType", "startDate", "endDate"],
+      "properties": { "institution": { "type": "string", "minLength": 1 }, "area": { "type": "string", "minLength": 1 }, "paused": { "type": "boolean" }, "studyType": { "type": "string", "minLength": 1 }, "startDate": { "$ref": "#/$defs/nullableDate" }, "endDate": { "$ref": "#/$defs/nullableDate" } }
+    },
+    "studyGroup": { "type": "object", "additionalProperties": false, "required": ["institution", "area", "studyType", "courses"], "properties": { "institution": { "type": "string", "minLength": 1 }, "area": { "type": "string", "minLength": 1 }, "studyType": { "type": "string", "minLength": 1 }, "courses": { "type": "array", "items": { "type": "string", "minLength": 1 } }, "featuredCourses": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }, "printLimit": { "type": "integer", "minimum": 1 } } },
+    "certificate": { "type": "object", "additionalProperties": false, "required": ["name", "date", "validThrough", "issuer", "url"], "properties": { "name": { "type": "string", "minLength": 1 }, "date": { "$ref": "#/$defs/date" }, "validThrough": { "$ref": "#/$defs/date" }, "issuer": { "type": "string", "minLength": 1 }, "url": { "$ref": "#/$defs/url" } } },
+    "skill": { "type": "object", "additionalProperties": false, "required": ["name", "level"], "properties": { "name": { "type": "string", "minLength": 1 }, "level": { "type": "string", "minLength": 1 } } },
+    "language": { "type": "object", "additionalProperties": false, "required": ["language", "fluency"], "properties": { "language": { "type": "string", "minLength": 1 }, "fluency": { "type": "string", "minLength": 1 } } },
+    "project": { "type": "object", "additionalProperties": false, "required": ["name", "company", "isActive", "description", "highlights", "url", "github"], "properties": { "name": { "type": "string", "minLength": 1 }, "company": { "type": "string", "minLength": 1, "description": "Use Personal, Freelance, or the name of an entry in work." }, "isActive": { "type": "boolean" }, "description": { "type": "string", "minLength": 1 }, "highlights": { "type": "array", "items": { "type": "string", "minLength": 1 } }, "url": { "anyOf": [{ "$ref": "#/$defs/url" }, { "type": "null" }] }, "github": { "anyOf": [{ "$ref": "#/$defs/url" }, { "type": "null" }] } } }
+  }
+}

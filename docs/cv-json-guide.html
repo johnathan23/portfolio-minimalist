@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV JSON guide</title>
+    <style>
+      :root { color: #1d1d1f; font-family: system-ui, sans-serif; line-height: 1.55; }
+      body { margin: 0 auto; max-width: 880px; padding: 2rem 1.25rem 4rem; }
+      .switcher { display: flex; gap: .5rem; margin-bottom: 2rem; }
+      button { background: #fff; border: 1px solid #aaa; border-radius: 999px; cursor: pointer; padding: .4rem .8rem; }
+      button[aria-pressed="true"] { background: #222; color: #fff; }
+      [data-language][hidden] { display: none; }
+      code { background: #f3f3f3; border-radius: 3px; padding: .1rem .25rem; }
+      pre { background: #171717; border-radius: 8px; color: #f5f5f5; overflow: auto; padding: 1rem; }
+      table { border-collapse: collapse; width: 100%; }
+      td, th { border-bottom: 1px solid #ddd; padding: .45rem; text-align: left; vertical-align: top; }
+    </style>
+  </head>
+  <body>
+    <nav class="switcher" aria-label="Documentation language">
+      <button type="button" data-select-language="en" aria-pressed="true">English</button>
+      <button type="button" data-select-language="es" aria-pressed="false">Español</button>
+    </nav>
+
+    <main data-language="en">
+      <h1>CV JSON developer guide</h1>
+      <p><code>cv.example.json</code> and <code>cv_english.example.json</code> are the versioned templates. Copy them to <code>cv.json</code> and <code>cv_english.json</code> before adding personal data; the local files are ignored by Git. Both must satisfy <a href="../schemas/cv.schema.json">the shared JSON Schema</a>.</p>
+      <h2>Validate before committing</h2>
+      <pre>npm run validate:cv
+npm run build</pre>
+      <p>The build runs validation first, so invalid content cannot be built. The command reports a file and field path for every problem.</p>
+      <h2>Top-level structure</h2>
+      <table><thead><tr><th>Field</th><th>Purpose</th></tr></thead><tbody>
+        <tr><td><code>basics</code></td><td>Identity, contact information, location and social profiles.</td></tr>
+        <tr><td><code>work</code></td><td>Professional roles. Use an empty string or <code>null</code> in <code>endDate</code> for the current role.</td></tr>
+        <tr><td><code>education</code></td><td>Formal education. Set <code>paused: true</code> for paused studies.</td></tr>
+        <tr><td><code>diplomas</code>, <code>courses</code>, <code>certificates</code></td><td>Additional education and credentials.</td></tr>
+        <tr><td><code>skills</code>, <code>languages</code>, <code>hobbies</code></td><td>Professional profile details.</td></tr>
+        <tr><td><code>projects</code></td><td>Projects linked to a work entry or grouped as complementary experience.</td></tr>
+      </tbody></table>
+      <h2>Conventions</h2>
+      <ul><li>Dates use <code>YYYY-MM-DD</code>.</li><li>URLs must be complete, for example <code>https://example.com</code>.</li><li>Project <code>company</code> is required: it must match a work <code>name</code>, or be exactly <code>Freelance</code> or <code>Personal</code>. The latter two appear under Complementary experience in print.</li><li>Use <code>featuredCourses</code> to order high-impact courses and <code>printLimit</code> to choose how many appear in print. Every featured course must be present in <code>courses</code>.</li><li>Use <code>null</code> only for optional project <code>url</code> or <code>github</code>; do not remove those fields.</li></ul>
+      <h2>Minimal examples</h2>
+      <pre>{
+  "work": [{
+    "name": "Company", "position": "Developer", "startDate": "2024-01-01",
+    "endDate": "", "summary": "Short role summary", "highlights": ["Achievement"]
+  }],
+  "projects": [{
+    "name": "Product", "company": "Company", "isActive": true,
+    "description": "What it does", "highlights": ["Key outcome"],
+    "url": "https://example.com", "github": null
+  }]
+}</pre>
+    </main>
+
+    <main data-language="es" hidden>
+      <h1>Guía para desarrolladores del CV JSON</h1>
+      <p><code>cv.example.json</code> y <code>cv_english.example.json</code> son las plantillas versionadas. Cópialas como <code>cv.json</code> y <code>cv_english.json</code> antes de agregar datos personales; los archivos locales están ignorados por Git. Ambos deben cumplir <a href="../schemas/cv.schema.json">el esquema JSON compartido</a>.</p>
+      <h2>Valida antes de hacer commit</h2>
+      <pre>npm run validate:cv
+npm run build</pre>
+      <p>El build ejecuta primero la validación, por lo que no se puede generar una versión con contenido inválido. El comando informa el archivo y la ruta de cada error.</p>
+      <h2>Estructura principal</h2>
+      <table><thead><tr><th>Campo</th><th>Uso</th></tr></thead><tbody>
+        <tr><td><code>basics</code></td><td>Identidad, contacto, ubicación y perfiles sociales.</td></tr>
+        <tr><td><code>work</code></td><td>Experiencia profesional. Usa una cadena vacía o <code>null</code> en <code>endDate</code> para el empleo actual.</td></tr>
+        <tr><td><code>education</code></td><td>Educación formal. Usa <code>paused: true</code> para estudios pausados.</td></tr>
+        <tr><td><code>diplomas</code>, <code>courses</code>, <code>certificates</code></td><td>Formación adicional y credenciales.</td></tr>
+        <tr><td><code>skills</code>, <code>languages</code>, <code>hobbies</code></td><td>Detalles del perfil profesional.</td></tr>
+        <tr><td><code>projects</code></td><td>Proyectos enlazados a una experiencia laboral o agrupados como experiencia complementaria.</td></tr>
+      </tbody></table>
+      <h2>Convenciones</h2>
+      <ul><li>Las fechas usan <code>YYYY-MM-DD</code>.</li><li>Las URLs deben ser completas, por ejemplo <code>https://example.com</code>.</li><li>El <code>company</code> de un proyecto es obligatorio: debe coincidir con un <code>name</code> de trabajo, o ser exactamente <code>Freelance</code> o <code>Personal</code>. Los dos últimos se muestran como experiencia complementaria en impresión.</li><li>Usa <code>featuredCourses</code> para ordenar los cursos de mayor impacto y <code>printLimit</code> para decidir cuántos aparecen en impresión. Todo curso destacado debe estar incluido en <code>courses</code>.</li><li>Usa <code>null</code> solo para <code>url</code> o <code>github</code> opcionales de proyectos; no elimines esas propiedades.</li></ul>
+      <h2>Ejemplo mínimo</h2>
+      <pre>{
+  "work": [{
+    "name": "Empresa", "position": "Developer", "startDate": "2024-01-01",
+    "endDate": "", "summary": "Resumen breve del cargo", "highlights": ["Logro"]
+  }],
+  "projects": [{
+    "name": "Producto", "company": "Empresa", "isActive": true,
+    "description": "Qué hace", "highlights": ["Resultado clave"],
+    "url": "https://example.com", "github": null
+  }]
+}</pre>
+    </main>
+
+    <script>
+      const buttons = document.querySelectorAll("[data-select-language]");
+      const sections = document.querySelectorAll("[data-language]");
+      buttons.forEach((button) => button.addEventListener("click", () => {
+        const language = button.dataset.selectLanguage;
+        document.documentElement.lang = language;
+        buttons.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+        sections.forEach((section) => { section.hidden = section.dataset.language !== language; });
+      }));
+    </script>
+  </body>
+</html>

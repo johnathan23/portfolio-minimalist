@@ -6,11 +6,11 @@
     "email": "johnathanyesid@gmail.com",
     "phone": "+57 3182921612",
     "url": "https://johnathan23.github.io/portfolio-minimalist/",
-    "summary": "Como Desarrollador, me destaco por mi habilidad para colaborar eficazmente en equipo, adaptarme a nuevos entornos y aprender con rapidez. Poseo las competencias técnicas necesarias para desempeñarme con excelencia en el ámbito laboral, contribuyendo al crecimiento empresarial mediante la entrega de resultados positivos. Mi enfoque está en satisfacer plenamente las necesidades de los clientes, asegurando una experiencia de usuario óptima y generando valor agregado para la organización.",
+    "summary": "Desarrollador Senior con más de 8 años de experiencia especializándose en el desarrollo cross-platform (Flutter) y nativo (Android/iOS). Experto en diseñar arquitecturas escalables (Clean, Hexagonal), automatización de despliegues (CI/CD con AWS/Azure y Bitrise) y soluciones de alta seguridad para el sector financiero y retail. Apasionado por la optimización de rendimiento y la entrega de experiencias de usuario de alto impacto corporativo.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Floridablanca",
+      "city": "Floridablanca, Santander",
       "countryCode": "Co",
       "region": "Colombia"
     },
@@ -29,17 +29,19 @@
   },
   "work": [
     {
-      "name": "Epam",
+      "name": "Epam Systems",
       "position": "Experienced Developer L3",
       "url": "https://www.epam.com/",
       "startDate": "2025-09-23",
       "endDate": "",
-      "summary": "Participé en el diseño, desarrollo e implementación de soluciones para el sector financiero, enfocándome en la creación de aplicaciones móviles seguras y eficientes que cumplen con los estándares regulatorios y las necesidades del cliente.",
+      "summary": "Desarrollo soluciones móviles empresariales para el sector financiero, impulsando arquitecturas escalables, automatización de despliegues (CI/CD), prácticas DevSecOps e integración de herramientas basadas en IA Generativa para optimizar procesos de desarrollo. Contribuyo a la mejora continua de la calidad del software mediante estrategias de pruebas, optimización del rendimiento y adopción de buenas prácticas de ingeniería. Además, apoyo el liderazgo técnico del equipo como Backup Technical Lead, colaborando en decisiones de arquitectura, mentoría y coordinación técnica.",
       "highlights": [
-        "Implementación de pipelines CI/CD sobre AWS",
-        "Arquitectura basada en micro-frontends",
-        "Cobertura con pruebas unitarias e integración",
-        "Prácticas de seguridad y ethical hacking"
+        "Actué como Backup Technical Lead (LT), apoyando decisiones de arquitectura, mentoría y coordinación técnica del equipo.",
+        "Incrementé la cobertura de pruebas automatizadas del 40% al 93%, fortaleciendo la calidad del software y reduciendo regresiones.",
+        "Configuré e integré herramientas de IA Generativa mediante Model Context Protocol (MCP), automatizando flujos de desarrollo y mejorando la productividad del equipo.",
+        "Implementé pipelines CI/CD sobre AWS para automatizar compilación, pruebas y despliegues continuos.",
+        "Participé en la evolución de Itaú Trader, acompañando su crecimiento de 5 a 67 clientes corporativos.",
+        "Contribuí al cumplimiento del 85% de los OKRs del equipo mediante la entrega continua de iniciativas estratégicas."
       ]
     },
     {
@@ -48,11 +50,12 @@
       "url": "https://www.tresastronautas.com/es",
       "startDate": "2025-07-16",
       "endDate": "2025-10-10",
-      "summary": "Participé en el diseño, desarrollo e implementación de soluciones web B2B, Saas, Bias",
+      "summary": "Participé en el diseño y desarrollo de una plataforma SaaS multi-tenant para el sector FinTech, enfocada en soluciones B2B. Contribuí a la definición de la arquitectura, la automatización de despliegues y la integración de servicios cloud para construir una plataforma escalable, segura y preparada para múltiples organizaciones.",
       "highlights": [
-        "Implementación de CI/CD en entornos AWS y Azure",
-        "Integración de Firebase a nivel host y aplicación",
-        "Desarrollo de Cloud Functions para autenticación y gestión de usuarios"
+        "Participé en el diseño e implementación de una arquitectura SaaS multi-tenant, garantizando el aislamiento de datos y la escalabilidad entre múltiples organizaciones.",
+        "Optimicé pipelines CI/CD en Azure DevOps para automatizar procesos de compilación, pruebas y despliegues continuos.",
+        "Diseñé e integré Firebase a nivel de infraestructura y aplicación, incorporando Authentication, Firestore y servicios asociados.",
+        "Desarrollé Cloud Functions para autenticación, autorización y gestión de usuarios, fortaleciendo la lógica de negocio y la seguridad del backend."
       ]
     },
     {
@@ -61,34 +64,48 @@
       "url": "https://apexglobal.co/",
       "startDate": "2024-08-01",
       "endDate": "2025-03-31",
-      "summary": "Participé en el diseño, desarrollo e implementación de soluciones móviles y web B2B y B2C para la distribución de productos CBC, con foco en eficiencia, automatización y soporte multiplataforma.",
+      "summary": "Participé en la evolución de soluciones móviles B2B y B2C para CBC, impulsando la modernización de la arquitectura, la optimización del rendimiento y la automatización de despliegues. Contribuí al rediseño del programa de lealtad y a la expansión internacional de la plataforma, además de apoyar el liderazgo técnico del equipo como Backup Technical Lead.",
       "highlights": [
-        "Publicación y mantenimiento de releases en Google Play y App Store",
-        "Automatización de despliegues móviles con Bitrise"
+        "Fui incorporado directamente a Apex Global Mobility tras mi participación inicial en el proyecto, contribuyendo posteriormente al desarrollo de múltiples productos estratégicos.",
+        "Actué como Backup Technical Lead, apoyando decisiones de arquitectura, mentoría técnica, revisión de código y coordinación de entregas.",
+        "Lideré el lanzamiento de aplicaciones móviles en Google Play y App Store, gestionando el proceso de publicación y estabilización de las primeras versiones productivas.",
+        "Contribuí al rediseño integral del programa Loyalty, permitiendo alcanzar en agosto objetivos de negocio inicialmente previstos para el cierre del año.",
+        "Participé en la expansión internacional de las plataformas de 5 a 17 países, adaptando las soluciones para soportar una operación multinacional.",
+        "Reorganicé la arquitectura hacia un enfoque monorepo, mejorando la mantenibilidad, reutilización de código y escalabilidad del desarrollo.",
+        "Implementé pipelines CI/CD con Bitrise para automatizar compilaciones, pruebas y despliegues móviles.",
+        "Recibí un bono de reconocimiento por el impacto de las mejoras técnicas y el cumplimiento de objetivos estratégicos."
       ]
     },
     {
       "name": "Yalutec",
-      "position": "Front Mobile Developer with Flutter",
+      "position": "Front Developer",
       "url": "https://yalutec.com/",
       "startDate": "2024-06-24",
       "endDate": "2024-07-31",
-      "summary": "Participé en el desarrollo de “Loyalty”, un programa de fidelización creado con Flutter, logrando una experiencia de usuario consistente en iOS, Android y Web.",
+      "summary": "Participé en el desarrollo frontend de una plataforma web de fidelización (Loyalty) para la gestión de recompensas, canje de puntos y beneficios para usuarios finales. Contribuí a construir una solución empresarial utilizando Flutter Web, priorizando la experiencia de usuario, mantenibilidad y escalabilidad del producto.",
       "highlights": [
-        "Desarrollo cross-platform con Flutter para iOS, Android y Web",
-        "Experiencia de usuario consistente en múltiples plataformas"
+        "Desarrollé funcionalidades frontend con Flutter Web para la plataforma de fidelización y recompensas.",
+        "Implementé interfaces responsivas enfocadas en la gestión de puntos, beneficios y canje de recompensas.",
+        "Construí componentes reutilizables para mejorar la consistencia visual y facilitar la evolución del producto.",
+        "Colaboré con equipos multidisciplinarios bajo metodologías ágiles para la entrega continua de funcionalidades."
       ]
     },
     {
       "name": "Venko",
-      "position": "Mobile Developer",
+      "position": "Mobile Leader",
       "url": "https://www.venko.co/",
       "startDate": "2021-06-14",
       "endDate": "2024-06-24",
-      "summary": "Participé en el diseño, desarrollo e implementación de soluciones móviles y multiplataforma orientadas a la automatización, productividad, salud y generación de código, utilizando tecnologías como Flutter, Kotlin y OpenCV.",
+      "summary": "Lideré el desarrollo y evolución de múltiples soluciones móviles para sectores como administración, productividad, salud e identidad digital. Participé en la definición de arquitecturas, consultoría tecnológica y dirección técnica de proyectos utilizando Flutter, Kotlin y OpenCV, además de coordinar el crecimiento del equipo mobile y representar técnicamente a Venko frente a clientes estratégicos.",
       "highlights": [
-        "Liderazgo técnico mobile de punta a punta, desde planificación hasta entrega",
-        "Consultoría para optimización de procesos de desarrollo y uso de recursos"
+        "Lideré técnicamente proyectos móviles de principio a fin, desde el levantamiento de requerimientos y definición de arquitectura hasta la publicación y mantenimiento en producción.",
+        "Coordiné el crecimiento del equipo Mobile, pasando de liderar 1 desarrollador a un equipo de 4 personas mediante mentoría, revisión de código y acompañamiento técnico.",
+        "Publiqué y mantuve todas las aplicaciones móviles desarrolladas por el equipo en Google Play y App Store.",
+        "Lideré el rediseño de Firmese, contribuyendo a su evolución y al reconocimiento del proyecto dentro del programa Microsoft for Startups.",
+        "Representé técnicamente a Venko frente a clientes estratégicos, liderando sesiones de consultoría, levantamiento de requerimientos y definición de soluciones tecnológicas.",
+        "Participé en proyectos para organizaciones como Pensemos y el Consultorio Jurídico de la Universidad Pontificia Bolivariana (Piedecuesta), adaptando soluciones a necesidades específicas del negocio.",
+        "Diseñé e implementé soluciones utilizando Flutter, Kotlin y OpenCV para automatización, reconocimiento documental y productividad empresarial.",
+        "Impulsé mejoras de arquitectura, rendimiento y mantenibilidad, incrementando la escalabilidad y calidad de los productos."
       ]
     },
     {
@@ -97,10 +114,15 @@
       "url": "https://actiontracker.eu/",
       "startDate": "2021-01-01",
       "endDate": "2021-05-31",
-      "summary": "Participé en el diseño, desarrollo e implementación de “IvAdventure”, una aplicación de automatización y control inteligente de dispositivos basada en BLE y WiFi, orientada a optimizar interruptores y medidores tradicionales mediante un sistema centralizado con ESP32.",
+      "summary": "Desarrollé 'IvAdventure', una plataforma Android para IoT enfocada en el monitoreo, automatización y control inteligente de dispositivos conectados mediante BLE y WiFi. Participé en la integración con hardware basado en ESP32, implementando soluciones para telemetría, geolocalización, gestión de eventos críticos y sincronización de datos con backend y almacenamiento local.",
       "highlights": [
-        "Integración de conectividad BLE y WiFi con dispositivos ESP32",
-        "Automatización y control remoto sobre hardware IoT"
+        "Desarrollé la integración entre la aplicación Android y dispositivos ESP32 mediante Bluetooth Low Energy (BLE) y WiFi.",
+        "Implementé procesos OTA (Over-the-Air) para la actualización remota del firmware de dispositivos IoT.",
+        "Diseñé módulos de configuración, sincronización y procesamiento de datos provenientes del hardware, utilizando Room para almacenamiento local y servicios backend para sincronización.",
+        "Implementé funcionalidades de geolocalización avanzada, incluyendo geocercas (Geofencing) y zonas marítimas (Boyas) para monitoreo de activos.",
+        "Desarrollé eventos inteligentes para detección de accidentes, activación de botón de pánico y monitoreo en tiempo real.",
+        "Contribuí al desarrollo de una plataforma adaptable para múltiples tipos de activos, incluyendo embarcaciones, vehículos, motocicletas, trenes y aeronaves.",
+        "Desarrollé la solución principalmente en Java, incorporando módulos en Kotlin como parte de la modernización tecnológica del proyecto."
       ]
     },
     {
@@ -109,10 +131,44 @@
       "url": "https://highdeveloper.com/",
       "startDate": "2018-02-01",
       "endDate": "2021-06-30",
-      "summary": "Participé en el diseño, desarrollo e implementación de soluciones móviles orientadas a IoT, salud, seguridad, administración y servicios, utilizando tecnologías como Android-Java, Xamarin, Flutter, Swift y Firebase.",
+      "summary": "Inicié mi carrera profesional desarrollando soluciones móviles para múltiples sectores, evolucionando desde Android nativo (Java/Kotlin) hacia iOS (Objective-C/Swift), Xamarin, NativeScript y finalmente Flutter. Participé en el diseño, desarrollo e implementación de aplicaciones empresariales, consolidando una base sólida en arquitecturas móviles, integración de servicios y desarrollo multiplataforma.",
       "highlights": [
-        "Desarrollo mobile multi-stack con Android, Xamarin, Flutter y Swift",
-        "Soluciones para IoT, salud, seguridad y servicios digitales"
+        "Desarrollé aplicaciones nativas para Android utilizando Java y Kotlin, participando en todo el ciclo de vida del desarrollo.",
+        "Participé en el desarrollo de aplicaciones iOS utilizando Objective-C y Swift, ampliando la cobertura multiplataforma de los proyectos.",
+        "Implementé soluciones cross-platform con Xamarin, NativeScript y Flutter, impulsando la reutilización de código y la eficiencia del desarrollo.",
+        "Contribuí al desarrollo de soluciones para IoT, salud, seguridad, administración y servicios digitales.",
+        "Integré servicios Firebase y APIs para autenticación, almacenamiento, notificaciones y sincronización de datos.",
+        "Participé en el diseño, implementación y evolución de aplicaciones empresariales siguiendo buenas prácticas de ingeniería y metodologías ágiles."
+      ]
+    },
+    {
+      "name": "Freelance",
+      "position": "Full Stack Developer",
+      "url": "",
+      "startDate": null,
+      "endDate": null,
+      "summary": "Diseñé y desarrollé soluciones tecnológicas para clientes de distintos sectores, incluyendo HealthTech, FoodTech, movilidad, logística y gestión empresarial. Participé en todo el ciclo de vida del software, desde el levantamiento de requerimientos y definición de arquitectura hasta el despliegue y soporte, construyendo aplicaciones multiplataforma con Flutter e integrando servicios cloud, pasarelas de pago, comunicaciones e inteligencia artificial.",
+      "highlights": [
+        "Desarrollé aplicaciones y plataformas SaaS para sectores como salud, restaurantes, delivery, alquiler de vehículos y transporte.",
+        "Diseñé arquitecturas escalables utilizando Flutter, Firebase, Laravel y servicios cloud.",
+        "Implementé integraciones con OpenPay, Stripe, Twilio y otros servicios de terceros para pagos, autenticación y comunicaciones.",
+        "Incorporé funcionalidades de IA y automatización para optimizar procesos de negocio y mejorar la productividad de los clientes.",
+        "Gestioné proyectos de manera integral, desde el análisis de requerimientos hasta la entrega, despliegue y mantenimiento en producción."
+      ]
+    },
+    {
+      "name": "Personal",
+      "position": null,
+      "url": "",
+      "startDate": null,
+      "endDate": null,
+      "summary": "Desarrollo productos propios para explorar nuevas tecnologías, validar ideas de negocio y experimentar con arquitecturas modernas. He creado aplicaciones enfocadas en educación, gestión empresarial, redes sociales, productividad, finanzas y propiedad horizontal, aplicando buenas prácticas de ingeniería, diseño de producto y experiencia de usuario.",
+      "highlights": [
+        "Diseñé y desarrollé aplicaciones multiplataforma utilizando Flutter para diferentes dominios de negocio.",
+        "Construí productos propios orientados a educación, gestión financiera, propiedad horizontal, redes sociales y productividad.",
+        "Experimenté con tecnologías como GraphQL, Firebase, animaciones avanzadas y arquitecturas escalables para acelerar el desarrollo de nuevos productos.",
+        "Implementé soluciones enfocadas en experiencia de usuario, rendimiento y mantenibilidad del código.",
+        "Utilicé proyectos personales como laboratorio de innovación para validar tecnologías, patrones de diseño y nuevas funcionalidades antes de aplicarlas en proyectos empresariales."
       ]
     }
   ],
@@ -180,6 +236,16 @@
       "institution": "Platzi",
       "area": "Programación",
       "studyType": "Career tracks",
+      "featuredCourses": [
+        "Arquitectura y Patrones de Diseño",
+        "Cloud AWS",
+        "Cloud Azure",
+        "Google Cloud Platform",
+        "Ciberseguridad para desarrolladores",
+        "Automatización de Procesos con N8N",
+        "Go y Rust"
+      ],
+      "printLimit": 4,
       "courses": [
         "Go y Rust",
         "Ciberseguridad para desarrolladores",
@@ -202,6 +268,12 @@
       "institution": "Udemy",
       "area": "Programación",
       "studyType": "Additional training",
+      "featuredCourses": [
+        "Patrones de Diseño Mobile",
+        "Principios SOLID y Clean Code",
+        "Figma"
+      ],
+      "printLimit": 3,
       "courses": [
         "Patrones de Diseño Mobile",
         "Principios SOLID y Clean Code",
@@ -429,9 +501,9 @@
     "Manualidades"
   ],
   "projects": [
-     {
+    {
       "name": "Itau Trader",
-      "company": "Epam",
+      "company": "Epam Systems",
       "isActive": true,
       "description": "Plataforma de trading de Itaú que te permite gestionar inversiones, ejecutar operaciones en tiempo real y monitorear los mercados con herramientas seguras y eficientes desde un solo lugar.",
       "highlights": [
@@ -446,7 +518,7 @@
     },
     {
       "name": "Itau Corporate",
-      "company": "Epam",
+      "company": "Epam Systems",
       "isActive": true,
       "description": "Aplicación bancaria que concentra todas tus operaciones financieras en un solo lugar, con seguridad y facilidad.",
       "highlights": [
@@ -793,7 +865,7 @@
     },
     {
       "name": "konjunto app",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "Aplicación centrada en la administración y gestión de propiedad horizontal.",
       "highlights": [
@@ -805,7 +877,7 @@
     },
     {
       "name": "Dragon books",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "Libro de dragones interactivo para niños.",
       "highlights": [
@@ -817,7 +889,7 @@
     },
     {
       "name": "Planets",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "Aplicación educativa para niños que enseña sobre los planetas.",
       "highlights": [
@@ -829,7 +901,7 @@
     },
     {
       "name": "Cats Breeds",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "App educativa sobre gatitos que enseña a conocer sus razas, necesidades de cuidado, tipo de alimentación y entorno ideal.",
       "highlights": [
@@ -840,7 +912,7 @@
     },
     {
       "name": "Portfolio",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "App todo-en-uno que diseña tu CV y portafolio visual para destacar habilidades, proyectos y experiencia de forma profesional y atractiva.",
       "highlights": [
@@ -853,7 +925,7 @@
     },
     {
       "name": "Pet Society",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "Red social para mascotas que facilita la adopción, monta y venta de animales",
       "highlights": [
@@ -865,7 +937,7 @@
     },
     {
       "name": "Chefcito",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "Aplicación para almacenar y gestionar recetas culinarias",
       "highlights": [
@@ -877,7 +949,7 @@
     },
     {
       "name": "Vacu+",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "Aplicación para el seguimiento de vacunación.",
       "highlights": [
@@ -889,7 +961,7 @@
     },
     {
       "name": "Pokedex",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "Base de datos interactiva sobre Pokémons.",
       "highlights": [
@@ -902,7 +974,7 @@
     },
     {
       "name": "Mekanic",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "Herramienta para el seguimiento y mantenimiento de vehículos.",
       "highlights": [
@@ -914,7 +986,7 @@
     },
     {
       "name": "Fiper",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "Aplicación para la gestión financiera personal.",
       "highlights": [

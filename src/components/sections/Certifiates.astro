@@ -1,6 +1,6 @@
 ---
 import Section from "../Section.astro";
-import { getCv } from "@/lib/cv";
+import { getCv } from "@/data/cv";
 import { getLabels } from "@/lib/i18n";
 const { certificates } = getCv(Astro.url.pathname)
 const labels = getLabels(Astro.url.pathname)
@@ -22,13 +22,8 @@ const labels = getLabels(Astro.url.pathname)
               <header class="cert-header">
                 <div class="cert-info">
                   <h3>
-                    {url ? (
-                      <a href={url} target="_blank" rel="noopener noreferrer">
-                        {name}
-                      </a>
-                    ) : (
-                      name
-                    )}
+                    {name}
+                    {url && <a class="credential-link screen-only" href={url} target="_blank" rel="noopener noreferrer">{labels.viewCredential} ↗</a>}
                   </h3>
                   <p>{issuer}</p>
                 </div>
@@ -68,18 +63,13 @@ const labels = getLabels(Astro.url.pathname)
   }
 
   .cert-info h3 {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 600;
-  }
-
-  .cert-info h3 a {
-    color: #111;
-    text-decoration: none;
-  }
-
-  .cert-info h3 a:hover {
-    text-decoration: underline;
   }
 
   .cert-info p {
@@ -103,6 +93,21 @@ const labels = getLabels(Astro.url.pathname)
     .cert-date {
       align-self: flex-end;
     }
+  }
+
+  .credential-link {
+    background: #f3f3f3;
+    border-radius: 999px;
+    color: #444;
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0.12rem 0.4rem;
+  }
+
+  .credential-link:hover {
+    background: #e8e8e8;
   }
 
   @media print {

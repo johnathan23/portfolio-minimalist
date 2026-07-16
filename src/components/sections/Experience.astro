@@ -1,7 +1,11 @@
 ---
 import Section from "../Section.astro"
-import { getCv } from "@/lib/cv"
+import { getCv } from "@/data/cv"
 import { getLabels } from "@/lib/i18n"
+
+interface Props {
+  print?: boolean
+}
 
 type Project = {
   name: string
@@ -14,6 +18,7 @@ type Project = {
 const normalizeCompany = (value?: string | null) => (value ?? "").toLowerCase().replace(/[^a-z0-9]/g, "")
 const { work, projects } = getCv(Astro.url.pathname)
 const labels = getLabels(Astro.url.pathname)
+const printMode = Astro.props.print ?? false
 const projectList = projects as unknown as Project[]
 
 const formatDate = (dateStr: string | number | Date | null) => {
@@ -39,40 +44,37 @@ const getDuration = (start: string | number | Date, end: string | number | Date 
     {
       work.map((job, index) => {
         const highlights = job.highlights ?? []
+        const isComplementaryExperience = ["freelance", "personal", "personal projects", "proyectos personales"].includes(job.name.toLowerCase())
         const jobProjects = projectList.filter(
           (project) => normalizeCompany(project.company) === normalizeCompany(job.name),
         )
 
         return (
-          <details class="experience" open={index === 0}>
+          <details class:list={["experience", { "complementary-experience": isComplementaryExperience }]} open={printMode || index === 0}>
             <summary>
               <span class="role">
-                <strong>{job.position}</strong>
-                <span>{job.name}</span>
+                {job.position ? (
+                  <Fragment>
+                    <strong>{job.position}</strong>
+                    <span>{job.name}</span>
+                  </Fragment>
+                ) : (
+                  <strong>{job.name}</strong>
+                )}
               </span>
-              <span class="period">
-                {formatDate(job.startDate)} — {formatDate(job.endDate)}
-              </span>
+              {!isComplementaryExperience && (
+                <span class="period">
+                  {formatDate(job.startDate)} — {formatDate(job.endDate)}
+                </span>
+              )}
             </summary>
 
             <div class="experience-content">
               <p>{job.summary}</p>
               {highlights.length > 0 && (
-                <ul class="work-highlights">
+                <ul class:list={["work-highlights", { "current-role": !job.endDate }]}>
                   {highlights.map((item) => <li>{item}</li>)}
                 </ul>
-              )}
-
-              {jobProjects.length > 0 && (
-                <p class="print print-project-list">
-                  <strong>{labels.projectsWorked}</strong>{" "}
-                  {jobProjects.map((project, index) => (
-                    <Fragment>
-                      {project.url ? <a href={project.url}>{project.name}</a> : <span>{project.name}</span>}
-                      {index < jobProjects.length - 1 && " · "}
-                    </Fragment>
-                  ))}
-                </p>
               )}
 
               {jobProjects.length > 0 && (
@@ -97,7 +99,7 @@ const getDuration = (start: string | number | Date, end: string | number | Date 
                 </details>
               )}
             </div>
-            <span class="print-duration">{getDuration(job.startDate, job.endDate)}</span>
+            {!isComplementaryExperience && job.startDate && <span class="print-duration">{getDuration(job.startDate, job.endDate)}</span>}
           </details>
         )
       })
@@ -107,48 +109,48 @@ const getDuration = (start: string | number | Date, end: string | number | Date 
 
 <style>
   .experience-list { display: grid; gap: 0.65rem; }
-  .experience { border: 1px solid #e8e8e8; border-radius: 8px; background: #fff; }
+  .experience { border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-bg-card); }
   summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.85rem 1rem; }
   summary::-webkit-details-marker { display: none; }
-  summary::after { content: "+"; color: #777; font-size: 1.1rem; }
+  summary::after { content: "+"; color: var(--color-text-light); font-size: 1.1rem; }
   details[open] > summary::after { content: "−"; }
   .role { display: grid; gap: 0.15rem; }
-  .role strong { color: #111; font-family: system-ui, sans-serif; font-size: 0.95rem; }
-  .role span, .period { color: #666; font-size: 0.82rem; }
+  .role strong { color: var(--color-text-primary); font-family: var(--font-sans); font-size: 0.95rem; }
+  .role span, .period { color: var(--color-text-muted); font-size: 0.82rem; }
   .period { white-space: nowrap; }
-  .experience-content { border-top: 1px solid #eee; padding: 0.85rem 1rem 1rem; }
+  .experience-content { border-top: 1px solid var(--color-border); padding: 0.85rem 1rem 1rem; }
   .experience-content > p { font-size: 0.85rem; }
   .work-highlights { display: grid; gap: 0.35rem; margin: 0.7rem 0 0; }
-  .work-highlights li { border-left: 2px solid #cfcfcf; color: #444; font-size: 0.78rem; line-height: 1.4; padding-left: 0.6rem; }
-  .print-project-list { display: none; }
+  .work-highlights li { border-left: 2px solid var(--color-border-muted); color: var(--color-text-secondary); font-size: 0.78rem; line-height: 1.4; padding-left: 0.6rem; }
   .project-details { margin-top: 0.8rem; }
-  .project-details > summary { border-top: 1px solid #eee; color: #333; font-size: 0.82rem; padding: 0.7rem 0 0; }
+  .project-details > summary { border-top: 1px solid var(--color-border); color: var(--color-text-primary); font-size: 0.82rem; padding: 0.7rem 0 0; }
   .project-list { display: grid; gap: 0.65rem; margin: 0.75rem 0 0; }
-  .project-list li { border-left: 2px solid #ddd; padding-left: 0.7rem; }
-  .project-list a, .project-list strong { color: #111; font-size: 0.85rem; }
+  .project-list li { border-left: 2px solid var(--color-border-muted); padding-left: 0.7rem; }
+  .project-list a, .project-list strong { color: var(--color-text-primary); font-size: 0.85rem; }
   .project-list a:hover { text-decoration: underline; }
-  .project-link-hint { background: #f3f3f3; border-radius: 999px; color: #444; display: inline-block; font-size: 0.65rem; font-weight: 500; margin-left: 0.45rem; padding: 0.12rem 0.4rem; white-space: nowrap; }
+  .project-link-hint { background: var(--color-bg-alt); border-radius: 999px; color: var(--color-text-secondary); display: inline-block; font-size: 0.65rem; font-weight: 500; margin-left: 0.45rem; padding: 0.12rem 0.4rem; white-space: nowrap; }
   .project-list p { font-size: 0.78rem; margin-top: 0.15rem; }
-  .project-list span { color: #666; display: block; font-size: 0.72rem; line-height: 1.4; margin-top: 0.25rem; }
+  .project-list span { color: var(--color-text-muted); display: block; font-size: 0.72rem; line-height: 1.4; margin-top: 0.25rem; }
   .print-duration { display: none; }
   @media (width <= 700px) { summary { align-items: flex-start; } .period { font-size: 0.72rem; } }
   @media print {
     .experience { border: 0; border-radius: 0; break-inside: avoid; position: relative; }
-    .experience:not(:last-child) { border-bottom: 1px solid #ddd; }
+    .experience:not(:last-child) { border-bottom: 1px solid var(--color-border-muted); }
     .experience summary { cursor: default; display: block; padding: 0.35rem 0 0.15rem; }
     .experience summary::after { display: none; }
     .role { display: inline; }
-    .role strong::after { content: " · "; }
-    .role span { color: #222; }
+    .role strong::after { content: ""; }
+    .role span::before { content: " · "; }
+    .role span { color: var(--color-text-primary); }
     .period { display: block; font-size: 0.72rem; margin-top: 0.1rem; }
+    .complementary-experience .period { display: none; }
     .experience-content { border: 0; display: block; padding: 0 0 0.4rem; }
     .experience:not([open]) > .experience-content { display: block !important; }
     .experience-content > p { display: none; }
     .work-highlights { display: block; list-style: disc; margin: 0.15rem 0 0; padding-left: 1rem; }
     .work-highlights li { border: 0; font-size: 0.7rem; line-height: 1.25; padding-left: 0; }
     .work-highlights li:nth-child(n + 3) { display: none; }
-    .print-project-list { color: #444; display: block; font-size: 0.7rem; line-height: 1.25; margin-top: 0.25rem; }
-    .print-project-list strong { color: #222; }
+    .work-highlights.current-role li:nth-child(n + 3) { display: list-item; }
     .project-details, .print-duration { display: none !important; }
   }
 </style>

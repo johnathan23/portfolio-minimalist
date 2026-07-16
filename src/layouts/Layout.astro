@@ -1,5 +1,5 @@
 ---
-import { getCv } from "@/lib/cv"
+import { getCv } from "@/data/cv"
 
 interface Props {
   title: string
@@ -39,15 +39,25 @@ const { image, summary, url } = getCv(Astro.url.pathname).basics
 </html>
 
 <style is:global>
+  :root {
+    --color-bg: #fff;
+    --color-bg-alt: #f3f3f3;
+    --color-bg-card: #fff;
+    --color-border: #e8e8e8;
+    --color-border-muted: #ddd;
+    --color-border-dark: #222;
+    --color-text-primary: #111;
+    --color-text-secondary: #444;
+    --color-text-muted: #666;
+    --color-text-light: #555;
+    
+    --font-mono: Menlo, Monaco, Lucida Console, "Courier New", Courier, monospace;
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+
   html {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      "Courier New",
-      Courier,
-      monospace;
-    background: #fff;
+    font-family: var(--font-mono);
+    background: var(--color-bg);
     letter-spacing: -0.025rem;
   }
 
@@ -78,22 +88,11 @@ const { image, summary, url } = getCv(Astro.url.pathname).basics
   h3,
   h4 {
     margin: 0;
-    font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      "Open Sans",
-      "Helvetica Neue",
-      sans-serif;
+    font-family: var(--font-sans);
   }
 
   p {
-    color: #666;
+    color: var(--color-text-muted);
     font-size: 0.9rem;
     line-height: 1.5;
     margin: 0;
@@ -109,7 +108,7 @@ const { image, summary, url } = getCv(Astro.url.pathname).basics
 
     html { font-family: Arial, Helvetica, sans-serif; letter-spacing: normal; }
 
-    body { color: #111; font-size: 10pt; }
+    body { color: var(--color-text-primary); font-size: 10pt; }
 
     .no-print {
       display: none !important;
@@ -133,7 +132,7 @@ const { image, summary, url } = getCv(Astro.url.pathname).basics
 
     section { max-width: none !important; margin-bottom: 0.45rem !important; }
 
-    h2 { border-bottom: 1px solid #222; font-size: 0.95rem !important; line-height: 1.2 !important; margin-bottom: 0.3rem !important; padding-bottom: 0.12rem; text-transform: uppercase; }
+    h2 { border-bottom: 1px solid var(--color-border-dark); font-size: 0.95rem !important; line-height: 1.2 !important; margin-bottom: 0.3rem !important; padding-bottom: 0.12rem; text-transform: uppercase; }
 
     a { color: inherit !important; text-decoration: none !important; }
   }

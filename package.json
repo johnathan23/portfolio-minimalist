@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "validate:cv": "node scripts/validate-cv.mjs",
+    "build": "npm run validate:cv && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -17,5 +18,9 @@
   },
   "overrides": {
     "prettier": "3.0.0"
+  },
+  "devDependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1"
   }
 }

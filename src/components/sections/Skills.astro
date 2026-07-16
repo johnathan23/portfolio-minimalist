@@ -23,9 +23,9 @@ import Azure from "@/icons/azure.astro";
 import AWS from "@/icons/aws.astro";
 import Tailwind from "@/icons/tailwind.astro";
 import Next from "@/icons/next.astro";
-import { getCv } from "@/lib/cv";
-import { getLocale } from "@/lib/cv";
-import { getLabels } from "@/lib/i18n";
+import { getCv } from "@/data/cv";
+import { getLocale } from "@/data/cv";
+import { getLabels } from "@/lib/i18n"
 import Swift from "@/icons/swift.astro";
 import SwiftUI from "@/icons/swiftui.astro";
 import Kotlin from "@/icons/kotlin.astro";
@@ -111,7 +111,7 @@ const ICON_ALIASES: Record<string, string> = {
   "App Gallery": "AppGallery",
 };
 
-const { skills } = getCv(Astro.url.pathname)
+const { skills, featuredSkills = [], skillsPrintLimit = 10 } = getCv(Astro.url.pathname)
 const labels = getLabels(Astro.url.pathname)
 const locale = getLocale(Astro.url.pathname)
 
@@ -119,7 +119,9 @@ const LEVEL_ORDER = locale === "en"
   ? ["Master", "Expert", "Advanced", "Intermediate", "Basic"]
   : ["Master", "Experto", "Avanzado", "Intermedio", "Basico"]
 const PRINTABLE_LEVELS = new Set(LEVEL_ORDER.slice(0, -1))
-const printableSkills = skills.filter(({ level }) => PRINTABLE_LEVELS.has(level))
+const printableSkills = featuredSkills.length > 0
+  ? featuredSkills.slice(0, skillsPrintLimit)
+  : skills.filter(({ level }) => PRINTABLE_LEVELS.has(level)).slice(0, skillsPrintLimit).map(({ name }) => name)
 
 const skillGroups = LEVEL_ORDER.map((level) => ({
   level,
@@ -129,7 +131,7 @@ const skillGroups = LEVEL_ORDER.map((level) => ({
 
 <Section title={labels.skills}>
   <div class="ats-skills print">
-    <p>{printableSkills.map(({ name }) => name).join(" · ")}</p>
+    <p>{printableSkills.join(" · ")}</p>
   </div>
 
   <div class="skills-groups no-print">

@@ -6,6 +6,8 @@ export interface CV {
   certificates: Array<Certificates>
   courses: Array<StudyGroup>
   skills: Array<Skills>
+  featuredSkills?: Array<string>
+  skillsPrintLimit?: number
   languages: Array<Languages>
   hobbies: Hobbies
   projects: Array<Projects>
@@ -67,6 +69,8 @@ interface StudyGroup {
   area: string,
   studyType: string,
   courses: Array<string>
+  featuredCourses?: Array<string>
+  printLimit?: number
 }
 
 interface Education {

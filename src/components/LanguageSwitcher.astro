@@ -1,5 +1,5 @@
 ---
-import { getLocale } from "@/lib/cv"
+import { getLocale } from "@/data/cv"
 
 const locale = getLocale(Astro.url.pathname)
 const spanishUrl = locale === "en" ? "../" : "./"

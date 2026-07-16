@@ -143,6 +143,8 @@
       "institution": "Platzi",
       "area": "Programming",
       "studyType": "Career tracks",
+      "featuredCourses": ["Architecture and Design Patterns", "Google Cloud Platform", "Cross-Platform Development with Flutter", "Testing and Deployment"],
+      "printLimit": 4,
       "courses": [
         "Google Cloud Platform",
         "Architecture and Design Patterns",
@@ -159,6 +161,8 @@
       "institution": "Udemy",
       "area": "Programming",
       "studyType": "Additional training",
+      "featuredCourses": ["Mobile Design Patterns", "SOLID Principles and Clean Code", "Figma"],
+      "printLimit": 3,
       "courses": [
         "Mobile Design Patterns",
         "SOLID Principles and Clean Code",
@@ -175,6 +179,8 @@
       ]
     }
   ],
+  "featuredSkills": ["Flutter", "Dart", "Kotlin", "Java", "AWS", "Firebase", "Git", "Clean Architecture", "Bitrise", "Docker"],
+  "skillsPrintLimit": 8,
   "skills": [
     {
       "name": "Git",
@@ -550,7 +556,7 @@
     },
     {
       "name": "konjunto app",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "Application focused on the administration and management of horizontal property.",
       "highlights": ["Property management administration", "Operational process digitization"],
@@ -657,10 +663,10 @@
       "url": null,
       "github": null
     },
-    { "name": "Dragon Books", "company": null, "isActive": true, "description": "Interactive dragon book for children.", "highlights": ["Interactive animated experience", "Cross-platform development"], "url": null, "github": null },
+    { "name": "Dragon Books", "company": "Personal", "isActive": true, "description": "Interactive dragon book for children.", "highlights": ["Interactive animated experience", "Cross-platform development"], "url": null, "github": null },
     {
       "name": "Planets",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "Educational application for children that teaches about planets.",
       "highlights": [
@@ -672,7 +678,7 @@
     },
     {
       "name": "Cats Breeds",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "Educational app about kittens that teaches about their breeds, care needs, type of food, and ideal environment.",
       "highlights": [
@@ -683,7 +689,7 @@
     },
     {
       "name": "Portfolio",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "All-in-one app that designs your CV and visual portfolio to highlight skills, projects, and experience in a professional and attractive way.",
       "highlights": [
@@ -696,7 +702,7 @@
     },
     {
       "name": "Pet Society",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "Social network for pets that facilitates adoption, breeding, and sale of animals.",
       "highlights": ["Vertical social network for pets", "Adoption, breeding, and sale workflows"],
@@ -705,7 +711,7 @@
     },
     {
       "name": "Chefcito",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "Application for storing and managing culinary recipes.",
       "highlights": ["Recipe and culinary content management", "Gastronomic information organization"],
@@ -714,7 +720,7 @@
     },
     {
       "name": "Vacu+",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "Application for tracking vaccinations.",
       "highlights": ["Vaccination schedule tracking", "Health reminder management"],
@@ -723,7 +729,7 @@
     },
     {
       "name": "Pokedex",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "Interactive database about Pokémon.",
       "highlights": [
@@ -736,7 +742,7 @@
     },
     {
       "name": "Mekanic",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "Tool for tracking and maintaining vehicles.",
       "highlights": ["Vehicle maintenance tracking", "Operational management of inspections and services"],
@@ -745,7 +751,7 @@
     },
     {
       "name": "Fiper",
-      "company": null,
+      "company": "Personal",
       "isActive": true,
       "description": "Application for personal financial management.",
       "highlights": ["Personal finance management", "Transaction control and traceability"],

@@ -1,21 +1,32 @@
 ---
 import Section from "../Section.astro"
-import { getCv } from "@/lib/cv"
+import { getCv } from "@/data/cv"
 import { getLabels } from "@/lib/i18n"
 
+interface Props {
+  title?: string
+  projects?: Project[]
+}
+
 type Project = { name: string; company?: string | null; description: string; highlights: string[]; url?: string | null }
-const { projects } = getCv(Astro.url.pathname)
+const { title: propsTitle, projects: propsProjects } = Astro.props
+
+const projects = propsProjects ?? getCv(Astro.url.pathname).projects
 const labels = getLabels(Astro.url.pathname)
-const independentProjects = (projects as unknown as Project[]).filter((project) => !project.company || project.company === "Freelance")
-const freelanceProjects = independentProjects.filter(({ company }) => company === "Freelance")
-const personalProjects = independentProjects.filter(({ company }) => !company)
+const title = propsTitle ?? labels.projects
+const normalizeCompany = (company?: string | null) => company?.trim().toLowerCase() ?? ""
+const freelanceProjects = (projects as unknown as Project[]).filter(({ company }) => normalizeCompany(company) === "freelance")
+const personalProjects = (projects as unknown as Project[]).filter(({ company }) => {
+  const normalizedCompany = normalizeCompany(company)
+  return normalizedCompany === "personal" || normalizedCompany === ""
+})
 const projectGroups = [
   { title: labels.freelance, projects: freelanceProjects },
   { title: labels.personal, projects: personalProjects },
-]
+].filter(({ projects: groupProjects }) => groupProjects.length > 0)
 ---
 
-<Section title={labels.projects}>
+<Section title={title}>
   <div class="print-projects print">
     {projectGroups.map(({ title, projects: groupProjects }) => (
       <div class="project-group">
