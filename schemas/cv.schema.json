@@ -12,9 +12,30 @@
     "diplomas": { "type": "array", "items": { "$ref": "#/$defs/studyGroup" } },
     "certificates": { "type": "array", "items": { "$ref": "#/$defs/certificate" } },
     "courses": { "type": "array", "items": { "$ref": "#/$defs/studyGroup" } },
-    "skills": { "type": "array", "items": { "$ref": "#/$defs/skill" } },
+    "skills": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["items"],
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/skill"
+          }
+        },
+        "featured": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      }
+    },
     "featuredSkills": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
     "skillsPrintLimit": { "type": "integer", "minimum": 1 },
+    "specializations": { "type": "array", "items": { "$ref": "#/$defs/specialization" } },
     "languages": { "type": "array", "items": { "$ref": "#/$defs/language" } },
     "hobbies": { "type": "array", "items": { "type": "string", "minLength": 1 } },
     "projects": { "type": "array", "items": { "$ref": "#/$defs/project" } }
@@ -49,6 +70,7 @@
     "certificate": { "type": "object", "additionalProperties": false, "required": ["name", "date", "validThrough", "issuer", "url"], "properties": { "name": { "type": "string", "minLength": 1 }, "date": { "$ref": "#/$defs/date" }, "validThrough": { "$ref": "#/$defs/date" }, "issuer": { "type": "string", "minLength": 1 }, "url": { "$ref": "#/$defs/url" } } },
     "skill": { "type": "object", "additionalProperties": false, "required": ["name", "level"], "properties": { "name": { "type": "string", "minLength": 1 }, "level": { "type": "string", "minLength": 1 } } },
     "language": { "type": "object", "additionalProperties": false, "required": ["language", "fluency"], "properties": { "language": { "type": "string", "minLength": 1 }, "fluency": { "type": "string", "minLength": 1 } } },
+    "specialization": { "type": "object", "additionalProperties": false, "required": ["title", "description", "skills"], "properties": { "title": { "type": "string", "minLength": 1 }, "description": { "type": "string", "minLength": 1 }, "skills": { "type": "array", "items": { "type": "string", "minLength": 1 } } } },
     "project": { "type": "object", "additionalProperties": false, "required": ["name", "company", "isActive", "description", "highlights", "url", "github"], "properties": { "name": { "type": "string", "minLength": 1 }, "company": { "type": "string", "minLength": 1, "description": "Use Personal, Freelance, or the name of an entry in work." }, "isActive": { "type": "boolean" }, "description": { "type": "string", "minLength": 1 }, "highlights": { "type": "array", "items": { "type": "string", "minLength": 1 } }, "url": { "anyOf": [{ "$ref": "#/$defs/url" }, { "type": "null" }] }, "github": { "anyOf": [{ "$ref": "#/$defs/url" }, { "type": "null" }] } } }
   }
 }

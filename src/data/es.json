@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Johnathan Yesid Silva Parra",
-    "label": "Experienced Developer",
+    "label": "Senior Software Engineer | Mobile Architect",
     "image": "/me.webp",
     "email": "johnathanyesid@gmail.com",
     "phone": "+57 3182921612",
     "url": "https://johnathan23.github.io/portfolio-minimalist/",
-    "summary": "Desarrollador Senior con más de 8 años de experiencia especializándose en el desarrollo cross-platform (Flutter) y nativo (Android/iOS). Experto en diseñar arquitecturas escalables (Clean, Hexagonal), automatización de despliegues (CI/CD con AWS/Azure y Bitrise) y soluciones de alta seguridad para el sector financiero y retail. Apasionado por la optimización de rendimiento y la entrega de experiencias de usuario de alto impacto corporativo.",
+    "summary": "Desarrollador Senior con más de 8 años de experiencia especializándose en el desarrollo cross-platform (Flutter, Xamarin, NativeScript, React Native) y nativo (Android/iOS). Experto en diseñar arquitecturas escalables (Clean, Hexagonal), automatización de despliegues (CI/CD con AWS/Azure y Bitrise) y soluciones de alta seguridad para el sector financiero y retail. Apasionado por la optimización de rendimiento y la entrega de experiencias de usuario de alto impacto corporativo.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -66,7 +66,6 @@
       "endDate": "2025-03-31",
       "summary": "Participé en la evolución de soluciones móviles B2B y B2C para CBC, impulsando la modernización de la arquitectura, la optimización del rendimiento y la automatización de despliegues. Contribuí al rediseño del programa de lealtad y a la expansión internacional de la plataforma, además de apoyar el liderazgo técnico del equipo como Backup Technical Lead.",
       "highlights": [
-        "Fui incorporado directamente a Apex Global Mobility tras mi participación inicial en el proyecto, contribuyendo posteriormente al desarrollo de múltiples productos estratégicos.",
         "Actué como Backup Technical Lead, apoyando decisiones de arquitectura, mentoría técnica, revisión de código y coordinación de entregas.",
         "Lideré el lanzamiento de aplicaciones móviles en Google Play y App Store, gestionando el proceso de publicación y estabilización de las primeras versiones productivas.",
         "Contribuí al rediseño integral del programa Loyalty, permitiendo alcanzar en agosto objetivos de negocio inicialmente previstos para el cierre del año.",
@@ -158,7 +157,7 @@
     },
     {
       "name": "Personal",
-      "position": null,
+      "position": "Full Stack Developer",
       "url": "",
       "startDate": null,
       "endDate": null,
@@ -200,25 +199,33 @@
   ],
   "diplomas": [
     {
-      "institution": "Netzun & Dionisio Romero University",
-      "area": "Analítica",
+      "institution": "Netzun & San Ignacio University",
+      "area": "Software Development",
       "studyType": "Diploma",
+      "featuredCourses": [
+        "Mobile Application Development",
+        "Android Development",
+        "Agile Methodologies"
+      ],
       "courses": [
-        "Power Bi y Tableau",
-        "Data Analytics"
+        "Mobile Application Development",
+        "Android Development",
+        "iOS Development",
+        "Web Development",
+        "Agile Methodologies",
+        "UX Design"
       ]
     },
     {
-      "institution": "Netzun & San Ignacio University",
-      "area": "Tecnología",
+      "institution": "Netzun & Dionisio Romero University",
+      "area": "Data Analytics",
       "studyType": "Diploma",
+      "featuredCourses": [
+        "Data Analytics"
+      ],
       "courses": [
-        "Programación Web y Apps",
-        "Metodologías Ágiles",
-        "Diseño de Experiencia de Usuario",
-        "Desarrollo de Aplicaciones Móviles",
-        "iOS",
-        "Android"
+        "Data Analytics",
+        "Power BI & Tableau"
       ]
     }
   ],
@@ -234,252 +241,335 @@
   "courses": [
     {
       "institution": "Platzi",
-      "area": "Programación",
-      "studyType": "Career tracks",
+      "area": "Software Engineering",
+      "studyType": "Career Tracks",
       "featuredCourses": [
-        "Arquitectura y Patrones de Diseño",
-        "Cloud AWS",
-        "Cloud Azure",
+        "Software Architecture & Design Patterns",
         "Google Cloud Platform",
-        "Ciberseguridad para desarrolladores",
-        "Automatización de Procesos con N8N",
-        "Go y Rust"
+        "Cloud AWS",
+        "Cybersecurity for Developers"
       ],
-      "printLimit": 4,
       "courses": [
-        "Go y Rust",
-        "Ciberseguridad para desarrolladores",
-        "Automatización de Procesos con N8N",
-        "Cloud Azure",
-        "Cloud AWS",
-        "Apps Multiplataforma",
+        "Software Architecture & Design Patterns",
         "Google Cloud Platform",
-        "Arquitectura y Patrones de Diseño",
-        "Diseño UI/UX",
-        "Testing y Despliegue",
-        "Desarrollo Multiplataforma con React Native",
-        "Desarrollo Multiplataforma con Flutter",
-        "Desarrollo de Aplicaciones iOS",
-        "Desarrollo de Aplicaciones Huawei",
-        "Desarrollo de Aplicaciones Android"
+        "Cloud AWS",
+        "Cloud Azure",
+        "Cybersecurity for Developers",
+        "Process Automation with N8N",
+        "Go & Rust",
+        "Cross-Platform Development with Flutter",
+        "Cross-Platform Development with React Native",
+        "Android Development",
+        "iOS Development",
+        "Huawei App Development",
+        "Testing & Deployment",
+        "UI/UX Design"
       ]
     },
     {
       "institution": "Udemy",
-      "area": "Programación",
-      "studyType": "Additional training",
+      "area": "Mobile Development",
+      "studyType": "Professional Courses",
       "featuredCourses": [
-        "Patrones de Diseño Mobile",
-        "Principios SOLID y Clean Code",
-        "Figma"
+        "Mobile Design Patterns",
+        "SOLID Principles & Clean Code",
+        "Flutter Web"
       ],
-      "printLimit": 3,
       "courses": [
-        "Patrones de Diseño Mobile",
-        "Principios SOLID y Clean Code",
+        "Mobile Design Patterns",
+        "SOLID Principles & Clean Code",
         "Flutter Web",
-        "Flutter Avanzado",
-        "Flutter Intermedio",
-        "Flutter Básico",
+        "Flutter Advanced",
+        "Flutter Intermediate",
+        "Flutter Fundamentals",
         "Figma",
-        "Bootcamp de iOS",
         "Kotlin",
+        "iOS Bootcamp",
         "React Native",
         "Xamarin Forms",
-        "Android-Java"
+        "Android Development with Java"
       ]
     }
   ],
-  "skills": [
+  "specializations": [
     {
-      "name": "Git",
-      "level": "Experto"
+      "title": "Arquitectura de Software",
+      "description": "Diseño de arquitecturas escalables, mantenibles y orientadas al dominio.",
+      "skills": [
+        "Clean Architecture",
+        "Hexagonal Architecture",
+        "SOLID",
+        "Design Patterns"
+      ]
     },
     {
-      "name": "GitHub",
-      "level": "Avanzado"
+      "title": "Desarrollo Multiplataforma",
+      "description": "Desarrollo de aplicaciones móviles y web desde una única base de código.",
+      "skills": [
+        "Flutter",
+        "Android",
+        "iOS",
+        "Flutter Web"
+      ]
     },
     {
-      "name": "GitLab",
-      "level": "Avanzado"
+      "title": "Liderazgo Técnico",
+      "description": "Mentoría, toma de decisiones técnicas y coordinación de equipos.",
+      "skills": [
+        "Technical Leadership",
+        "Mentoring",
+        "Code Review",
+        "Agile"
+      ]
     },
     {
-      "name": "BitBucket",
-      "level": "Avanzado"
+      "title": "DevSecOps & CI/CD",
+      "description": "Automatización de compilaciones, pruebas, despliegues y seguridad.",
+      "skills": [
+        "GitHub Actions",
+        "Azure DevOps",
+        "Bitrise",
+        "AWS"
+      ]
     },
     {
-      "name": "Jira",
-      "level": "Avanzado"
+      "title": "Cloud",
+      "description": "Diseño e integración de soluciones cloud para aplicaciones empresariales.",
+      "skills": [
+        "AWS",
+        "Azure",
+        "Firebase",
+        "Google Cloud Platform"
+      ]
     },
     {
-      "name": "Asana",
-      "level": "Avanzado"
+      "title": "IA Generativa y Automatización",
+      "description": "Integración de modelos de IA y automatización de procesos.",
+      "skills": [
+        "Generative AI",
+        "Model Context Protocol (MCP)",
+        "N8N",
+        "Prompt Engineering"
+      ]
     },
     {
-      "name": "Trello",
-      "level": "Avanzado"
-    },
-    {
-      "name": "Confluence",
-      "level": "Avanzado"
-    },
-    {
-      "name": "Miro",
-      "level": "Avanzado"
-    },
-    {
-      "name": "Mermaid",
-      "level": "Intermedio"
-    },
-    {
-      "name": "Tensor Flow",
-      "level": "Avanzado"
-    },
-    {
-      "name": "N8N",
-      "level": "Avanzado"
-    },
-    {
-      "name": "Google Cloud",
-      "level": "Experto"
-    },
-    {
-      "name": "Azure",
-      "level": "Intermedio"
-    },
-    {
-      "name": "AWS",
-      "level": "Intermedio"
-    },
-    {
-      "name": "Flutter",
-      "level": "Master"
-    },
-    {
-      "name": "Dart",
-      "level": "Avanzado"
-    },
-    {
-      "name": "Kotlin",
-      "level": "Avanzado"
-    },
-    {
-      "name": "Java",
-      "level": "Avanzado"
-    },
-    {
-      "name": "Swift",
-      "level": "Avanzado"
-    },
-    {
-      "name": "Objective-C",
-      "level": "Avanzado"
-    },
-    {
-      "name": "React Native",
-      "level": "Intermedio"
-    },
-    {
-      "name": "Xamarin Forms",
-      "level": "Intermedio"
-    },
-    {
-      "name": "Python",
-      "level": "Basico"
-    },
-    {
-      "name": "PHP",
-      "level": "Avanzado"
-    },
-    {
-      "name": "Go",
-      "level": "Avanzado"
-    },
-    {
-      "name": "Node Js",
-      "level": "Intermedio"
-    },
-    {
-      "name": "JavaScript",
-      "level": "Avanzado"
-    },
-    {
-      "name": "GraphQL",
-      "level": "Avanzado"
-    },
-    {
-      "name": "SQL",
-      "level": "Avanzado"
-    },
-    {
-      "name": "Realm",
-      "level": "Avanzado"
-    },
-    {
-      "name": "MongoDB",
-      "level": "Intermedio"
-    },
-    {
-      "name": "Firebase",
-      "level": "Experto"
-    },
-    {
-      "name": "Supabase",
-      "level": "Basico"
-    },
-    {
-      "name": "Postman",
-      "level": "Master"
-    },
-    {
-      "name": "Figma",
-      "level": "Master"
-    },
-    {
-      "name": "Adobe XD",
-      "level": "Avanzado"
-    },
-    {
-      "name": "Docker",
-      "level": "Basico"
-    },
-    {
-      "name": "Bitrise",
-      "level": "Avanzado"
-    },
-    {
-      "name": "CodeMagic",
-      "level": "Intermedio"
-    },
-    {
-      "name": "Play Store",
-      "level": "Master"
-    },
-    {
-      "name": "Apple Store",
-      "level": "Experto"
-    },
-    {
-      "name": "App Gallery",
-      "level": "Avanzado"
-    },
-    {
-      "name": "Hexagonal Architecture",
-      "level": "Experto"
-    },
-    {
-      "name": "Clean Architecture",
-      "level": "Experto"
-    },
-    {
-      "name": "Feature Architecture",
-      "level": "Experto"
-    },
-    {
-      "name": "Atomic Design",
-      "level": "Avanzado"
+      "title": "IoT y Visión por Computador",
+      "description": "Integración con dispositivos inteligentes y procesamiento de imágenes.",
+      "skills": [
+        "ESP32",
+        "BLE",
+        "OpenCV",
+        "Google ML Kit",
+        "OCR"
+      ]
     }
   ],
+  "featuredSkills": [
+    "Ingeniería Mobile",
+    "Arquitectura de Software",
+    "Liderazgo Técnico",
+    "Desarrollo Multiplataforma",
+    "IA Generativa",
+    "DevSecOps",
+    "CI/CD",
+    "Computación en la Nube",
+    "Firebase",
+    "GraphQL",
+    "IoT",
+    "Visión por Computador"
+  ],
+  "skills": {
+    "items": [
+      {
+        "name": "Git",
+        "level": "Experto"
+      },
+      {
+        "name": "GitHub",
+        "level": "Avanzado"
+      },
+      {
+        "name": "GitLab",
+        "level": "Avanzado"
+      },
+      {
+        "name": "BitBucket",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Jira",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Asana",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Trello",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Confluence",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Miro",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Mermaid",
+        "level": "Intermedio"
+      },
+      {
+        "name": "Tensor Flow",
+        "level": "Avanzado"
+      },
+      {
+        "name": "N8N",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Google Cloud",
+        "level": "Experto"
+      },
+      {
+        "name": "Azure",
+        "level": "Intermedio"
+      },
+      {
+        "name": "AWS",
+        "level": "Intermedio"
+      },
+      {
+        "name": "Flutter",
+        "level": "Master"
+      },
+      {
+        "name": "Dart",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Kotlin",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Java",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Swift",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Objective-C",
+        "level": "Avanzado"
+      },
+      {
+        "name": "React Native",
+        "level": "Intermedio"
+      },
+      {
+        "name": "Xamarin Forms",
+        "level": "Intermedio"
+      },
+      {
+        "name": "Python",
+        "level": "Basico"
+      },
+      {
+        "name": "PHP",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Go",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Node Js",
+        "level": "Intermedio"
+      },
+      {
+        "name": "JavaScript",
+        "level": "Avanzado"
+      },
+      {
+        "name": "GraphQL",
+        "level": "Avanzado"
+      },
+      {
+        "name": "SQL",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Realm",
+        "level": "Avanzado"
+      },
+      {
+        "name": "MongoDB",
+        "level": "Intermedio"
+      },
+      {
+        "name": "Firebase",
+        "level": "Experto"
+      },
+      {
+        "name": "Supabase",
+        "level": "Basico"
+      },
+      {
+        "name": "Postman",
+        "level": "Master"
+      },
+      {
+        "name": "Figma",
+        "level": "Master"
+      },
+      {
+        "name": "Adobe XD",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Docker",
+        "level": "Basico"
+      },
+      {
+        "name": "Bitrise",
+        "level": "Avanzado"
+      },
+      {
+        "name": "CodeMagic",
+        "level": "Intermedio"
+      },
+      {
+        "name": "Play Store",
+        "level": "Master"
+      },
+      {
+        "name": "Apple Store",
+        "level": "Experto"
+      },
+      {
+        "name": "App Gallery",
+        "level": "Avanzado"
+      },
+      {
+        "name": "Hexagonal Architecture",
+        "level": "Experto"
+      },
+      {
+        "name": "Clean Architecture",
+        "level": "Experto"
+      },
+      {
+        "name": "Feature Architecture",
+        "level": "Experto"
+      },
+      {
+        "name": "Atomic Design",
+        "level": "Avanzado"
+      }
+    ]
+  },
   "languages": [
     {
       "language": "Español",

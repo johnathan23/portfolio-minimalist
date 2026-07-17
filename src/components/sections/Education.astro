@@ -1,9 +1,11 @@
 ---
 import Section from "../Section.astro";
-import { getCv } from "@/data/cv";
+import { getCv, getLocale } from "@/data/cv";
 import { getLabels } from "@/lib/i18n";
 const { education } = getCv(Astro.url.pathname)
 const labels = getLabels(Astro.url.pathname)
+const locale = getLocale(Astro.url.pathname)
+const pausedLabel = locale === "en" ? "Incomplete" : "Incompleto"
 ---
 
 <Section title={labels.education}>
@@ -23,10 +25,6 @@ const labels = getLabels(Astro.url.pathname)
           years = `${formatYear(startDate)} - Actual`;
         }
 
-        if (paused) {
-          years += " (pausado)";
-        }
-
         if (startDate && (paused || !endDate)) {
           const lastYear = endDate ? formatYear(endDate) : new Date().getFullYear();
           semesters = Math.max(0, (lastYear - formatYear(startDate) + 1) * 2);
@@ -36,14 +34,26 @@ const labels = getLabels(Astro.url.pathname)
           <li>
             <article>
               <header>
-                <div>
+                <div class="institution-row">
                   <h3>{institution}</h3>
+                  {semesters > 0 && <small class="print semestres">{semesters} {labels.semesters}</small>}
                 </div>
                 {years && <time>{years}</time>}
               </header>
+
+              <div class="print-edu">
+                <div class="print-title"><strong>{institution}</strong>{years && ` (${years})`}</div>
+                {semesters > 0 ? (
+                  <div class="print-sub"><em>{studyType}{locale === 'es' ? ' en ' : ' in '}{area} ({semesters} {locale === 'es' ? 'semestres cursados' : 'semesters completed'})</em></div>
+                ) : (
+                  <div class="print-sub"><em>{studyType}{locale === 'es' ? ' en ' : ' in '}{area}</em></div>
+                )}
+              </div>
+
               <footer>
-                <p>{studyType} en {area}</p>
-                {semesters > 0 && <small class="print">{semesters} {labels.semesters}</small>}
+                <p class="edu-meta">
+                  <span>{studyType} en {area}</span>
+                </p>
               </footer>
             </article>
           </li>
@@ -57,29 +67,130 @@ const labels = getLabels(Astro.url.pathname)
   ul {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 18px;
+  }
+
+  article {
+    margin: 0;
   }
 
   article h3 {
     font-weight: 500;
     color: #111;
+    margin-bottom: 0;
   }
 
   header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 4px;
+    margin-bottom: 0.1rem;
+    gap: 0.5rem;
+  }
+
+  .institution-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 0.35rem;
+  }
+
+  .institution-row h3 {
+    margin: 0;
+  }
+
+  .institution-row .semestres {
+    color: #444;
+    font-size: 0.68rem;
+    line-height: 1.2;
+    display: none;
+  }
+
+  .edu-meta {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  .edu-meta span {
+    display: inline;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .paused {
+    color: #444;
+    font-size: 0.68rem;
+    line-height: 1.2;
+    margin-left: 0.45rem;
+    display: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .print-edu {
+    display: none;
+  }
+
+  .print-title {
+    font-weight: 600;
+    color: #111;
+    font-size: 0.82rem;
+  }
+
+  .print-sub {
+    margin-top: 0.15rem;
+    color: #444;
+    font-style: italic;
+    font-size: 0.82rem;
+  }
+
+  .print-paused small {
+    color: #444;
+    font-size: 0.72rem;
+    margin-left: 0.35rem;
   }
 
   time {
     color: #555;
-    font-size: 0.85rem;
-    min-width: 102px;
+    font-size: 0.82rem;
+    line-height: 1.1;
+  }
+
+  @media print {
+    .institution-row .semestres {
+      display: inline;
+    }
+
+    .paused {
+      display: inline;
+    }
+
+    header, footer {
+      display: none;
+    }
+
+    .print-edu {
+      display: block;
+    }
+
+    .print-title { font-size: 0.78rem; }
+    .print-sub { font-size: 0.78rem; }
+  }
+
+  @media print {
+    .date-meta small {
+      display: block;
+    }
   }
 
   @media (width <= 700px) {
-    time {
+    .date-block {
       text-align: right;
     }
   }
@@ -87,6 +198,6 @@ const labels = getLabels(Astro.url.pathname)
   @media print {
     ul { gap: 0.25rem; }
     article h3, footer p, time { font-size: 0.72rem; }
-    footer small { color: #444; display: block; font-size: 0.68rem; margin-top: 0.08rem; }
+    .date-meta small { color: #444; display: block; font-size: 0.68rem; }
   }
 </style>

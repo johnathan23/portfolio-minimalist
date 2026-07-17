@@ -111,7 +111,8 @@ const ICON_ALIASES: Record<string, string> = {
   "App Gallery": "AppGallery",
 };
 
-const { skills, featuredSkills = [], skillsPrintLimit = 10 } = getCv(Astro.url.pathname)
+const { skills: skillsSection, featuredSkills = [] } = getCv(Astro.url.pathname)
+const skills = skillsSection.items
 const labels = getLabels(Astro.url.pathname)
 const locale = getLocale(Astro.url.pathname)
 
@@ -119,9 +120,7 @@ const LEVEL_ORDER = locale === "en"
   ? ["Master", "Expert", "Advanced", "Intermediate", "Basic"]
   : ["Master", "Experto", "Avanzado", "Intermedio", "Basico"]
 const PRINTABLE_LEVELS = new Set(LEVEL_ORDER.slice(0, -1))
-const printableSkills = featuredSkills.length > 0
-  ? featuredSkills.slice(0, skillsPrintLimit)
-  : skills.filter(({ level }) => PRINTABLE_LEVELS.has(level)).slice(0, skillsPrintLimit).map(({ name }) => name)
+const printableSkills = featuredSkills
 
 const skillGroups = LEVEL_ORDER.map((level) => ({
   level,

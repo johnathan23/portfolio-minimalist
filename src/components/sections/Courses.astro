@@ -35,12 +35,18 @@ const groupedCourses = groupByInstitution(courses as CourseGroup[])
 const printMode = Astro.props.print ?? false
 const title = Astro.props.title ?? labels.courses
 const printableGroups = (courses as CourseGroup[])
-  .map(({ institution, featuredCourses = [], printLimit = 3 }) => ({
+  .map(({ institution, featuredCourses = [] }) => ({
     institution,
-    courses: featuredCourses.slice(0, printLimit),
+    courses: featuredCourses,
   }))
-  .filter(({ courses: featuredCourses }) => featuredCourses.length > 0)
-const printableDiplomas = diplomas.map(({ institution, courses: diplomaCourses }) => ({ institution, courses: diplomaCourses }))
+  .filter(({ courses }) => courses.length > 0)
+
+const printableDiplomas = (diplomas as CourseGroup[])
+  .map(({ institution, featuredCourses = [] }) => ({
+    institution,
+    courses: featuredCourses,
+  }))
+  .filter(({ courses }) => courses.length > 0)
 ---
 
 <Section title={title}>

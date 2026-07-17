@@ -1,0 +1,92 @@
+---
+/**
+ * Specializations.astro
+ *
+ * Print-only section that highlights the developer's core technical specializations.
+ * Each specialization has a title, a short description, and a list of related skills/tools.
+ * This section is hidden on screen and only appears when printing the PDF resume.
+ *
+ * Data source: cv.json > specializations[]
+ * Positioned below Skills in the print layout.
+ */
+import Section from "../Section.astro"
+import { getCv } from "@/data/cv"
+import { getLabels } from "@/lib/i18n"
+
+type Specialization = {
+  title: string
+  description: string
+  skills: string[]
+}
+
+const cv = getCv(Astro.url.pathname)
+const labels = getLabels(Astro.url.pathname)
+const specializations = (cv.specializations ?? []) as Specialization[]
+---
+
+{specializations.length > 0 && (
+  <div class="specializations-print">
+    <div class="spec-group">
+      <h3>{labels.specializations}</h3>
+      <ul class="spec-list">
+        {Array.from(new Set(specializations.flatMap(({ skills }) => skills))).map((skill) => (
+          <li class="spec-item">{skill}</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+)}
+
+<style>
+  .specializations-print {
+    display: none;
+  }
+
+  .spec-group {
+    margin: 0.2rem 0 0;
+  }
+
+  .spec-group h3 {
+    margin: 0 0 0.2rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-text-primary);
+  }
+
+  .spec-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .spec-item {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border-radius: 0;
+    color: var(--color-text-secondary);
+    font-size: 0.7rem;
+    line-height: 1.2;
+    padding: 0;
+  }
+
+  @media print {
+    .specializations-print {
+      display: block;
+    }
+
+    .spec-item {
+      background: transparent;
+      border-radius: 0;
+      padding: 0;
+      color: var(--color-text-secondary);
+      font-size: 0.68rem;
+    }
+  }
+</style>

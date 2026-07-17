@@ -16,6 +16,7 @@ import Languages from "@/components/sections/Languages.astro"
 import Courses from "@/components/sections/Courses.astro"
 import Diplomas from "@/components/sections/Diplomas.astro"
 import Hobbies from "@/components/sections/Hobbies.astro"
+import Specializations from "@/components/sections/Specializations.astro"
 import SectionRenderer from "@/components/SectionRenderer.astro"
 
 const { basics: { name, label } } = getCv(Astro.url.pathname)
@@ -58,7 +59,8 @@ const printSections = [
   { component: Education },
   { component: Courses, props: { print: true, title: labels.complementaryEducation } },
   { component: Skills },
-  { component: Languages },
+  { component: Specializations },
+  { component: Languages, props: { print: true } },
 ]
 ---
 

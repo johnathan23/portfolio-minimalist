@@ -1,25 +1,54 @@
 ---
 import Section from "../Section.astro"
-import { getCv } from "@/data/cv"
+import { getCv, getLocale } from "@/data/cv"
 import { getLabels } from "@/lib/i18n"
+
+interface Props {
+  print?: boolean
+}
+
 const { languages } = getCv(Astro.url.pathname)
 const labels = getLabels(Astro.url.pathname)
+const locale = getLocale(Astro.url.pathname)
+
+const getFluency = (fluency: string) => {
+  if (fluency === "C2") {
+    return locale === "es" ? "Nativo" : "Native"
+  }
+  return fluency
+}
+
+const printMode = Astro.props.print ?? false
 ---
 
 <Section title={labels.languages}>
-  <ul>
-    {
-      languages.map(({ language, fluency }) => (
-        <li>
-          <span>{language}</span>
-          <small>{fluency}</small>
-        </li>
-      ))
-    }
-  </ul>
+  {printMode ? (
+    <div class="print-language-list">
+      <p>
+        {languages.map(({ language, fluency }, index) => (
+          <>
+            <span><strong>{language}:</strong> {getFluency(fluency)}</span>
+            {index < languages.length - 1 && ' · '}
+          </>
+        ))}
+      </p>
+    </div>
+  ) : (
+    <ul>
+      {
+        languages.map(({ language, fluency }) => (
+          <li>
+            <span>{language}</span>
+            <small>{getFluency(fluency)}</small>
+          </li>
+        ))
+      }
+    </ul>
+  )}
 </Section>
 
 <style>
+  /* Existing styles for non-print mode */
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -53,4 +82,34 @@ const labels = getLabels(Astro.url.pathname)
     font-weight: 400;
     color: #777;
   }
+
+  /* New styles for print mode */
+  .print-language-list { display: grid; gap: 0.25rem; }
+  .print-language-list p { font-size: 0.72rem; line-height: 1.3; }
+  .print-language-list strong { color: #222; }
+
+  @media (width <= 700px) {
+    ul {
+      margin-inline: 0px;
+    }
+
+    article {
+      border: none;
+      box-shadow: 0 1px 1px #f2f2f2;
+      padding: 0 0 16px 0;
+    }
+  }
+
+  @media print {
+    /* Hide the non-print list */
+    ul {
+        display: none;
+    }
+
+    /* Show the print list */
+    .print-language-list {
+        display: grid;
+    }
+  }
 </style>
+

@@ -5,9 +5,10 @@ export interface CV {
   diplomas: Array<StudyGroup>
   certificates: Array<Certificates>
   courses: Array<StudyGroup>
-  skills: Array<Skills>
+  skills: SkillsSection
   featuredSkills?: Array<string>
   skillsPrintLimit?: number
+  specializations?: Array<Specialization>
   languages: Array<Languages>
   hobbies: Hobbies
   projects: Array<Projects>
@@ -41,19 +42,29 @@ interface Profiles {
 
 interface Work {
   name: string
-  position: string
+  position: string | null
   url: string
-  startDate: DateStr
+  startDate: DateStr | null
   endDate: DateStr | null
   summary: string
   highlights?: Highlight
 }
 
+interface Specialization {
+  title: string
+  description: string
+  skills: Array<string>
+}
+
 type DateStr = `${string}-${string}-${string}`
 
-interface Skills {
+interface Skill {
   name: string
   level: string
+}
+
+interface SkillsSection {
+  items: Array<Skill>
 }
 
 interface Certificates {
@@ -70,7 +81,6 @@ interface StudyGroup {
   studyType: string,
   courses: Array<string>
   featuredCourses?: Array<string>
-  printLimit?: number
 }
 
 interface Education {
