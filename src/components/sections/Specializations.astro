@@ -22,17 +22,15 @@ type Specialization = {
 const cv = getCv(Astro.url.pathname)
 const labels = getLabels(Astro.url.pathname)
 const specializations = (cv.specializations ?? []) as Specialization[]
+const uniqueSpecs = Array.from(new Set(specializations.flatMap(({ skills }) => skills)))
+
 ---
 
 {specializations.length > 0 && (
   <div class="specializations-print">
     <div class="spec-group">
       <h3>{labels.specializations}</h3>
-      <ul class="spec-list">
-        {Array.from(new Set(specializations.flatMap(({ skills }) => skills))).map((skill) => (
-          <li class="spec-item">{skill}</li>
-        ))}
-      </ul>
+      <p class="spec-inline">{uniqueSpecs.join(" · ")}</p>
     </div>
   </div>
 )}
@@ -59,10 +57,18 @@ const specializations = (cv.specializations ?? []) as Specialization[]
   .spec-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.35rem;
+    gap: 0.12rem;
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+
+  .spec-inline {
+    margin: 0;
+    padding: 0;
+    color: var(--color-text-secondary);
+    font-size: 0.68rem;
+    line-height: 1.3;
   }
 
   .spec-item {
@@ -76,6 +82,16 @@ const specializations = (cv.specializations ?? []) as Specialization[]
     padding: 0;
   }
 
+  .spec-item + .spec-item::before {
+    content: "·";
+    color: var(--color-text-secondary);
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 0.12rem;
+    line-height: 1;
+    transform: translateY(-0.03em);
+  }
+
   @media print {
     .specializations-print {
       display: block;
@@ -87,6 +103,14 @@ const specializations = (cv.specializations ?? []) as Specialization[]
       padding: 0;
       color: var(--color-text-secondary);
       font-size: 0.68rem;
+    }
+    .spec-item + .spec-item::before {
+      content: "·";
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0 0.12rem;
+      line-height: 1;
+      transform: translateY(-0.03em);
     }
   }
 </style>
