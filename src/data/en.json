@@ -6,7 +6,7 @@
     "email": "johnathanyesid@gmail.com",
     "phone": "+57 3182921612",
     "url": "https://johnathan23.github.io/portfolio-minimalist/",
-    "summary": "Senior Mobile Developer with over 8 years of experience specializing in cross-platform (Flutter) and native mobile development (Android/iOS). Experienced in designing scalable software architectures (Clean Architecture and Hexagonal Architecture), implementing CI/CD pipelines with AWS, Azure, and Bitrise, and delivering secure, enterprise-grade solutions for the financial, retail, healthcare, and logistics industries. Passionate about software quality, performance optimization, technical leadership, and building high-impact digital products that drive business value.",
+    "summary": "Senior Software Engineer with over 8 years of experience specializing in cross-platform (Flutter, Xamarin, NativeScript, React Native) and native (Android/iOS) mobile development. Expert in designing scalable software architectures (Clean Architecture and Hexagonal Architecture), implementing CI/CD pipelines with AWS, Azure, and Bitrise, and building secure, enterprise-grade solutions for the financial and retail industries. Passionate about performance optimization, software quality, and delivering high-impact user experiences.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -29,19 +29,19 @@
   },
   "work": [
     {
-      "name": "Epam Systems",
+      "name": "EPAM Systems",
       "position": "Experienced Developer L3",
       "url": "https://www.epam.com/",
       "startDate": "2025-09-23",
       "endDate": "",
-      "summary": "Develop enterprise mobile solutions for the financial sector, driving scalable architectures, CI/CD automation, DevSecOps practices, and the integration of Generative AI tools to streamline development workflows. Contribute to software quality through automated testing strategies, performance optimization, and engineering best practices while supporting the team as Backup Technical Lead.",
+      "summary": "Develop enterprise-grade mobile solutions for the financial industry, driving scalable architectures, CI/CD automation, DevSecOps practices, and the integration of Generative AI tools to improve engineering productivity. Contribute to software quality through automated testing, performance optimization, and engineering best practices. Also serve as Backup Technical Lead, supporting architecture decisions, technical mentoring, and team coordination.",
       "highlights": [
-        "Served as Backup Technical Lead, supporting architectural decisions, technical mentoring, and team coordination.",
-        "Increased automated test coverage from 40% to 93%, significantly improving software quality and reducing regressions.",
-        "Integrated Generative AI tools using the Model Context Protocol (MCP), automating development workflows and improving team productivity.",
-        "Designed and implemented AWS-based CI/CD pipelines to automate build, testing, and deployment processes.",
-        "Contributed to the growth of Itaú Trader from 5 to 67 corporate clients.",
-        "Helped the team achieve 85% of its quarterly OKRs through continuous delivery of strategic initiatives."
+        "Served as Backup Technical Lead, supporting architecture decisions, technical mentoring, and engineering coordination across the team.",
+        "Increased automated test coverage from 40% to 93%, significantly improving software quality and reducing production regressions.",
+        "Configured and integrated Generative AI solutions using the Model Context Protocol (MCP), automating development workflows and improving team productivity.",
+        "Designed and implemented AWS-based CI/CD pipelines to automate builds, testing, and continuous deployments.",
+        "Contributed to the evolution of Itaú Trader, supporting its growth from 5 to 67 corporate customers.",
+        "Helped the team achieve 85% of its strategic OKRs through continuous delivery of high-impact initiatives."
       ]
     },
     {
@@ -50,29 +50,29 @@
       "url": "https://www.tresastronautas.com/es",
       "startDate": "2025-07-16",
       "endDate": "2025-10-10",
-      "summary": "Contributed to the design and development of a multi-tenant SaaS platform for the FinTech industry, focused on enterprise B2B solutions. Participated in defining the platform architecture, deployment automation, and cloud integrations to deliver a scalable, secure, and multi-organization solution.",
+      "summary": "Contributed to the design and development of a multi-tenant SaaS platform for the FinTech industry, focused on enterprise B2B solutions. Participated in architecture definition, deployment automation, and cloud service integration to build a scalable, secure, and organization-ready platform.",
       "highlights": [
-        "Designed and implemented a multi-tenant SaaS architecture ensuring tenant isolation and scalability.",
-        "Optimized Azure DevOps CI/CD pipelines for automated build, testing, and deployment workflows.",
-        "Integrated Firebase services, including Authentication, Firestore, and supporting cloud infrastructure.",
+        "Designed and implemented a multi-tenant SaaS architecture, ensuring data isolation and scalability across multiple organizations.",
+        "Optimized Azure DevOps CI/CD pipelines to automate build, testing, and deployment processes.",
+        "Designed and integrated Firebase services, including Authentication, Cloud Firestore, and supporting infrastructure.",
         "Developed Cloud Functions for authentication, authorization, and user management, strengthening backend security and business logic."
       ]
     },
     {
       "name": "Apex Global Mobility",
-      "position": "Front Mobile Developer",
+      "position": "Mobile Developer",
       "url": "https://apexglobal.co/",
       "startDate": "2024-08-01",
       "endDate": "2025-03-31",
-      "summary": "Contributed to the evolution of B2B and B2C mobile platforms for CBC by modernizing application architecture, improving performance, and automating delivery pipelines. Supported the redesign of the Loyalty platform, international expansion, and technical leadership as Backup Technical Lead.",
+      "summary": "Contributed to the evolution of enterprise B2B and B2C mobile solutions for CBC, modernizing application architecture, improving performance, and automating delivery pipelines. Played a key role in redesigning the loyalty platform, supporting international expansion, and serving as Backup Technical Lead.",
       "highlights": [
-        "Served as Backup Technical Lead, supporting architecture decisions, technical mentoring, code reviews, and release coordination.",
-        "Led the publication of mobile applications on Google Play and the App Store, ensuring successful production releases.",
-        "Contributed to the complete redesign of the Loyalty platform, enabling business goals to be achieved months ahead of schedule.",
-        "Supported the international expansion of the platform from 5 to 17 countries.",
-        "Migrated the solution to a monorepo architecture, improving maintainability, scalability, and code reuse.",
-        "Implemented Bitrise CI/CD pipelines for automated mobile builds and deployments.",
-        "Received a performance recognition bonus for technical impact and successful delivery of strategic objectives."
+        "Served as Backup Technical Lead, contributing to architecture decisions, technical mentoring, code reviews, and release coordination.",
+        "Led the publication of mobile applications to Google Play and the Apple App Store, managing release processes and production stabilization.",
+        "Contributed to the complete redesign of the Loyalty platform, enabling business goals planned for year-end to be achieved months ahead of schedule.",
+        "Supported the international expansion of the platform from 5 to 17 countries by adapting the solution for multinational operations.",
+        "Migrated the mobile ecosystem to a monorepo architecture, improving maintainability, scalability, and code reuse.",
+        "Implemented Bitrise CI/CD pipelines to automate builds, testing, and mobile deployments.",
+        "Received a performance bonus in recognition of technical contributions and successful delivery of strategic objectives."
       ]
     },
     {
@@ -81,30 +81,30 @@
       "url": "https://yalutec.com/",
       "startDate": "2024-06-24",
       "endDate": "2024-07-31",
-      "summary": "Developed frontend features for a web-based Loyalty platform focused on rewards, points redemption, and customer engagement. Built enterprise-grade Flutter Web solutions emphasizing maintainability, responsiveness, and scalability.",
+      "summary": "Contributed to the frontend development of an enterprise loyalty platform built with Flutter Web. Focused on delivering responsive user experiences, reusable components, and a scalable architecture for rewards management and customer engagement.",
       "highlights": [
-        "Developed frontend features using Flutter Web.",
-        "Implemented responsive user interfaces for rewards, points management, and redemption workflows.",
-        "Built reusable UI components to improve consistency and accelerate feature development.",
-        "Collaborated with cross-functional Agile teams to deliver new product features."
+        "Developed frontend features using Flutter Web for an enterprise loyalty platform.",
+        "Built responsive interfaces for rewards, points management, and redemption workflows.",
+        "Created reusable UI components to improve consistency, maintainability, and development efficiency.",
+        "Collaborated within cross-functional Agile teams to deliver new features through continuous iterations."
       ]
     },
     {
       "name": "Venko",
-      "position": "Mobile Leader",
+      "position": "Mobile Technical Lead",
       "url": "https://www.venko.co/",
       "startDate": "2021-06-14",
       "endDate": "2024-06-24",
-      "summary": "Led the development of mobile solutions across healthcare, digital identity, productivity, and enterprise management. Defined software architectures, provided technical consulting, and led the mobile engineering team while delivering Flutter, Kotlin, and OpenCV-based solutions.",
+      "summary": "Led the design, development, and evolution of mobile solutions across industries including digital identity, healthcare, enterprise productivity, and property management. Defined software architectures, provided technical consulting, and led cross-platform development using Flutter, Kotlin, and OpenCV while growing and mentoring the mobile engineering team.",
       "highlights": [
-        "Led end-to-end mobile projects, from requirements gathering and architecture design to production deployment and maintenance.",
-        "Scaled the Mobile team from one developer to four engineers through mentoring, code reviews, and technical leadership.",
-        "Published and maintained all company mobile applications on Google Play and the App Store.",
-        "Led the redesign of Firmese, contributing to its recognition within the Microsoft for Startups program.",
-        "Represented Venko in technical consulting sessions with strategic clients, defining architectures and technical solutions.",
-        "Delivered projects for organizations including Pensemos and Universidad Pontificia Bolivariana.",
-        "Designed enterprise solutions using Flutter, Kotlin, and OpenCV for automation, document recognition, and productivity.",
-        "Improved software architecture, maintainability, scalability, and application performance."
+        "Led end-to-end mobile projects, from requirements gathering and architecture design to production deployment and long-term maintenance.",
+        "Scaled the Mobile team from 1 to 4 engineers through mentoring, technical leadership, and code reviews.",
+        "Managed the publication and maintenance of all company mobile applications on Google Play and the Apple App Store.",
+        "Led the redesign of Firmese, contributing to its evolution and recognition within the Microsoft for Startups program.",
+        "Represented Venko in technical meetings with strategic clients, leading discovery sessions, solution architecture, and technology consulting.",
+        "Delivered solutions for organizations such as Pensemos and Universidad Pontificia Bolivariana's Legal Clinic, tailoring products to business-specific requirements.",
+        "Designed enterprise solutions using Flutter, Kotlin, and OpenCV for automation, document recognition, and digital productivity.",
+        "Improved application architecture, maintainability, scalability, and overall software quality across multiple products."
       ]
     },
     {
@@ -113,15 +113,15 @@
       "url": "https://actiontracker.eu/",
       "startDate": "2021-01-01",
       "endDate": "2021-05-31",
-      "summary": "Developed IoT solutions for Android focused on monitoring, automation, and remote management of connected devices using BLE and Wi-Fi. Integrated ESP32 hardware, telemetry systems, geolocation, and backend synchronization for real-time asset management.",
+      "summary": "Developed IvAdventure, an Android IoT platform focused on monitoring, automation, and intelligent control of connected devices using BLE and Wi-Fi. Integrated ESP32-based hardware while implementing telemetry, geolocation, critical event management, and offline synchronization capabilities.",
       "highlights": [
-        "Integrated Android applications with ESP32 devices using Bluetooth Low Energy (BLE) and Wi-Fi.",
-        "Implemented OTA firmware update processes for IoT devices.",
-        "Designed hardware synchronization modules using Room and backend services.",
-        "Developed advanced geolocation features including geofencing and maritime monitoring.",
-        "Implemented real-time event detection, including accident monitoring and panic alerts.",
-        "Contributed to a flexible IoT platform supporting boats, vehicles, motorcycles, trains, and aircraft.",
-        "Developed the platform primarily in Java while modernizing selected modules with Kotlin."
+        "Developed Android integrations with ESP32 devices using Bluetooth Low Energy (BLE) and Wi-Fi.",
+        "Implemented Over-the-Air (OTA) firmware updates for IoT devices.",
+        "Designed data synchronization and configuration modules using Room for local persistence and backend services for cloud synchronization.",
+        "Built advanced geolocation capabilities, including geofencing and marine buoy monitoring.",
+        "Implemented real-time event detection for accident alerts, panic button activation, and asset monitoring.",
+        "Contributed to a scalable IoT platform supporting boats, vehicles, motorcycles, trains, and aircraft.",
+        "Developed the application primarily in Java while introducing Kotlin modules as part of the modernization effort."
       ]
     },
     {
@@ -130,14 +130,14 @@
       "url": "https://highdeveloper.com/",
       "startDate": "2018-02-01",
       "endDate": "2021-06-30",
-      "summary": "Started my professional career developing enterprise mobile applications, evolving from native Android (Java/Kotlin) to iOS (Objective-C/Swift), Xamarin, NativeScript, and Flutter. Built a strong foundation in mobile architecture, cloud integrations, and cross-platform development.",
+      "summary": "Started my professional career developing enterprise mobile applications across multiple industries, evolving from native Android development (Java/Kotlin) to iOS (Objective-C/Swift), Xamarin, NativeScript, and Flutter. Built a strong foundation in software architecture, cloud integration, and cross-platform application development.",
       "highlights": [
-        "Developed native Android applications using Java and Kotlin.",
-        "Contributed to iOS applications using Objective-C and Swift.",
-        "Built cross-platform applications with Xamarin, NativeScript, and Flutter.",
-        "Delivered solutions for IoT, healthcare, public safety, and enterprise management.",
-        "Integrated Firebase services and third-party APIs for authentication, notifications, storage, and synchronization.",
-        "Applied software engineering best practices and Agile methodologies throughout the development lifecycle."
+        "Developed native Android applications using Java and Kotlin throughout the complete software development lifecycle.",
+        "Contributed to iOS application development using Objective-C and Swift.",
+        "Built cross-platform applications with Xamarin, NativeScript, and Flutter, maximizing code reuse and development efficiency.",
+        "Participated in projects across IoT, healthcare, security, enterprise management, and digital services.",
+        "Integrated Firebase services and REST APIs for authentication, notifications, storage, and real-time synchronization.",
+        "Applied software engineering best practices and Agile methodologies in enterprise mobile development."
       ]
     },
     {
@@ -146,35 +146,35 @@
       "url": "",
       "startDate": null,
       "endDate": null,
-      "summary": "Designed and developed software solutions for clients across multiple industries, including HealthTech, FoodTech, mobility, logistics, and enterprise management. Managed the entire software development lifecycle, from requirements gathering and solution architecture to deployment and production support, building cross-platform applications with Flutter and integrating cloud services, payment gateways, communication platforms, and AI-powered features.",
+      "summary": "Designed and delivered custom software solutions for clients across HealthTech, FoodTech, logistics, mobility, and enterprise management. Worked across the entire software lifecycle, from requirements analysis and architecture design to deployment and production support, building scalable cross-platform applications with Flutter and cloud technologies.",
       "highlights": [
-        "Developed SaaS applications and platforms for healthcare, restaurants, delivery, vehicle rental, and transportation industries.",
-        "Designed scalable architectures using Flutter, Firebase, Laravel, and cloud-native services.",
-        "Integrated third-party services including OpenPay, Stripe, Twilio, and authentication providers.",
-        "Implemented AI-driven features and business process automation to improve operational efficiency.",
-        "Managed projects end-to-end, including requirements analysis, architecture, development, deployment, and long-term maintenance."
+        "Developed SaaS platforms and mobile applications for healthcare, restaurants, delivery, transportation, and vehicle rental businesses.",
+        "Designed scalable architectures using Flutter, Firebase, Laravel, and cloud platforms.",
+        "Integrated third-party services including Stripe, OpenPay, Twilio, and payment gateways.",
+        "Implemented AI-powered features and business process automation to improve customer productivity.",
+        "Managed projects end-to-end, from requirements gathering through deployment and production maintenance."
       ]
     },
     {
       "name": "Personal",
-      "position": "Software Developer",
+      "position": "Full Stack Developer",
       "url": "",
       "startDate": null,
       "endDate": null,
-      "summary": "Develop personal software products to explore emerging technologies, validate business ideas, and experiment with modern software architectures. Created applications spanning education, enterprise management, social networking, finance, and property management while applying software engineering best practices and user-centered design principles.",
+      "summary": "Build personal products to explore emerging technologies, validate business ideas, and experiment with modern software architectures. Developed applications focused on education, finance, enterprise management, social networking, productivity, and property management while continuously improving engineering practices and user experience.",
       "highlights": [
-        "Designed and developed cross-platform applications using Flutter across multiple business domains.",
-        "Built products focused on education, finance, social networking, property management, and productivity.",
+        "Designed and developed cross-platform applications with Flutter across multiple business domains.",
+        "Created products focused on education, personal finance, property management, social networking, and productivity.",
         "Experimented with GraphQL, Firebase, advanced animations, and scalable architectures to accelerate product development.",
-        "Focused on delivering high-quality user experiences, performance optimization, and maintainable codebases.",
-        "Used personal projects as innovation laboratories to validate technologies, design patterns, and new product ideas before applying them to enterprise solutions."
+        "Focused on user experience, application performance, and long-term maintainability.",
+        "Used personal projects as innovation labs to validate technologies, design patterns, and engineering practices before adopting them in enterprise environments."
       ]
     }
   ],
   "education": [
     {
       "institution": "Universidad Pontificia Bolivariana",
-      "area": "Computer Science and Information Systems",
+      "area": "Systems and Computer Engineering",
       "paused": true,
       "studyType": "Bachelor's Degree",
       "startDate": "2015-01-14",
@@ -190,7 +190,7 @@
     },
     {
       "institution": "Colegio Integrado Nuestra Señora de las Mercedes",
-      "area": "Business Administration",
+      "area": "Business Studies",
       "paused": false,
       "studyType": "High School Diploma",
       "startDate": null,
@@ -231,7 +231,7 @@
   ],
   "certificates": [
     {
-      "name": "Google Play Store Listing Certificate",
+      "name": "Google Play Store Listing",
       "date": "2025-01-02",
       "validThrough": "2028-01-02",
       "issuer": "Google Play Academy",
@@ -253,9 +253,9 @@
         "Software Architecture & Design Patterns",
         "Google Cloud Platform",
         "AWS Cloud",
-        "Azure Cloud",
+        "Microsoft Azure",
         "Cybersecurity for Developers",
-        "Process Automation with N8N",
+        "Process Automation with n8n",
         "Go & Rust",
         "Cross-Platform Development with Flutter",
         "Cross-Platform Development with React Native",
@@ -279,12 +279,12 @@
         "Mobile Design Patterns",
         "SOLID Principles & Clean Code",
         "Flutter Web",
-        "Flutter Advanced",
-        "Flutter Intermediate",
+        "Advanced Flutter",
+        "Intermediate Flutter",
         "Flutter Fundamentals",
         "Figma",
         "Kotlin",
-        "iOS Development Bootcamp",
+        "iOS Bootcamp",
         "React Native",
         "Xamarin Forms",
         "Android Development with Java"
@@ -364,105 +364,98 @@
       ]
     }
   ],
+  "specializations": [
+    {
+      "title": "Software Architecture",
+      "description": "Design of scalable, maintainable, and domain-driven software architectures.",
+      "skills": [
+        "Clean Architecture",
+        "Hexagonal Architecture",
+        "SOLID Principles",
+        "Design Patterns"
+      ]
+    },
+    {
+      "title": "Cross-Platform Development",
+      "description": "Development of mobile and web applications from a single codebase.",
+      "skills": [
+        "Flutter",
+        "Android",
+        "iOS",
+        "Flutter Web"
+      ]
+    },
+    {
+      "title": "Technical Leadership",
+      "description": "Technical mentoring, engineering decision-making, and team leadership.",
+      "skills": [
+        "Technical Leadership",
+        "Mentoring",
+        "Code Review",
+        "Agile Methodologies"
+      ]
+    },
+    {
+      "title": "DevSecOps & CI/CD",
+      "description": "Automation of build, testing, deployment, and security processes.",
+      "skills": [
+        "GitHub Actions",
+        "Azure DevOps",
+        "Bitrise",
+        "AWS"
+      ]
+    },
+    {
+      "title": "Cloud Computing",
+      "description": "Design and integration of cloud-native solutions for enterprise applications.",
+      "skills": [
+        "AWS",
+        "Azure",
+        "Firebase",
+        "Google Cloud Platform"
+      ]
+    },
+    {
+      "title": "Generative AI & Automation",
+      "description": "Integration of AI models and workflow automation to improve software engineering productivity.",
+      "skills": [
+        "Generative AI",
+        "Model Context Protocol (MCP)",
+        "n8n",
+        "Prompt Engineering"
+      ]
+    },
+    {
+      "title": "IoT & Computer Vision",
+      "description": "Development of intelligent solutions integrating connected devices and computer vision technologies.",
+      "skills": [
+        "ESP32",
+        "Bluetooth Low Energy (BLE)",
+        "OpenCV",
+        "Google ML Kit",
+        "OCR"
+      ]
+    }
+  ],
   "featuredSkills": [
     "Mobile Engineering",
     "Software Architecture",
     "Technical Leadership",
-    "Cross-platform Development",
+    "Cross-Platform Development",
     "Generative AI",
     "DevSecOps",
     "CI/CD",
-    "Cloud",
+    "Cloud Computing",
     "Firebase",
     "GraphQL",
-    "IoT",
+    "Internet of Things (IoT)",
     "Computer Vision"
   ],
   "skills": {
     "items": [
       {
-        "name": "Flutter",
-        "level": "Expert"
-      },
-      {
-        "name": "Dart",
-        "level": "Expert"
-      },
-      {
-        "name": "Firebase",
-        "level": "Expert"
-      },
-      {
-        "name": "Clean Architecture",
-        "level": "Expert"
-      },
-      {
-        "name": "Hexagonal Architecture",
-        "level": "Expert"
-      },
-      {
-        "name": "Feature Architecture",
-        "level": "Expert"
-      },
-      {
         "name": "Git",
         "level": "Expert"
-      },
-      {
-        "name": "Google Cloud",
-        "level": "Expert"
-      },
-      {
-        "name": "Google Play Console",
-        "level": "Expert"
-      },
-      {
-        "name": "App Store Connect",
-        "level": "Expert"
-      },
-      {
-        "name": "GraphQL",
-        "level": "Advanced"
-      },
-      {
-        "name": "Kotlin",
-        "level": "Advanced"
-      },
-      {
-        "name": "Java",
-        "level": "Advanced"
-      },
-      {
-        "name": "Swift",
-        "level": "Advanced"
-      },
-      {
-        "name": "Objective-C",
-        "level": "Advanced"
-      },
-      {
-        "name": "JavaScript",
-        "level": "Advanced"
-      },
-      {
-        "name": "PHP",
-        "level": "Advanced"
-      },
-      {
-        "name": "Go",
-        "level": "Advanced"
-      },
-      {
-        "name": "SQL",
-        "level": "Advanced"
-      },
-      {
-        "name": "Realm",
-        "level": "Advanced"
-      },
-      {
-        "name": "Bitrise",
-        "level": "Advanced"
       },
       {
         "name": "GitHub",
@@ -497,31 +490,51 @@
         "level": "Advanced"
       },
       {
-        "name": "Postman",
-        "level": "Advanced"
-      },
-      {
-        "name": "Figma",
-        "level": "Advanced"
-      },
-      {
-        "name": "Adobe XD",
-        "level": "Advanced"
+        "name": "Mermaid",
+        "level": "Intermediate"
       },
       {
         "name": "TensorFlow",
         "level": "Advanced"
       },
       {
-        "name": "N8N",
+        "name": "n8n",
         "level": "Advanced"
       },
       {
-        "name": "Atomic Design",
+        "name": "Google Cloud Platform",
+        "level": "Expert"
+      },
+      {
+        "name": "Microsoft Azure",
+        "level": "Intermediate"
+      },
+      {
+        "name": "AWS",
+        "level": "Intermediate"
+      },
+      {
+        "name": "Flutter",
+        "level": "Master"
+      },
+      {
+        "name": "Dart",
         "level": "Advanced"
       },
       {
-        "name": "Huawei AppGallery",
+        "name": "Kotlin",
+        "level": "Advanced"
+      },
+      {
+        "name": "Java",
+        "level": "Advanced"
+      },
+      {
+        "name": "Swift",
+        "level": "Advanced"
+      },
+      {
+        "name": "Objective-C",
         "level": "Advanced"
       },
       {
@@ -533,47 +546,107 @@
         "level": "Intermediate"
       },
       {
-        "name": "AWS",
-        "level": "Intermediate"
+        "name": "Python",
+        "level": "Basic"
       },
       {
-        "name": "Azure",
-        "level": "Intermediate"
+        "name": "PHP",
+        "level": "Advanced"
       },
       {
-        "name": "MongoDB",
-        "level": "Intermediate"
+        "name": "Go",
+        "level": "Advanced"
       },
       {
         "name": "Node.js",
         "level": "Intermediate"
       },
       {
-        "name": "Codemagic",
+        "name": "JavaScript",
+        "level": "Advanced"
+      },
+      {
+        "name": "GraphQL",
+        "level": "Advanced"
+      },
+      {
+        "name": "SQL",
+        "level": "Advanced"
+      },
+      {
+        "name": "Realm",
+        "level": "Advanced"
+      },
+      {
+        "name": "MongoDB",
         "level": "Intermediate"
       },
       {
-        "name": "Mermaid",
-        "level": "Intermediate"
-      },
-      {
-        "name": "Python",
-        "level": "Basic"
+        "name": "Firebase",
+        "level": "Expert"
       },
       {
         "name": "Supabase",
         "level": "Basic"
       },
       {
+        "name": "Postman",
+        "level": "Master"
+      },
+      {
+        "name": "Figma",
+        "level": "Master"
+      },
+      {
+        "name": "Adobe XD",
+        "level": "Advanced"
+      },
+      {
         "name": "Docker",
         "level": "Basic"
+      },
+      {
+        "name": "Bitrise",
+        "level": "Advanced"
+      },
+      {
+        "name": "Codemagic",
+        "level": "Intermediate"
+      },
+      {
+        "name": "Google Play Console",
+        "level": "Master"
+      },
+      {
+        "name": "Apple App Store Connect",
+        "level": "Expert"
+      },
+      {
+        "name": "Huawei AppGallery",
+        "level": "Advanced"
+      },
+      {
+        "name": "Hexagonal Architecture",
+        "level": "Expert"
+      },
+      {
+        "name": "Clean Architecture",
+        "level": "Expert"
+      },
+      {
+        "name": "Feature Architecture",
+        "level": "Expert"
+      },
+      {
+        "name": "Atomic Design",
+        "level": "Advanced"
       }
     ]
   },
   "languages": [
     {
       "language": "Spanish",
-      "fluency": "Native"
+      "fluency": "C2"
     },
     {
       "language": "English",
@@ -588,14 +661,14 @@
     "Reading",
     "Traveling",
     "Cooking",
-    "Crafts"
+    "DIY Projects"
   ],
   "projects": [
     {
-      "name": "Itau Trader",
-      "company": "Epam Systems",
+      "name": "Itaú Trader",
+      "company": "EPAM Systems",
       "isActive": true,
-      "description": "Enterprise trading platform that enables corporate clients to manage investments, execute real-time trades, and monitor financial markets through a secure and scalable solution.",
+      "description": "Enterprise trading platform that enables corporate clients to manage investments, execute real-time trading operations, and monitor financial markets through a secure and scalable solution.",
       "highlights": [
         "Real-time trading platform",
         "Live market data streaming",
@@ -607,16 +680,16 @@
       "github": null
     },
     {
-      "name": "Itau Corporate",
-      "company": "Epam Systems",
+      "name": "Itaú Corporate",
+      "company": "EPAM Systems",
       "isActive": true,
-      "description": "Corporate banking platform that centralizes financial operations, payments, and treasury management within a secure enterprise environment.",
+      "description": "Corporate banking application that centralizes financial operations, payments, and cash management within a secure enterprise platform.",
       "highlights": [
         "Corporate banking platform",
         "Payments and cash management",
         "Multi-company support",
         "High availability",
-        "Secure authentication"
+        "Enterprise-grade security"
       ],
       "url": "https://banco.itau.co/web/corporate",
       "github": null
@@ -640,7 +713,7 @@
       "isActive": true,
       "description": "B2B e-commerce platform that streamlines product distribution between CBC, retailers, and suppliers.",
       "highlights": [
-        "Cross-platform Flutter application",
+        "Cross-platform mobile application",
         "Deployed across 17 countries"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.apexdigital.b2b_app&hl=es_CO",
@@ -650,7 +723,7 @@
       "name": "Vah",
       "company": "Apex Global Mobility",
       "isActive": true,
-      "description": "B2C e-commerce application that allows consumers to purchase CBC products directly through a mobile platform.",
+      "description": "B2C e-commerce application that allows consumers to purchase CBC products directly from their mobile devices.",
       "highlights": [
         "SurveyMonkey integration"
       ],
@@ -661,7 +734,7 @@
       "name": "XDelivery",
       "company": "Apex Global Mobility",
       "isActive": true,
-      "description": "Logistics and delivery management platform designed to optimize CBC's distribution network across multiple countries.",
+      "description": "Delivery tracking and logistics management platform designed to optimize CBC's distribution network.",
       "highlights": [
         "Google Maps integration",
         "Google Routes optimization",
@@ -674,9 +747,9 @@
       "name": "Monorepo",
       "company": "Apex Global Mobility",
       "isActive": true,
-      "description": "Enterprise monorepo architecture used to manage multiple business applications from a unified codebase.",
+      "description": "Enterprise monorepo platform used to manage multiple business applications from a unified codebase.",
       "highlights": [
-        "Monorepo management with Melos"
+        "Monorepo architecture powered by Melos"
       ],
       "url": null,
       "github": null
@@ -685,22 +758,22 @@
       "name": "Loyalty",
       "company": "Yalutec",
       "isActive": true,
-      "description": "Enterprise customer loyalty platform for rewards, points management, and customer engagement.",
+      "description": "Enterprise customer loyalty platform focused on rewards, points management, and customer engagement.",
       "highlights": [
         "Loyalty SaaS platform",
-        "Deployed across five countries"
+        "Available in five countries"
       ],
       "url": null,
       "github": null
     },
     {
-      "name": "Goldrain",
+      "name": "GoldRain",
       "company": "Venko",
       "isActive": true,
       "description": "AI-powered low-code platform capable of generating applications from natural language descriptions.",
       "highlights": [
         "AI-assisted low-code generation",
-        "Cross-platform Flutter application"
+        "Cross-platform application"
       ],
       "url": null,
       "github": null
@@ -709,11 +782,11 @@
       "name": "Planifiquese",
       "company": "Venko",
       "isActive": true,
-      "description": "Workforce management platform that helps organizations plan, track, and measure employee productivity and time usage.",
+      "description": "Work management platform designed to organize tasks, measure productivity, and optimize team performance.",
       "highlights": [
         "Cross-platform application",
         "Jira integration",
-        "Excel interoperability"
+        "Excel export and interoperability"
       ],
       "url": "https://www.planifique.se/",
       "github": null
@@ -722,9 +795,9 @@
       "name": "Vundo",
       "company": "Venko",
       "isActive": true,
-      "description": "Electronic signature platform focused on secure authentication and digital identity verification.",
+      "description": "Electronic signature platform that streamlines authentication and digital identity verification.",
       "highlights": [
-        "OpenCV-powered image processing"
+        "OpenCV-powered computer vision"
       ],
       "url": null,
       "github": null
@@ -733,9 +806,9 @@
       "name": "Firmese",
       "company": "Venko",
       "isActive": true,
-      "description": "Healthcare application for bruise tracking and patient health monitoring using computer vision technologies.",
+      "description": "Healthcare application for bruise monitoring and patient health assessment using computer vision.",
       "highlights": [
-        "Computer vision with Google ML Kit",
+        "Google ML Kit integration",
         "PDF417 document scanning"
       ],
       "url": "https://www.firme.se/",
@@ -745,10 +818,10 @@
       "name": "Document Recognizer",
       "company": "Venko",
       "isActive": true,
-      "description": "Document recognition plugin specialized in identity document processing and structured data serialization.",
+      "description": "Flutter plugin specialized in identity document recognition and structured data extraction.",
       "highlights": [
-        "OCR with Google ML Kit",
-        "Identity data serialization"
+        "OCR powered by Google ML Kit",
+        "Identity document serialization"
       ],
       "url": null,
       "github": null
@@ -757,15 +830,203 @@
       "name": "Verifiquese",
       "company": "Venko",
       "isActive": true,
-      "description": "Digital identity platform that retrieves and visualizes personal information from trusted public data sources.",
+      "description": "Cross-platform application that retrieves and visualizes personal information from public data sources.",
       "highlights": [
         "Cross-platform mobile application",
-        "PDF417 document capture",
+        "PDF417 document scanning",
         "Google Drive integration",
         "Google Ads monetization",
         "Available in 12 countries"
       ],
       "url": "https://www.verifique.se/",
+      "github": null
+    },
+    {
+      "name": "ReadyToSail",
+      "company": "Actions Tracker S.L.",
+      "isActive": true,
+      "description": "Multi-purpose yacht platform that enables secure remote control through onboard automation, providing 24/7 real-time monitoring and operational management from anywhere.",
+      "highlights": [
+        "IoT platform for remote asset management",
+        "Real-time monitoring over Wi-Fi",
+        "Cloud-connected marine automation"
+      ],
+      "url": "https://readytosail.eu/",
+      "github": null
+    },
+    {
+      "name": "IvAdventure",
+      "company": "Actions Tracker S.L.",
+      "isActive": true,
+      "description": "IoT platform that modernizes traditional controllers and monitoring devices through intelligent automation powered by ESP32, BLE, and Wi-Fi.",
+      "highlights": [
+        "IoT automation platform",
+        "Bluetooth Low Energy (BLE)",
+        "ESP32 integration",
+        "OTA firmware updates"
+      ],
+      "url": "https://ivadventure.com/",
+      "github": null
+    },
+    {
+      "name": "Reservato",
+      "company": "High Developer",
+      "isActive": true,
+      "description": "Reservation management platform designed for hospitality and commercial businesses.",
+      "highlights": [
+        "Digital reservation management",
+        "Availability scheduling",
+        "Cross-platform application"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Coverty",
+      "company": "High Developer",
+      "isActive": true,
+      "description": "Public safety platform focused on citizen security, emergency response, and real-time incident management.",
+      "highlights": [
+        "IoT integration",
+        "Bluetooth Low Energy (BLE)",
+        "Google Maps integration",
+        "Firebase backend"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "AppTracing",
+      "company": "High Developer",
+      "isActive": true,
+      "description": "Incident response platform that provides real-time monitoring, routing, and emergency assistance.",
+      "highlights": [
+        "Google Maps integration",
+        "Google Routes optimization",
+        "MQTT real-time communication",
+        "Geofencing"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Sifa",
+      "company": "High Developer",
+      "isActive": true,
+      "description": "Healthcare management platform for patient administration, invoicing, and medical operations.",
+      "highlights": [
+        "Patient management",
+        "Medical billing",
+        "Healthcare digitalization"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Streamlog",
+      "company": "High Developer",
+      "isActive": true,
+      "description": "IoT platform designed for sensor monitoring and real-time device management.",
+      "highlights": [
+        "IoT sensor monitoring",
+        "Bluetooth Low Energy (BLE)"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Amigo Doc",
+      "company": "Freelance",
+      "isActive": true,
+      "description": "Healthcare CRM that centralizes patient management, appointments, and communication to streamline clinical workflows.",
+      "highlights": [
+        "AI-assisted automation",
+        "Cross-platform architecture"
+      ],
+      "url": "https://admin.amigodocapp.com/login",
+      "github": null
+    },
+    {
+      "name": "NetChef",
+      "company": "Freelance",
+      "isActive": true,
+      "description": "Restaurant management platform integrating orders, menus, kitchen operations, and online payments.",
+      "highlights": [
+        "Integrated payment processing",
+        "Cross-platform architecture",
+        "Laravel backend"
+      ],
+      "url": "https://netchef-712d8.firebaseapp.com/login-page",
+      "github": null
+    },
+    {
+      "name": "Gente Mejor",
+      "company": "Freelance",
+      "isActive": true,
+      "description": "CRM platform for nutritionists to manage patient care, follow-up, and communication.",
+      "highlights": [
+        "AI-powered automation"
+      ],
+      "url": "https://admin.gentemejor.com/login",
+      "github": null
+    },
+    {
+      "name": "Efood",
+      "company": "Freelance",
+      "isActive": true,
+      "description": "Food delivery platform that integrates restaurant menus, online ordering, and digital payments.",
+      "highlights": [
+        "Cross-platform food delivery application"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Auto Rent Pro",
+      "company": "Freelance",
+      "isActive": true,
+      "description": "Vehicle rental management platform with booking, payment, and fleet administration features.",
+      "highlights": [
+        "OpenPay payment integration",
+        "Twilio notifications"
+      ],
+      "url": "https://autogps.iqnetingtest.site/",
+      "github": null
+    },
+    {
+      "name": "Taxi Renta",
+      "company": "Freelance",
+      "isActive": true,
+      "description": "Transportation platform for booking airport transfers to and from Palonegro International Airport.",
+      "highlights": [
+        "Google Maps integration",
+        "Google Routes optimization"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "Ninja Express",
+      "company": "Freelance",
+      "isActive": true,
+      "description": "On-demand delivery platform designed for last-mile logistics services.",
+      "highlights": [
+        "On-demand delivery model",
+        "Stripe payment integration"
+      ],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "UTS Reservat",
+      "company": "Freelance",
+      "isActive": true,
+      "description": "Hotel reservation platform with booking and availability management.",
+      "highlights": [
+        "Hotel booking management",
+        "Reservation workflow"
+      ],
+      "url": null,
       "github": null
     }
   ]
