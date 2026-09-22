@@ -1,362 +1,119 @@
 # CV JSON Schema Guide
 
-This document details the structure and properties of the `cv.json` file that powers the portfolio. The complete and authoritative schema can be found in [`../schemas/cv.schema.json`](../schemas/cv.schema.json).
+The files [`src/data/es.json`](../src/data/es.json) and [`src/data/en.json`](../src/data/en.json) contain the Spanish and English portfolio data. Keep the same structure in both files, translating text values as needed. This guide and the example file do not replace either locale file.
 
-## Philosophy and Conventions
+The authoritative contract is [`schemas/cv.schema.json`](../schemas/cv.schema.json).
 
-- **Avoid `null` (with exceptions):** As a general rule, avoid `null`. If a list has no elements (like `highlights` in a work entry), use an empty array (`[]`). The only documented exceptions are `work.endDate`, `education.endDate`, `project.url`, and `project.github`.
-- **Empty strings (`""`):** Intentionally used in certain date fields (`work.endDate`, `education.endDate`) to indicate a "current" or "ongoing" status. In other text fields, an empty string is considered invalid by the schema if the field requires content (`minLength: 1`).
-- **Dates:** Must follow the `YYYY-MM-DD` format.
-- **URLs:** Must be complete, including the protocol (e.g., `https://example.com`).
+```bash
+npm run validate:cv
+npm run build
+```
 
----
+## Quick Start
 
-## Root Object
+1. Copy [`src/data/example.json`](../src/data/example.json) or one of the locale files.
+2. Change values while keeping property names unchanged.
+3. Use double quotes, `true`/`false` for booleans, and `null` only where documented.
+4. Run `npm run validate:cv` before committing.
 
-The main JSON object must contain the following top-level properties. All are required.
+The schema rejects unknown properties inside objects. Misspelled properties, trailing commas, and empty required strings fail validation.
 
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| `basics` | `Object` | Basic personal information, contact details, and social profiles. |
-| `work` | `Array<Object>` | Professional experience. |
-| `education` | `Array<Object>` | Formal academic education. |
-| `diplomas` | `Array<Object>` | Grouping of diplomas by area and institution. |
-| `certificates` | `Array<Object>` | Individual certifications with issue and expiration dates. |
-| `courses` | `Array<Object>` | Grouping of courses by area and institution. |
-| `skills` | `Object` | List of skills and configuration for featured ones. |
-| `languages` | `Array<Object>` | Languages and proficiency levels. |
-| `hobbies` | `Array<String>` | List of hobbies or interests. |
-| `projects` | `Array<Object>` | Personal projects or projects associated with work experience. |
+## General Conventions
 
----
+| Data | Accepted format |
+| --- | --- |
+| Text | Non-empty string when required. |
+| Date | `YYYY-MM-DD`, for example `2026-09-22`. |
+| URL | Complete URL including a protocol, such as `https://example.com`. |
+| Optional URL | Use `null` where supported. `work.url` also accepts `""`. |
+| Unknown or ongoing date | Use `null` where allowed. `work.endDate` also accepts `""` for a current job. |
+| Empty list | Use `[]`, never `null`. |
+| Boolean | Use `true` or `false` without quotes. |
+
+## Top-Level Properties
+
+Required: `basics`, `work`, `education`, `diplomas`, `certificates`, `courses`, `skills`, `languages`, `hobbies`, and `projects`.
+
+Optional: `professionalCertificates`, legacy `profesionalCertificates`, `specializations`, `pricing`, `featuredSkills`, and `skillsPrintLimit`.
 
 ## `basics`
 
-Contains your identity, contact information, and a professional summary.
+Required fields are `name`, `label`, `image`, `email`, `phone`, `summary`, `location`, and `profiles`. `url` is optional and must be omitted when there is no valid URL. The current photo path is `/me.webp`, served from `public/me.webp`.
 
-| Property | Type | Required | Description and Behavior |
-| :--- | :--- | :--- | :--- |
-| `name` | `String` | ✅ Yes | Your full name. |
-| `label` | `String` | ✅ Yes | Your main title or role (e.g., "Software Engineer"). |
-| `image` | `String` | ✅ Yes | Path to your profile photo. Currently, the only supported value is `"/me.webp"`. |
-| `email` | `String` | ✅ Yes | Your email address. Must be a valid email format. |
-| `phone` | `String` | ✅ Yes | Your phone number. |
-| `url` | `String` | ❌ No | URL to your website or main portfolio. |
-| `summary` | `String` | ✅ Yes | A brief paragraph describing you professionally. |
-| `location` | `Object` | ✅ Yes | Contains your location details. See `location` table below. |
-| `profiles` | `Array<Object>` | ✅ Yes | A list of your social media or professional platform profiles. See `profiles` table below. |
+`location` requires `postalCode`, `city`, `countryCode`, and `region`; `address` is optional. Use a two-letter country code such as `CO`, `US`, or `ES`.
 
-### `basics.location`
-
-| Property | Type | Required | Description and Behavior |
-| :--- | :--- | :--- | :--- |
-| `address` | `String` | ❌ No | Your postal address (street and number). Generally not displayed for privacy. |
-| `postalCode`| `String` | ✅ Yes | Your postal code. |
-| `city` | `String` | ✅ Yes | The city where you reside. |
-| `countryCode`| `String` | ✅ Yes | Your country code (e.g., "US", "GB"). |
-| `region` | `String` | ✅ Yes | The region, state, or province. |
-
-### `basics.profiles`
-
-Each object in the `profiles` array represents a social profile.
-
-| Property | Type | Required | Description and Behavior |
-| :--- | :--- | :--- | :--- |
-| `network` | `String` | ✅ Yes | The name of the social network (e.g., "LinkedIn", "GitHub", "X"). The system will attempt to display an icon matching this name. |
-| `username` | `String` | ✅ Yes | Your username on that network. |
-| `url` | `String` | ✅ Yes | The full URL to your profile. |
-
-### Example `basics`
-
-```json
-"basics": {
-  "name": "John Doe",
-  "label": "Full-Stack Software Developer",
-  "image": "/me.webp",
-  "email": "john.doe@email.com",
-  "phone": "+1 555 123 4567",
-  "url": "https://johndoe.dev",
-  "summary": "Developer with 5 years of experience in modern web technologies, focused on building robust and scalable applications.",
-  "location": {
-    "postalCode": "10001",
-    "city": "New York",
-    "countryCode": "US",
-    "region": "New York"
-  },
-  "profiles": [
-    {
-      "network": "LinkedIn",
-      "username": "john-doe-dev",
-      "url": "https://linkedin.com/in/john-doe-dev"
-    },
-    {
-      "network": "GitHub",
-      "username": "john-doe",
-      "url": "https://github.com/john-doe"
-    }
-  ]
-}
-```
-
----
+Each profile requires `network`, `username`, and `url`. Known icon names include `LinkedIn`, `GitHub`, and `X`; other network names remain valid but may not have an icon.
 
 ## `work`
 
-An array of objects, where each object represents a work experience entry.
-
-| Property | Type | Required | Description and Behavior |
-| :--- | :--- | :--- | :--- |
-| `name` | `String` | ✅ Yes | Company name. |
-| `position` | `String` or `null` | ✅ Yes | Your job title. Can be `null` if not applicable (e.g., for grouping `Freelance` projects). |
-| `url` | `String` | ❌ No | Company website URL. |
-| `startDate` | `String` | ✅ Yes | Start date in `YYYY-MM-DD` format. |
-| `endDate` | `String` or `null` | ✅ Yes | End date. Use `""` (empty string) or `null` if it's your current job. |
-| `summary` | `String` | ✅ Yes | A summary of your responsibilities in the role. |
-| `highlights`| `Array<String>` | ❌ No | A list of your achievements or key tasks. Use `[]` if none. |
-
-### Example `work`
-
-```json
-"work": [
-  {
-    "name": "Global Tech Inc.",
-    "position": "Senior Software Engineer",
-    "url": "https://globaltech.com",
-    "startDate": "2020-09-01",
-    "endDate": null,
-    "summary": "Led the development of the main product, improving scalability and user experience.",
-    "highlights": [
-      "Redesigned backend architecture, reducing latency by 40%.",
-      "Implemented a new CI/CD system with GitHub Actions."
-    ]
-  },
-  {
-    "name": "Creative Startup",
-    "position": "Frontend Developer",
-    "startDate": "2018-06-01",
-    "endDate": "2020-08-31",
-    "summary": "Developed user interfaces for mobile and web applications with React and React Native.",
-    "highlights": []
-  }
-]
-```
-
----
+Each item requires `name`, `position`, `startDate`, `endDate`, and `summary`. `position` may be `null`. `startDate` may be a date or `null`; `endDate` may be a date, `null`, or `""`. Use `null` or `""` for a current job. `url` and `highlights` are optional; use `[]` when there are no highlights.
 
 ## `education`
 
-An array of objects, where each object represents a stage of your academic education.
+Each item requires `institution`, `area`, `studyType`, `startDate`, `endDate`, and `paused`. Dates may be a date or `null`. `paused: true` means the studies are paused. `studyType` is free text, for example `Bachelor's Degree` or `Master's Degree`.
 
-| Property | Type | Required | Description and Behavior |
-| :--- | :--- | :--- | :--- |
-| `institution`| `String` | ✅ Yes | Name of the educational institution. |
-| `area` | `String` | ✅ Yes | Area of study or degree (e.g., "Computer Science"). |
-| `studyType` | `String` | ✅ Yes | Type of study (e.g., "Bachelor's", "Master's"). |
-| `startDate` | `String` | ✅ Yes | Start date in `YYYY-MM-DD` format. |
-| `endDate` | `String` or `null` | ✅ Yes | End date. Use `""` (empty string) or `null` if you are still studying. |
-| `paused` | `Boolean` | ✅ Yes | Set to `true` if studies are currently paused. `false` otherwise. |
+## `diplomas` and `courses`
 
-### Example `education`
+Both arrays use the same structure. Each group requires `institution`, `area`, `studyType`, and `courses`.
 
-```json
-"education": [
-  {
-    "institution": "Polytechnic University of Madrid",
-    "area": "Software Engineering",
-    "studyType": "Master's Degree",
-    "startDate": "2021-09-01",
-    "endDate": "2022-07-15",
-    "paused": false
-  },
-  {
-    "institution": "Complutense University of Madrid",
-    "area": "Computer Science",
-    "studyType": "Bachelor's Degree",
-    "startDate": "2017-09-01",
-    "endDate": "2021-06-30",
-    "paused": false
-  }
-]
-```
+- `featuredCourses` is optional; every value must exactly match an item in `courses`.
+- `printLimit` is optional and must be an integer greater than or equal to `1`.
 
----
+## Certificates
 
-## `diplomas`, `courses`
+`certificates` items require `name`, `date`, `validThrough`, `issuer`, and `url`. Dates use `YYYY-MM-DD` and are intended for certificates with expiration dates.
 
-Both are arrays of objects with the same structure, representing groupings of studies or courses.
-
-| Property | Type | Required | Description and Behavior |
-| :--- | :--- | :--- | :--- |
-| `institution`| `String` | ✅ Yes | Name of the institution offering the diploma/course. |
-| `area` | `String` | ✅ Yes | Thematic area (e.g., "Web Development", "Cloud Computing"). |
-| `studyType` | `String` | ✅ Yes | Type of study (e.g., "Bootcamp", "Specialization"). |
-| `courses` | `Array<String>` | ✅ Yes | List of names of specific courses/topics. Use `[]` if none. |
-| `featuredCourses`| `Array<String>` | ❌ No | List of names of featured courses, in priority order. Must exist in `courses`. |
-| `printLimit` | `Integer` | ❌ No | Maximum number of `featuredCourses` to display in the printed version. |
-
-### Example `diplomas` or `courses`
-
-```json
-"courses": [
-  {
-    "institution": "Platzi",
-    "area": "Web Development",
-    "studyType": "Learning Path",
-    "courses": ["Frontend Developer", "Backend with Node.js", "Databases with PostgreSQL"],
-    "featuredCourses": ["Frontend Developer", "Backend with Node.js"],
-    "printLimit": 2
-  }
-]
-```
-
----
-
-## `certificates`
-
-An array of objects, where each object represents an obtained certification.
-
-| Property | Type | Required | Description and Behavior |
-| :--- | :--- | :--- | :--- |
-| `name` | `String` | ✅ Yes | Name of the certification. |
-| `date` | `String` | ✅ Yes | Issue date in `YYYY-MM-DD` format. |
-| `validThrough`| `String` | ✅ Yes | Expiration date in `YYYY-MM-DD` format. |
-| `issuer` | `String` | ✅ Yes | Entity that issued the certification (e.g., "AWS", "Google"). |
-| `url` | `String` | ✅ Yes | URL to the certificate. |
-
-### Example `certificates`
-
-```json
-"certificates": [
-  {
-    "name": "AWS Certified Solutions Architect - Associate",
-    "date": "2023-03-10",
-    "validThrough": "2026-03-10",
-    "issuer": "AWS",
-    "url": "https://www.credly.com/badges/..."
-  }
-]
-```
-
----
+`professionalCertificates` items require `name`, `issuer`, and `taughtBy`. `url` is optional and accepts a URL or `null`; dates are not required. The misspelled `profesionalCertificates` alias is supported only for compatibility.
 
 ## `skills`
 
-An object that describes your professional skills.
+`skills.items` contains objects with `name` and `level`. The schema accepts any non-empty level string, but the UI only groups these exact values:
 
-| Property | Type | Required | Description and Behavior |
-| :--- | :--- | :--- | :--- |
-| `items` | `Array<Object>` | ✅ Yes | List of individual skills. See `skill` table below. |
-| `featured` | `Array<String>` | ❌ No | List of names of featured skills, in priority order. Must exist in `items`. |
-| `skillsPrintLimit`| `Integer` | ❌ No | Maximum number of `featured` skills to display in the printed version. |
+| Spanish file (`es.json`) | English file (`en.json`) | Meaning |
+| --- | --- | --- |
+| `Master` | `Master` | Deep or exceptional mastery. |
+| `Experto` | `Expert` | Expert proficiency. |
+| `Avanzado` | `Advanced` | Strong, autonomous proficiency. |
+| `Intermedio` | `Intermediate` | Functional proficiency. |
+| `Basico` | `Basic` | Fundamental knowledge. |
 
-### `skills.items`
+Use the value matching the locale. The Spanish value is intentionally `Basico` without an accent because that is what the UI recognizes. Other values pass schema validation but will not appear in a visible skill group.
 
-Each object in the `items` array describes a skill.
-
-| Property | Type | Required | Description and Behavior |
-| :--- | :--- | :--- | :--- |
-| `name` | `String` | ✅ Yes | Name of the skill (e.g., "JavaScript", "Docker"). |
-| `level` | `String` | ✅ Yes | Proficiency level (e.g., "Advanced", "Intermediate"). |
-
-### Example `skills`
-
-```json
-"skills": {
-  "items": [
-    { "name": "JavaScript", "level": "Advanced" },
-    { "name": "React", "level": "Advanced" },
-    { "name": "Node.js", "level": "Intermediate" },
-    { "name": "TypeScript", "level": "Advanced" },
-    { "name": "AWS", "level": "Intermediate" }
-  ],
-  "featured": ["React", "Node.js", "AWS"],
-  "skillsPrintLimit": 3
-}
-```
-
----
+`featuredSkills` is a top-level array of exact skill names shown in print. The UI does not automatically verify that they exist in `skills.items`. Unknown skill names use a fallback icon.
 
 ## `languages`
 
-An array of objects, where each object describes a language.
+Each item requires `language` and `fluency`. `fluency` is free text. Recommended values are `C2`, `C1`, `B2`, `B1`, `A2`, and `A1`. `C2` renders as `Native` in English and `Nativo` in Spanish. Values such as `Bilingual` or `Fluent` are displayed exactly as written.
 
-| Property | Type | Required | Description and Behavior |
-| :--- | :--- | :--- | :--- |
-| `language` | `String` | ✅ Yes | Name of the language (e.g., "Spanish", "English"). |
-| `fluency` | `String` | ✅ Yes | Fluency level (e.g., "Native", "Bilingual", "Advanced"). |
+## `hobbies`, `specializations`, and `projects`
 
-### Example `languages`
+`hobbies` is a list of non-empty strings.
 
-```json
-"languages": [
-  { "language": "Spanish", "fluency": "Native" },
-  { "language": "English", "fluency": "Bilingual" }
-]
-```
+Each `specializations` item requires `title`, `description`, and `skills`. This section appears in the printable CV.
 
----
+Each project requires `name`, `company`, `isActive`, `description`, `highlights`, `url`, and `github`.
 
-## `hobbies`
+- `company` must be `Personal`, `Freelance`, or match a `work[].name` value. Comparison ignores case, spaces, and special characters.
+- `isActive: true` means the project is ongoing.
+- `highlights` is a list of strings; use `[]` when empty.
+- `url` and `github` accept a URL or `null`.
 
-An array of strings, where each string is a hobby or interest.
+## `pricing`
 
-| Property | Type | Required | Description and Behavior |
-| :--- | :--- | :--- | :--- |
-| `(element)` | `String` | ✅ Yes | Name of the hobby (e.g., "Reading", "Hiking"). |
+This optional object requires `currency`, `baseRate`, `features`, and `teamComposition`.
 
-### Example `hobbies`
+- `currency` is text such as `USD` or `COP`.
+- `baseRate` and feature `price` values must be at least `0`.
+- Each feature requires `id`, `label`, `price`, and positive integer `order`.
+- Each team composition requires `id`, `label`, `priceModifier`, and `timeModifier`. Modifiers may be positive, zero, or negative.
 
-```json
-"hobbies": [
-  "Reading",
-  "Hiking",
-  "Photography"
-]
-```
+## Common Problems
 
----
-
-## `projects`
-
-An array of objects, where each object describes a project.
-
-| Property | Type | Required | Description and Behavior |
-| :--- | :--- | :--- | :--- |
-| `name` | `String` | ✅ Yes | Name of the project. |
-| `company` | `String` | ✅ Yes | Company or category the project belongs to. Must be the `name` of a `work` entry, or one of these keywords: `"Freelance"` or `"Personal"`. |
-| `isActive` | `Boolean` | ✅ Yes | `true` if the project is active/ongoing, `false` if completed. |
-| `description`| `String` | ✅ Yes | A brief description of the project. |
-| `highlights`| `Array<String>` | ✅ Yes | List of key features or achievements of the project. Use `[]` if none. |
-| `url` | `String` or `null` | ❌ No | URL of the deployed project. Use `null` if no public URL. |
-| `github` | `String` or `null` | ❌ No | URL of the GitHub repository. Use `null` if no public repository. |
-
-### Example `projects`
-
-```json
-"projects": [
-  {
-    "name": "Task Management Application",
-    "company": "Global Tech Inc.",
-    "isActive": false,
-    "description": "Internal tool to optimize team task assignment and tracking.",
-    "highlights": [
-      "Slack integration for automatic notifications.",
-      "Intuitive user interface with React."
-    ],
-    "url": "https://tasks-app.globaltech.com",
-    "github": null
-  },
-  {
-    "name": "Personal Blog",
-    "company": "Personal",
-    "isActive": true,
-    "description": "Personal blog where I share articles on web development and technology.",
-    "highlights": [
-      "Developed with Astro and Tailwind CSS.",
-      "Optimized for SEO and performance."
-    ],
-    "url": "https://johndoe.dev/blog",
-    "github": "https://github.com/john-doe/personal-blog"
-  }
-]
-```
+| Problem | Fix |
+| --- | --- |
+| A skill level does not appear | Check the exact locale-specific spelling. |
+| `featuredCourses` fails | Every value must exist in that group's `courses`. |
+| A project fails on `company` | Use `Personal`, `Freelance`, or a company listed in `work`. |
+| A URL fails | Include `https://`, or use `null` where supported. |
+| A current job fails | Use `endDate: ""` or `endDate: null`, never `"Current"`. |
+| The JSON looks correct but fails | Run `npm run validate:cv`; the output includes the failing JSON path. |

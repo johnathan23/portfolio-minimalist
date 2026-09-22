@@ -1,0 +1,140 @@
+{
+  "basics": {
+    "name": "Alex Morgan",
+    "label": "Senior Product Engineer",
+    "image": "/me.webp",
+    "email": "alex.morgan@example.com",
+    "phone": "+1 555 010 2040",
+    "url": "https://example.com/alex-morgan",
+    "summary": "Product engineer focused on accessible web applications, reliable delivery, and thoughtful technical leadership.",
+    "location": {
+      "postalCode": "10001",
+      "city": "New York",
+      "countryCode": "US",
+      "region": "New York"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "alex-morgan",
+        "url": "https://www.linkedin.com/in/alex-morgan"
+      },
+      {
+        "network": "GitHub",
+        "username": "alex-morgan",
+        "url": "https://github.com/alex-morgan"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Northstar Labs",
+      "position": "Senior Product Engineer",
+      "url": "https://example.com/northstar-labs",
+      "startDate": "2022-04-01",
+      "endDate": "",
+      "summary": "Builds customer-facing products and supports the team with architecture, mentoring, and delivery practices.",
+      "highlights": [
+        "Reduced checkout errors by 35% through improved validation and observability.",
+        "Introduced automated release checks for the main product team."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Example State University",
+      "area": "Computer Science",
+      "studyType": "Bachelor's Degree",
+      "startDate": "2016-09-01",
+      "endDate": "2020-05-15",
+      "paused": false
+    }
+  ],
+  "diplomas": [
+    {
+      "institution": "Example Academy",
+      "area": "Product Engineering",
+      "studyType": "Diploma",
+      "courses": ["Web Accessibility", "Testing Strategies"],
+      "featuredCourses": ["Web Accessibility"],
+      "printLimit": 1
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Example Cloud Associate",
+      "date": "2024-02-10",
+      "validThrough": "2027-02-10",
+      "issuer": "Example Cloud",
+      "url": "https://example.com/certificates/cloud-associate"
+    }
+  ],
+  "professionalCertificates": [
+    {
+      "name": "Example Product Leadership",
+      "issuer": "Example Learning",
+      "taughtBy": "Example Faculty",
+      "url": "https://example.com/certificates/product-leadership"
+    }
+  ],
+  "courses": [
+    {
+      "institution": "Example Learning",
+      "area": "Engineering Practice",
+      "studyType": "Course Track",
+      "courses": ["TypeScript Essentials", "Technical Writing"],
+      "featuredCourses": ["TypeScript Essentials"]
+    }
+  ],
+  "specializations": [
+    {
+      "title": "Reliable Product Delivery",
+      "description": "Improving quality and delivery through testing, automation, and observability.",
+      "skills": ["Testing", "CI/CD", "Observability"]
+    }
+  ],
+  "pricing": {
+    "currency": "USD",
+    "baseRate": 600,
+    "features": [
+      {
+        "id": "discovery",
+        "label": "Discovery and requirements",
+        "price": 150,
+        "order": 1
+      }
+    ],
+    "teamComposition": [
+      {
+        "id": "solo",
+        "label": "Solo developer",
+        "priceModifier": 0,
+        "timeModifier": 0
+      }
+    ]
+  },
+  "featuredSkills": ["TypeScript", "Testing", "CI/CD"],
+  "skills": {
+    "items": [
+      { "name": "TypeScript", "level": "Advanced" },
+      { "name": "Testing", "level": "Expert" },
+      { "name": "CI/CD", "level": "Intermediate" }
+    ]
+  },
+  "languages": [
+    { "language": "English", "fluency": "C2" },
+    { "language": "Spanish", "fluency": "B2" }
+  ],
+  "hobbies": ["Reading", "Photography"],
+  "projects": [
+    {
+      "name": "Open Notes",
+      "company": "Personal",
+      "isActive": true,
+      "description": "A small application for organizing research notes.",
+      "highlights": ["Offline-first editing", "Keyboard-friendly navigation"],
+      "url": "https://example.com/open-notes",
+      "github": "https://github.com/example/open-notes"
+    }
+  ]
+}
