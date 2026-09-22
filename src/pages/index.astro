@@ -17,6 +17,7 @@ import Courses from "@/components/sections/Courses.astro"
 import Diplomas from "@/components/sections/Diplomas.astro"
 import Hobbies from "@/components/sections/Hobbies.astro"
 import Specializations from "@/components/sections/Specializations.astro"
+import ProfessionalCertificates from "@/components/sections/ProfessionalCertificates.astro"
 import SectionRenderer from "@/components/SectionRenderer.astro"
 
 const { basics: { name, label } } = getCv(Astro.url.pathname)
@@ -39,9 +40,10 @@ const screenSections = [
     type: 'group',
     title: labels.additional,
     sections: [
-      { component: Languages },
+      { component: ProfessionalCertificates },
       { component: Diplomas },
       { component: Courses },
+      { component: Languages },
       { component: Hobbies },
     ],
   },
@@ -56,6 +58,7 @@ const printSections = [
     condition: () => complementaryWork.length > 0,
   },
   { component: Certifiates },
+  { component: ProfessionalCertificates, props: { print: true } },
   { component: Education },
   { component: Courses, props: { print: true, title: labels.complementaryEducation } },
   { component: Skills },

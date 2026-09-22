@@ -238,6 +238,26 @@
       "url": "https://www.credential.net/ab0b4f05-af38-4676-bc44-0ad6108c782e#acc.Caknp0U5"
     }
   ],
+  "professionalCertificates": [
+    {
+      "name": "Google AI",
+      "issuer": "Coursera",
+      "taughtBy": "Google Career Certificates",
+      "url": "https://coursera.org/verify/professional-cert/L0N0WCUV8PV3"
+    },
+    {
+      "name": "Generative AI Leader",
+      "issuer": "Coursera",
+      "taughtBy": "Google Cloud Training",
+      "url": "https://coursera.org/verify/professional-cert/RXDGQ0L8XGNU"
+    },
+    {
+      "name": "Software Design and Architecture",
+      "issuer": "Coursera",
+      "taughtBy": "University of Alberta",
+      "url": "https://coursera.org/verify/professional-cert/RXDGQ0L8XGNU"
+    }
+  ],
   "courses": [
     {
       "institution": "Platzi",
@@ -364,79 +384,22 @@
       ]
     }
   ],
-  "specializations": [
-    {
-      "title": "Software Architecture",
-      "description": "Design of scalable, maintainable, and domain-driven software architectures.",
-      "skills": [
-        "Clean Architecture",
-        "Hexagonal Architecture",
-        "SOLID Principles",
-        "Design Patterns"
-      ]
-    },
-    {
-      "title": "Cross-Platform Development",
-      "description": "Development of mobile and web applications from a single codebase.",
-      "skills": [
-        "Flutter",
-        "Android",
-        "iOS",
-        "Flutter Web"
-      ]
-    },
-    {
-      "title": "Technical Leadership",
-      "description": "Technical mentoring, engineering decision-making, and team leadership.",
-      "skills": [
-        "Technical Leadership",
-        "Mentoring",
-        "Code Review",
-        "Agile Methodologies"
-      ]
-    },
-    {
-      "title": "DevSecOps & CI/CD",
-      "description": "Automation of build, testing, deployment, and security processes.",
-      "skills": [
-        "GitHub Actions",
-        "Azure DevOps",
-        "Bitrise",
-        "AWS"
-      ]
-    },
-    {
-      "title": "Cloud Computing",
-      "description": "Design and integration of cloud-native solutions for enterprise applications.",
-      "skills": [
-        "AWS",
-        "Azure",
-        "Firebase",
-        "Google Cloud Platform"
-      ]
-    },
-    {
-      "title": "Generative AI & Automation",
-      "description": "Integration of AI models and workflow automation to improve software engineering productivity.",
-      "skills": [
-        "Generative AI",
-        "Model Context Protocol (MCP)",
-        "n8n",
-        "Prompt Engineering"
-      ]
-    },
-    {
-      "title": "IoT & Computer Vision",
-      "description": "Development of intelligent solutions integrating connected devices and computer vision technologies.",
-      "skills": [
-        "ESP32",
-        "Bluetooth Low Energy (BLE)",
-        "OpenCV",
-        "Google ML Kit",
-        "OCR"
-      ]
-    }
-  ],
+  "pricing": {
+    "currency": "USD",
+    "baseRate": 500,
+    "features": [
+      {"id":"discovery","label":"Discovery & Requirements","price":150,"order":1},
+      {"id":"design","label":"UI/UX & Prototypes","price":300,"order":2},
+      {"id":"development","label":"Development (per developer)","price":800,"order":3},
+      {"id":"qa","label":"QA & Testing","price":200,"order":4},
+      {"id":"deployment","label":"Deployment & DevOps","price":150,"order":5}
+    ],
+    "teamComposition": [
+      {"id":"solo","label":"Solo developer","priceModifier":0,"timeModifier":0},
+      {"id":"dev_plus_qa","label":"Developer + QA","priceModifier":200,"timeModifier":0},
+      {"id":"small_team","label":"Small team (PM + 2 dev + QA)","priceModifier":600,"timeModifier":-7}
+    ]
+  },
   "featuredSkills": [
     "Mobile Engineering",
     "Software Architecture",

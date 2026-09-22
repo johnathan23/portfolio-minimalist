@@ -9,6 +9,8 @@ export interface CV {
   featuredSkills?: Array<string>
   skillsPrintLimit?: number
   specializations?: Array<Specialization>
+  professionalCertificates?: Array<ProfessionalCertificate>
+  profesionalCertificates?: Array<ProfessionalCertificate>
   languages: Array<Languages>
   hobbies: Hobbies
   projects: Array<Projects>
@@ -54,6 +56,13 @@ interface Specialization {
   title: string
   description: string
   skills: Array<string>
+}
+
+interface ProfessionalCertificate {
+  name: string
+  issuer: string
+  taughtBy?: string
+  url?: string
 }
 
 type DateStr = `${string}-${string}-${string}`

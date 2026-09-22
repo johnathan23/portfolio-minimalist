@@ -8,7 +8,7 @@ const locale = getLocale(Astro.url.pathname)
 const pausedLabel = locale === "en" ? "Incomplete" : "Incompleto"
 ---
 
-<Section title={labels.education}>
+<Section title={labels.education} class="education-section">
   <ul>
     {
       education.map(({ institution, startDate, endDate, area, paused, studyType }) => {
@@ -181,6 +181,12 @@ const pausedLabel = locale === "en" ? "Incomplete" : "Incompleto"
 
     .print-title { font-size: 0.78rem; }
     .print-sub { font-size: 0.78rem; }
+
+    /* Add separation around education in print */
+    .education-section {
+      margin-top: 0.6rem !important;
+      margin-bottom: 0.6rem !important;
+    }
   }
 
   @media print {

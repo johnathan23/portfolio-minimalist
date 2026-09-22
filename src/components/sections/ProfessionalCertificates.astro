@@ -1,0 +1,185 @@
+---
+import Section from "../Section.astro"
+import { getCv } from "@/data/cv"
+import { getLabels } from "@/lib/i18n"
+
+type ProfessionalCertificate = {
+  name: string
+  issuer?: string
+  taughtBy?: string
+  url?: string
+}
+
+const printMode = Astro.props.print ?? false
+const cv = getCv(Astro.url.pathname)
+const labels = getLabels(Astro.url.pathname)
+const professionalCertificates = (
+  (cv.professionalCertificates ?? cv.profesionalCertificates ?? []) as ProfessionalCertificate[]
+)
+---
+
+{professionalCertificates.length > 0 && (
+  printMode ? (
+    <div class="professional-certificates-print">
+      <div class="cert-group">
+        <h3>{labels.professionalCertificates}</h3>
+        <p class="cert-inline">{professionalCertificates.map((certificate) => certificate.name).join(" · ")}</p>
+      </div>
+    </div>
+  ) : (
+    <Section title={labels.professionalCertificates} class="professional-certificates-screen">
+      <div class="cert-grid">
+        {professionalCertificates.map(({ name, issuer, taughtBy, url }) => (
+          <article class="cert-card">
+            <header>
+              <div class="cert-title-row">
+                <h4>{name}</h4>
+                {url && <a class="credential-link screen-only" href={url} target="_blank" rel="noopener noreferrer">{labels.viewCredential} ↗</a>}
+              </div>
+              {issuer && <p>{issuer}</p>}
+            </header>
+            {taughtBy && <p class="cert-detail">{labels.taughtBy}: {taughtBy}</p>}
+          </article>
+        ))}
+      </div>
+    </Section>
+  )
+)}
+
+<style>
+  .professional-certificates-screen {
+    display: block;
+  }
+
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-inline: -16px;
+    margin-top: 0.75rem;
+  }
+
+  .cert-card {
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-card);
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    min-height: 110px;
+    height: 100%;
+    color: var(--color-text-primary);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  }
+
+  .cert-card header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .cert-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .cert-card h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .credential-link {
+    background: #f3f3f3;
+    border-radius: 999px;
+    color: #444;
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0.12rem 0.4rem;
+    text-decoration: none;
+  }
+
+  .credential-link:hover {
+    background: #e8e8e8;
+  }
+
+  .cert-card p {
+    margin: 0;
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+    color: var(--color-text-muted);
+  }
+
+  .cert-detail {
+    margin: 0;
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+    color: var(--color-text-muted);
+  }
+
+  .professional-certificates-print {
+    display: none;
+  }
+
+  .cert-group {
+    margin: 0.2rem 0 0;
+  }
+
+  .cert-group h3 {
+    margin: 0 0 0.2rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-text-primary);
+  }
+
+  .cert-inline {
+    margin: 0;
+    padding: 0;
+    color: var(--color-text-secondary);
+    font-size: 0.68rem;
+    line-height: 1.3;
+  }
+
+  @media (width <= 700px) {
+    .cert-grid {
+      margin-inline: 0px;
+    }
+  }
+
+  @media print {
+    .professional-certificates-screen {
+      display: none !important;
+    }
+
+    .professional-certificates-print {
+      display: block !important;
+    }
+
+    .cert-grid {
+      display: none !important;
+    }
+
+    .cert-card {
+      border-radius: 0;
+      padding: 0.2rem 0;
+      background: transparent;
+      border: 0;
+      min-width: auto;
+    }
+
+    .cert-detail {
+      display: none;
+    }
+
+  }
+</style>

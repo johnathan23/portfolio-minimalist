@@ -20,10 +20,14 @@ export const getLocale = (pathname: string): Locale =>
 const normalizeCv = (source: unknown): CV => {
   const cv = source as CV
 
+  const professionalCertificates = cv.professionalCertificates ?? cv.profesionalCertificates ?? []
+
   return {
     ...cv,
     diplomas: cv.diplomas ?? [],
     certificates: cv.certificates ?? [],
+    professionalCertificates,
+    profesionalCertificates: professionalCertificates,
     courses: cv.courses ?? [],
     languages: cv.languages ?? [],
     hobbies: cv.hobbies ?? [],
@@ -42,4 +46,10 @@ export const getUnfilteredProjects = (pathname: string) => {
 
 export const getComplementaryWork = (_pathname: string) => {
   return []
+}
+
+export const getPricing = (pathname: string) => {
+  // Read pricing object from the locale-specific JSON (if present)
+  const source = getLocale(pathname) === "en" ? englishCv : spanishCv
+  return (source as any).pricing ?? null
 }

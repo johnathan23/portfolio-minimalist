@@ -21,7 +21,7 @@ const getFluency = (fluency: string) => {
 const printMode = Astro.props.print ?? false
 ---
 
-<Section title={labels.languages}>
+<Section title={labels.languages} class="languages-section">
   {printMode ? (
     <div class="print-language-list">
       <p>
@@ -109,6 +109,12 @@ const printMode = Astro.props.print ?? false
     /* Show the print list */
     .print-language-list {
         display: grid;
+    }
+
+    /* Add separation before languages in print */
+    .languages-section {
+      margin-top: 0.6rem !important;
+      margin-bottom: 0.6rem !important;
     }
   }
 </style>
